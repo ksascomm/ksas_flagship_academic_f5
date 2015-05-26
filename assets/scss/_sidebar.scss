@@ -1,0 +1,129 @@
+.no-gutter {
+  padding: 0;
+}
+
+img.featured {
+  float: right;
+  max-width: 110%;
+}
+
+#sidebar_header {
+  padding: 12px 15px 10px 0;
+  margin-bottom: 15px;
+  a:hover {
+    color: #FFF;
+  }
+}
+
+aside li, .wrapper li {
+  margin-left: 20px;
+}
+
+aside ul.nav li {
+  margin-left: 0;
+  padding-left: 45px;
+  text-indent: -25px;
+  padding-right: 15px;
+}
+
+.widget_title {
+  padding: 10px 0;
+  margin-bottom: 15px;
+  background-color: #3478b6;
+  h5 {
+    color: #FFF;
+  }
+}
+
+ul.nav li {
+  &:before, ul li:before {
+    content: "\e010";
+    font-family: 'flagship-icon';
+    color: #999;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
+
+#sidebar {
+  h5 {
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  h6 {
+    margin-bottom: 7px;
+    color: $black;
+  }
+  p {
+    font-style: normal;
+  }
+}
+
+.sidebar_bg ul.nav li a, #sidebar li a {
+  font-family: $font-subhead;
+  font-weight: 400;
+  font-style: normal;
+  color: #336699;
+}
+
+.textwidget, .menu-research-links-container, .hub, .frm_form_widget .frm_forms {
+  margin: 0 20px 40px 20px;
+}
+
+.label.round {
+  padding: 4px 7px 2px;
+  font-size: 14px;
+  a {
+    color: $black;
+  }
+}
+
+.faculty_button {
+  position: absolute;
+  top: 63px;
+  right: 50px;
+  height: 20px;
+}
+
+.hub img, .ksas_recent img, .ksas_books img {
+  max-width: 75px;
+  float: left;
+  margin-right: 10px;
+}
+
+.hub h6, .ksas_books h6, .ksas_recent h6 {
+  margin-top: 0;
+  text-transform: none;
+  font-size: 13px;
+  letter-spacing: normal;
+}
+
+.textwidget {
+  h6 {
+    margin-top: 0;
+    text-transform: none;
+    font-size: 13px;
+    letter-spacing: normal;
+  }
+  padding: 3px 20px;
+}
+
+.hub article, .ksas_books article, .ksas_recent article {
+  padding: 3px 20px;
+}
+
+.widget article {
+  padding: 3px 25px;
+}
+
+.sidebar_bg {
+  background: #cecece;
+@include background-image(linear-gradient(to right, #fcfcfc 0%, #ffffff 66.6%, #cecece 67%));  margin-bottom: 60px;
+  .wrapper {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 100px;
+    padding-right: 30px;
+  }
+}

@@ -1,0 +1,129 @@
+@media only screen and (max-width: 1024px) {
+  #search-bar input[type="submit"], #field_search input[type="submit"] {
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .sidebar_bg {
+    background: #cecece !important;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  #main_nav ul li {
+    padding: 0 7px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #logo_nav {
+    margin-top: 50px;
+  }
+  #main_nav ul {
+    li {
+      &:nth-child(5) {
+        clear: left;
+      }
+      width: 33%;
+      ul {
+        display: none;
+      }
+    }
+    height: 144px;
+  }
+  li.logo {
+    display: none;
+  }
+  .offset-top {
+    margin-top: 0 !important;
+  }
+  #caption {
+    display: none;
+  }
+  .content {
+  padding-right: 0em;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #main_nav ul li {
+    padding: 0 5px;
+    width: auto;
+  }
+  .mobile-field {
+    clear: left;
+  }
+  body.fields .row .mobile-two {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  button {
+    font-size: 14px;
+  }
+  .hide-for-mobile {
+    display: none !important;
+  }
+  #quicklinks li.has-flyout {
+    width: 100%;
+  }
+  .mean-container .mean-bar {
+    background: #000;
+    position: relative;
+  }
+  #logo_nav {
+    margin-top: 0;
+  }
+}
+
+@media print {
+  dl.accordion .content {
+    display: block !important;
+  }
+  .hide-for-print {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  #desktop-nav {
+    display: none;
+  }
+  .mobile-logo {
+    margin-top: 2em;
+  }
+}
+
+@media only screen and (min-width: 64.063em) {
+  #mobile-nav {
+    display: none;
+  }
+}
+
+/*Fix float issue*/
+
+.faculty {
+  padding-left: 230px;
+}
+
+@media only screen and (max-width: 40em) {
+  .faculty {
+    padding-left: 1em;
+  }
+  .single-people .tabs dd a {
+    padding: .88889rem .7rem !important;
+  }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .faculty {
+    padding-left: 1em;
+  }
+  #logo_nav h1 {
+    margin-left: 1rem;
+  }
+}

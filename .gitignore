@@ -1,0 +1,10 @@
+# Created by https://www.gitignore.io
+
+### Sass ###
+/assets/.sass-cache/
+/assets/bower_components/
+*.css.map
+
+assets/config.codekit
+
+/assets/functions/cache/

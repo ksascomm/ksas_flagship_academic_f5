@@ -1,0 +1,262 @@
+.SEClear {
+  float: left;
+}
+
+#SECalendarListWrapper {
+  max-width: 300px;
+  table {
+    border: none;
+    margin: 0;
+    background: transparent;
+    tbody tr {
+      &.even, &:nth-child(even) {
+        background: none;
+      }
+    }
+    thead tr th, tfoot tr th, tbody tr td, tr td, tfoot tr td {
+      display: block;
+    }
+  }
+  .SECalendarEventLocation:before {
+    content: 'Location: ';
+    color: $rust;
+  }
+  .SECalendarEventTime:before {
+    content: 'Time: ';
+    color: $rust;
+  }
+  .SECalendarEventLocation, .SECalendarNoEvent {
+    margin-bottom: 20px;
+  }
+  table tbody tr td {
+    padding: 0 10px 4px 10px;
+  }
+  .SECalendarEventDate {
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: $font-subhead;
+
+  }
+  .SECalendarEventTime, .SECalendarEventLocation {
+    color: #333;
+    font-size: 10px;
+    font-family: $font-stack;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .SECalendarEventName, .SECalendarNoEvent, .SECalendarEventName a {
+    color: #3478b6;
+    font-size: 14px;
+    font-family: $font-stack;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .SECalendarThumb {
+    display: none;
+  }
+}
+
+.SECalendarEventName h3 {
+  font-family: $font-subhead;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.SECalendarEventDetails {
+  border-color: transparent;
+  padding: 5px 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  .SECalendarProperty {
+    margin-bottom: 8px;
+  }
+}
+
+#SECalendarListWrapper .SECalendarPropertyLabel {
+  font-family: $font-subhead;
+  font-weight: 400;
+  font-style: normal;
+  float: left;
+  margin-right: 10px;
+}
+
+.SEbuttons {
+  padding-top: 10px;
+}
+
+.SECalendarEventDetails p {
+  margin-bottom: 0;
+}
+
+#SECalendarWrapper {
+  width: 100%;
+  table {
+    width: 100%;
+  }
+}
+
+#SECalendarNav {
+  margin: 10px auto 20px auto;
+  div {
+    display: inline;
+    vertical-align: middle;
+  }
+}
+
+a.rssLink {
+  display: none;
+}
+
+#SECalendarSearch {
+  .SECalendarLocation, .SECalendarKeyword input.SEApplicationText, .SECalendarType label, .SECalendarKeyword label {
+    display: none;
+  }
+}
+
+#SECalendarNav .SECalendarMonth {
+  font-family: $font-header;
+  font-size: 28px;
+  margin-top: 5px;
+}
+
+#SECalendar {
+  padding-bottom: 50px;
+  .SECalendarEventName a, .SECalendarEventTime {
+    color: #FFF;
+  }
+}
+
+#SECalendarSearch {
+  margin-top: 10px;
+}
+
+.SECalendarMonth {
+  font-size: 18px;
+  text-align: center;
+}
+
+.SECalendarDay a {
+  color: #000;
+}
+
+#calendar_container iframe {
+  height: 785px!important;
+}
+
+#SECalendarTable td {
+  border: 1px solid #ddd;
+  width: 14.28%;
+  height: 138px;
+}
+
+.dark_blue_bg, #SECalendar .SECalendarEventDetails.color8, .color8 {
+  background: #003366 !important;
+}
+
+.grey_bg, #SECalendar .SECalendarEventDetails.color9, .color9 {
+  background: #666 !important;
+}
+
+.rust_bg, #SECalendar .SECalendarEventDetails.color7, .color7 {
+  background: #663333 !important;
+}
+
+.green_bg, #SECalendar .SECalendarEventDetails.color4, .color4 {
+  background: $green !important;
+}
+
+.purple_bg, #SECalendar .SECalendarEventDetails.color5, .color5 {
+  background: $purple !important;
+}
+
+.fushia, #SECalendar .SECalendarEventDetails.color6, .color6 {
+  background: #993366 !important;
+}
+
+.yellow_bg, #SECalendar .SECalendarEventDetails.color2, .color2 {
+  background: $yellow !important;
+}
+
+.orange_bg {
+  background: #cc6600 !important;
+  &.button:hover {
+    background: #cc6600 !important;
+  }
+}
+
+#SECalendar .SECalendarEventDetails.color3, .color3 {
+  background: #cc6600 !important;
+}
+
+.bright_blue_bg {
+  background: #3399ff !important;
+  &.button:hover {
+    background: #3399ff !important;
+  }
+}
+
+.color0, .SECalendarPrevMonth, .SECalendarNextMonth {
+  background: #3399ff !important;
+}
+
+button, .button, .select-buttons li, .SECalendarPrevMonth, .SECalendarNextMonth {
+  border: none;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  font-family: $font-stack;
+  font-weight: 300;
+  font-style: normal;
+  color: #FFF;
+  font-size: 16px;
+  padding: 8px 12px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  opacity: .9;
+  font-weight: normal;
+}
+
+.select-buttons li {
+  display: inline;
+}
+
+button:hover, .button:hover, .select-buttons li:hover {
+  opacity: 1;
+}
+
+button a {
+  color: #fff;
+  &:hover, &:visited {
+    color: #fff;
+  }
+}
+
+.button a {
+  color: #fff;
+  &:hover, &:visited {
+    color: #fff;
+  }
+}
+
+.select-buttons li a {
+  color: #fff;
+  &:hover, &:visited {
+    color: #fff;
+  }
+}
+
+.SECalendarPrevMonth a, .SECalendarNextMonth a {
+  color: #fff;
+}
+
+#SECalendar .SECalendarEventDetails {
+  background: #3478b6 !important;
+  &.color1 {
+    background: #3478b6 !important;
+  }
+}
