@@ -100,6 +100,16 @@ add_action('after_setup_theme','academic_flagship_theme_support');
 			'before_title'  => '<div class="widget_title"><h5 class="white">',
 			'after_title'   => '</h5></div>' 
 			));
+	if ( function_exists('register_sidebar') )
+		register_sidebar(array(
+			'name'          => 'News Archive Sidebar',
+			'id'            => 'archive-sb',
+			'description'   => 'This sidebar will only appear on the news archive page',
+			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget_title"><h5 class="white">',
+			'after_title'   => '</h5></div>' 
+			));
 
 	include_once (TEMPLATEPATH . '/assets/functions/page_metabox.php'); 
 
