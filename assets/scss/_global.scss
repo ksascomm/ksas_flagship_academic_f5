@@ -1,23 +1,10 @@
 @font-face {
-  font-family: 'flagship-icon';
-  src:url('../fonts/flagship-icon.eot');
+  font-family: $flagship_icon;
+  src: $flagship-icon_url_0;
 }
 @font-face {
-  font-family: 'flagship-icon';
-  src:url('../fonts/flagship-icon.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/flagship-icon.svg#flagship-icon') format('svg'),
-    url('../fonts/flagship-icon.woff') format('woff'),
-    url('../fonts/flagship-icon.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'flagship-icon';
-  src:url('../fonts/flagship-icon.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/flagship-icon.svg#flagship-icon') format('svg'),
-    url('../fonts/flagship-icon.woff') format('woff'),
-    url('../fonts/flagship-icon.ttf') format('truetype');
+  font-family: $flagship_icon;
+  src: $flagship-icon_url_1 format('embedded-opentype'), $flagship-icon_url_2 format('svg'), $flagship-icon_url_3 format('woff'), $flagship-icon_url_4 format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -40,58 +27,69 @@ font-size: 1.1rem;
 
 
 h1, h2, h3 {
-color: #3478b6;
+color: $blue;
 }
 
 h4, h5, h6, .semibold {
   font-family: $font-subhead;
-  color: #3478b6;
+  color: $blue;
   font-weight: 400;
   font-style: normal;
 }
 
+
+//strong, b, .bold
+%extend_1 {
+  font-family: $font-subhead;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//.b.em, .strong.em
+%extend_2 {
+  font-family: $font-stack;
+  font-weight: 300;
+  font-style: italic;
+}
+
 table {
   thead tr th, tfoot tr td {
-    font-family: $font-header;
-    color: #3478b6;
-      font-weight: 400;
-  font-style: normal;
+    @extend %extend_1;
+    color: $blue;
   }
 }
 
 em, i {
-  font-family: $font-stack;
-   font-weight: 300;
-  font-style: italic;
+ @extend %extend_2;
 }
 
+
 blockquote {
- font-family: $font-stack;
-   font-weight: 300;
-  font-style: italic;
+ @extend %extend_2;
   p {
-    font-family: $font-stack;
-   font-weight: 300;
-  font-style: italic;
+    @extend %extend_2;
   }
 }
 
 .italic {
   font-family: $font-stack;
-   font-weight: 300;
+  font-weight: 300;
   font-style: italic;
 }
-
-strong, b, .bold {
-  font-family: $font-subhead;
-  font-weight: 400;
-  font-style: normal;
+strong {
+  @extend %extend_1;
 }
-
-.b.em, .strong.em {
-  font-family: $font-stack;
-   font-weight: 300;
-  font-style: italic;
+b {
+  @extend %extend_1;
+}
+.bold {
+  @extend %extend_1;
+}
+.b.em {
+  @extend %extend_2;
+}
+.strong.em {
+  @extend %extend_2;
 }
 
 .capitalize {
@@ -168,16 +166,16 @@ ol {
 }
 
 .sky_blue {
-  color: #6699cc;
+  color: #68ace5;
 }
 
 .blue_bg {
-  background: #3478b6 !important;
+  background: #418fde !important;
 }
 
 
 .color1 {
-  background: #3478b6 !important;
+  background: #418fde !important;
 }
 
 
@@ -214,39 +212,22 @@ ol {
 }
 
 .radius10 {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  @include border-radius($radius);
 }
-
 .radius-left {
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+   @include border-left-radius($radius);
 }
-
 .radius-topright {
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  border-top-right-radius: 10px;
+  //Instead of the line below you could use @includeborder-top-right-radius($radius)
+  @include border-top-right-radius($radius)
 }
-
 .radius-topleft {
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
+  //Instead of the line below you could use @includeborder-top-left-radius($radius)
+ @include border-top-left-radius($radius)
 }
-
 .radius-top {
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  border-top-right-radius: 10px;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
+ @include border-top-radius($radius);
 }
 
 .inline {

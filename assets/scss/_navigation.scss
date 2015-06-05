@@ -154,7 +154,7 @@ nav ul {
 
 li.external a::after {
   content: "\e007";
-  font-family: 'flagship-icon';
+  font-family: $flagship_icon;
   font-style: normal;
   speak: none;
   font-weight: normal;
