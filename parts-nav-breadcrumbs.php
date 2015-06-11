@@ -5,14 +5,14 @@
 		if ( is_single()) { 
 			global $post;
 			$article_title = $post->post_title;
-			$article_link = $post->guid;
+			//$article_link = $post->guid;
 		?>
 		<nav role="navigation">
 			<ul id="menu-main-menu-2" class="breadcrumbs">
 				<li><a href="<?php echo $home_url; ?>">Home</a></li>
 				<li><a href="<?php echo $home_url; ?>/about">About</a></li>
 				<li><a href="<?php echo $home_url; ?>/about/archive">News Archive</a></li>
-				<li><a href="<?php echo $article_link; ?>"><?php echo $article_title; ?></a></li>
+				<li><a href="<?php echo get_permalink(); ?>"><?php echo $article_title; ?></a></li>
 			</ul>
 		</nav>	<?php } 
 
