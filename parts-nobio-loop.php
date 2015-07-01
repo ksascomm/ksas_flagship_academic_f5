@@ -1,7 +1,6 @@
 				<li class="person <?php echo get_the_directory_filters($post);?> <?php echo get_the_roles($post); ?>">
 					<div class="row">
 						<div class="small-12 columns">
-							<div class="row">
 										<?php if ( get_post_meta($post->ID, 'ecpt_website', true) ) : ?><a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" target="_blank"><?php endif; ?>
 										<?php if ( has_post_thumbnail()) { ?> 
 								<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small')); ?>
