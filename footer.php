@@ -14,7 +14,7 @@
 				'fallback_cb' => 'foundation_page_menu', 
 				'container' => 'nav', 
 				'container_id' => 'quicklinks',
-				'container_class' => 'small-3 columns hide-for-small-only', 
+				'container_class' => 'small-10 small-centered medium-uncentered medium-3 columns', 
 				'walker' => new foundation_navigation() ) ); 
 			
 			//Return to current site
@@ -37,7 +37,9 @@
 		
 		<!-- Copyright and Address -->
 		<div class="row" id="copyright" role="content-info">
+			<div class="small-12 columns">
   			<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, <?php echo $theme_option['flagship_sub_copyright'];?></p>
+  			</div>
   		</div>
   		<div class="row">
 	  		<div class="small-12 medium-4 medium-centered columns">
