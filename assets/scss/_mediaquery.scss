@@ -128,25 +128,45 @@
   }
 }
 
-@media only screen and (min-width: 36em) {
+@media only screen and (min-width: 40em) {
 p, ul, ol, dl {
   font-size: 1.05rem;
 }
 }
 
-@media only screen and (min-width: 54em){
+@media only screen and (min-width: 64.063em){
 p, ul, ol, dl {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 }
 
-@media only screen and (min-width: 81em) {
+@media only screen and (min-width: 86em) {
 p, ul, ol, dl {
   font-size: 1.15rem;
 }
+ h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4; }
+
+  h1 {
+    font-size: 2.75rem; }
+
+  h2 {
+    font-size: 2.3125rem; }
+
+  h3 {
+    font-size: 1.6875rem; }
+
+  h4 {
+    font-size: 1.4375rem; }
+
+  h5 {
+    font-size: 1.125rem; }
+
+  h6 {
+    font-size: 1rem; } 
 }
 @media only screen and (min-width: 108em) {
 p, ul, ol, dl {
   font-size: 1.175rem;
 } 
-}
+} 

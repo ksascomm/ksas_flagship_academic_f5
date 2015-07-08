@@ -113,8 +113,18 @@ ul.nav li {
   padding: 3px 20px;
 }
 
-.widget article {
+.widget {
+ article {
   padding: 3px 25px;
+}
+}
+.widget_recent_entries {
+  ul {
+    font-size: inherit;
+      li {
+      padding-bottom: 5px;
+      }
+  }
 }
 
 .sidebar_bg {
