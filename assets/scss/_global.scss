@@ -13,18 +13,13 @@ body {
   font-family: $font-stack;
   font-weight: 300;
   font-style: normal;
+  color: $black;
 }
 
 p {
-  line-height: 1.3rem;
-  color: $black;
-  font-size: 1.1rem;
+  color: #2c2c33;
+  font-size: inherit;
 }
-
-ul, ol, dl {
-font-size: 1.1rem;
-}
-
 
 h1, h2, h3 {
 color: $blue;
@@ -102,10 +97,6 @@ b {
 
 .copy h2 {
   color: $blue;
-}
-
-.content p {
-  line-height: 1.6em;
 }
 
 h6, time {

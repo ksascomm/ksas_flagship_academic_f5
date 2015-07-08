@@ -127,3 +127,26 @@
     margin-left: 1rem;
   }
 }
+
+@media only screen and (min-width: 36em) {
+p, ul, ol, dl {
+  font-size: 1.05rem;
+}
+}
+
+@media only screen and (min-width: 54em){
+p, ul, ol, dl {
+  font-size: 1.1rem;
+}
+}
+
+@media only screen and (min-width: 81em) {
+p, ul, ol, dl {
+  font-size: 1.15rem;
+}
+}
+@media only screen and (min-width: 108em) {
+p, ul, ol, dl {
+  font-size: 1.175rem;
+} 
+}

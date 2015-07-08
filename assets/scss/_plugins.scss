@@ -476,7 +476,7 @@ div.field {
 #fields_search fieldset {
   background: #ccc;
   background: rgba(0, 0, 0, 0.15);
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   border: none;
 }
 
@@ -495,7 +495,7 @@ div.field {
 
 #fields_search input {
   &[type="text"] {
-    height: 56px;
+    height: 42px;
     margin-bottom: 10px;
     -webkit-border-top-right-radius: 7px;
     -webkit-border-bottom-right-radius: 7px;
@@ -516,7 +516,7 @@ div.field {
   }
   &[type="submit"] {
     background: #333;
-    height: 56px;
+    height: 42px;
     width: 45px;
     font-family: 'flagship-icon';
     -webkit-border-top-left-radius: 7px;
