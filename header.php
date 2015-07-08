@@ -14,7 +14,6 @@
   <!-- CSS Files: All pages -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/stylesheets/app.css">
-  <script async type="text/javascript" src="http://fast.fonts.com/jsapi/c5f514c7-d786-4bfb-9484-ea6c8fbd263f.js"></script>
   <!-- CSS Files: Conditionals -->
   
   <!-- Modernizr and Jquery Script -->
