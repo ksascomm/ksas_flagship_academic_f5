@@ -14,7 +14,7 @@
 				'fallback_cb' => 'foundation_page_menu', 
 				'container' => 'nav', 
 				'container_id' => 'quicklinks',
-				'container_class' => 'small-10 small-centered medium-uncentered medium-3 columns', 
+				'container_class' => 'small-10 medium-3 columns', 
 				'walker' => new foundation_navigation() ) ); 
 			
 			//Return to current site
@@ -26,13 +26,17 @@
 				'menu_class' => 'inline-list hide-for-small-only', 
 				'fallback_cb' => 'foundation_page_menu', 
 				'container' => 'nav', 
-				'container_class' => 'medium-7 columns', 
+				'container_class' => 'medium-5 columns', 
 				'walker' => new foundation_navigation() ) ); 
 		 ?>
 		<!-- Social Media -->
-		<nav class="small-12 medium-2 columns iconfont hide-for-small-only" id="social-media">
-			<a href="http://facebook.com/jhuksas" title="Facebook"><span class="icon-facebook"></span></a>
-			<a href="http://vimeo.com/channels/jhuksas" title="Vimeo"><span class="icon-vimeo"></span></a>
+		<nav class="small-12 medium-4 large-2 columns" id="social-media">
+				<div class="small-6 columns">
+					<a href="http://facebook.com/jhuksas" title="Facebook"><i class="fa fa-facebook-official fa-3x"></i></a>
+				</div>
+				<div class="small-6 columns">
+					<a href="https://www.youtube.com/user/jhuksas" title="YouTube"><i class="fa fa-youtube-square fa-3x"></i></a>
+				</div>
 		</nav>
 		
 		<!-- Copyright and Address -->
@@ -42,7 +46,7 @@
   			</div>
   		</div>
   		<div class="row">
-	  		<div class="small-12 medium-4 medium-centered columns">
+	  		<div class="small-12 small-centered medium-4 columns">
   				<a href="http://www.jhu.edu"><img src="<?php echo get_template_directory_uri() ?>/assets/images/university.jpg" /></a>
   			</div>
   		</div>
