@@ -11,21 +11,9 @@ footer {
 }
 
 #social-media {
-  margin-top: 9px;
   a {
-    content: none;
-    color: #333;
-    background: #555;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
     padding: 10px;
     margin-right: 10px;
-    font-size: 18px;
-    &:hover {
-      color: #333;
-      background: #CCC;
-    }
   }
 }
 
@@ -44,6 +32,7 @@ footer {
     color: #FFF;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
   }
   .flyout {
     background: #f2f2f2;

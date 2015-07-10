@@ -1,20 +1,65 @@
-@media only screen and (max-width: 1024px) {
-  #search-bar input[type="submit"], #field_search input[type="submit"] {
-    -webkit-border-top-left-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    -moz-border-radius-bottomleft: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+@media print {
+  dl.accordion .content {
+    display: block !important;
   }
-  .sidebar_bg {
-    background: #cecece !important;
+  .hide-for-print {
+    display: none !important;
   }
 }
 
-@media only screen and (max-width: 975px) {
+@media only screen and (max-width: 320px) {
+  .mobile-logo {
+    img {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  button {
+    font-size: 14px;
+  }
+  .hide-for-mobile {
+    display: none !important;
+  }
+  #quicklinks li.has-flyout {
+    width: 100%;
+  }
+  .mean-container .mean-bar {
+    background: #000;
+    position: relative;
+  }
+  #logo_nav {
+    margin-top: 0;
+  }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width:640px) {
+    .mobile-logo {
+    margin-top: 2em;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
   #main_nav ul li {
-    padding: 0 7px;
+    padding: 0 5px;
+    width: auto;
+  }
+  .mobile-field {
+    clear: left;
+  }
+  body.fields .row .mobile-two {
+    width: 100% !important;
+  }
+  #mobile-nav {
+        h2 {
+      margin-top:1em;
+      font-size: 1.6875rem;
+    }
   }
 }
 
@@ -46,63 +91,51 @@
   .content {
   padding-right: 0em;
   }
+  #mobile-nav {
+        h2 {
+      margin-top:1em;
+      font-size: 1.84375rem;
+    }
+  }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 975px) {
   #main_nav ul li {
-    padding: 0 5px;
-    width: auto;
-  }
-  .mobile-field {
-    clear: left;
-  }
-  body.fields .row .mobile-two {
-    width: 100% !important;
+    padding: 0 7px;
   }
 }
 
-@media only screen and (max-width: 480px) {
-  button {
-    font-size: 14px;
+@media only screen and (max-width: 1024px) {
+  #search-bar input[type="submit"], #field_search input[type="submit"] {
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
-  .hide-for-mobile {
-    display: none !important;
-  }
-  #quicklinks li.has-flyout {
-    width: 100%;
-  }
-  .mean-container .mean-bar {
-    background: #000;
-    position: relative;
-  }
-  #logo_nav {
-    margin-top: 0;
-  }
-}
-
-@media print {
-  dl.accordion .content {
-    display: block !important;
-  }
-  .hide-for-print {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: 64em) {
-  #desktop-nav {
-    display: none;
+  .sidebar_bg {
+    background: #cecece !important;
   }
   .mobile-logo {
-    margin-top: 2em;
+    img {
+    margin-top: 1em;
+    }
+  }
+  #mobile-nav {
+        h2 {
+      margin-top:1em;
+      font-size: 2rem;
+    }
+  }
+  .slideshow-wrapper {
+  padding-bottom: 2em;
+  }
+  #social-media {
+  margin-top: 9px;
   }
 }
 
-@media only screen and (min-width: 64.063em) {
-  #mobile-nav {
-    display: none;
-  }
-}
 
 /*Fix float issue*/
 
@@ -119,6 +152,7 @@
   }
 }
 
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   .faculty {
     padding-left: 1em;
@@ -126,12 +160,30 @@
   #logo_nav h1 {
     margin-left: 1rem;
   }
+  .mobile-logo {
+    margin-top: 2em;
+    img {
+        width: 35%;
+    }
+  }
 }
 
 @media only screen and (min-width: 40em) {
 p, ul, ol, dl {
   font-size: 1.05rem;
 }
+}
+
+@media only screen and (max-width: 64em) {
+  #desktop-nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 64.063em) {
+  #mobile-nav {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 64.063em){
@@ -148,10 +200,10 @@ p, ul, ol, dl {
     line-height: 1.4; }
 
   h1 {
-    font-size: 2.75rem; }
+    font-size: 2.5rem; }
 
   h2 {
-    font-size: 2.3125rem; }
+    font-size: 2.225rem; }
 
   h3 {
     font-size: 1.6875rem; }
