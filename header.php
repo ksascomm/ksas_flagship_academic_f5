@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-57x57-precomposed.png" />
 
   <!-- CSS Files: All pages -->
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/stylesheets/app.css">
   <!-- CSS Files: Conditionals -->
   
@@ -31,13 +31,17 @@
 <?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme']; global $blog_id; $site_id = 'site-' . $blog_id; ?>
 <body <?php body_class($color_scheme . ' ' . $site_id); ?>>	
 	<header>
-		<div id="mobile-nav">
-			<div class="row">
-				<div class="small-12 large-4 columns centered blue_bg">
-				<div class="mobile-logo centered"><a href="http://krieger.jhu.edu">Home</a></div>
-				<h2 align="center"><a class="white" href="<?php echo site_url(); ?>"><?php echo get_bloginfo( 'title' ); ?></a></h2>
-				</div>
-			</div>
+		<div id="mobile-nav" class="blue_bg">
+	  		<div class="row">
+		        <div class="small-12 columns">
+		  			<div class="mobile-logo"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="jhu logo"></a></div>
+		  		</div>
+		  		<div class="row">
+		  			<div class="small-12 columns">	
+		  				<h2 align="center"><a class="white" href="<?php echo site_url(); ?>"> <?php echo get_bloginfo( 'title' ); ?></a></h2>
+		  			</div>
+		  		</div>
+	  		</div>
 		</div>
 		<div id="desktop-nav">
 			<div class="row hide-for-print">

@@ -1,27 +1,3 @@
-/*#logo_nav li.logo, .mobile-logo {
-  width: 222px;
-  height: 162px;
-  padding: 0;
-  position: absolute;
-  margin-top: -61px;
-  -webkit-border-bottom-right-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  -moz-border-radius-bottomright: 20px;
-  -moz-border-radius-bottomleft: 20px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-#logo_nav li.logo a {
-  background: url('../images/logo.png') no-repeat top;
-  width: 182px;
-  height: 142px;
-  text-indent: -9999px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}*/
-
 li.logo { 
   list-style: none;
   img {
@@ -41,29 +17,12 @@ li.logo {
 
 .mobile-logo {
   position: relative;
-  height: 122px;
   img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+   display: block;
+    margin-left: auto;
+    margin-right: auto 
   }
- /* a {
-    background: url('../images/logo.png') no-repeat top;
-    width: 222px;
-    height: 133px;
-    margin-top: -61px;
-    text-indent: -9999px;
-    position: absolute;
-  }*/
 }
-
-/*#logo_nav li.logo {
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.75);
-  margin-left: 24px;
-}*/
 
 .mobile-logo {
   a {
@@ -84,9 +43,7 @@ li.logo {
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
   margin: 0;
-  /*padding-bottom: 20px;*/
   h1 {
-    /*margin: 30px 0 0 280px;*/
     margin-top:30px;
     line-height: 1.1em;
     padding-right: 3px;
@@ -167,4 +124,8 @@ li.logo {
     padding: 0;
     color: #ccc;
   }
+}
+
+#mobile-nav {
+  padding-top: 4%;
 }
