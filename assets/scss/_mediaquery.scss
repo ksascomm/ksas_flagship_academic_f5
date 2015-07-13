@@ -57,8 +57,13 @@
   }
   #mobile-nav {
         h2 {
-      margin-top:1em;
       font-size: 1.6875rem;
+    }
+  }
+  .mobile-logo {
+    img {
+        margin-top:1em;
+        width: 55%;
     }
   }
 }
@@ -96,7 +101,6 @@ p, ul, ol, dl {
   }
   #mobile-nav {
         h2 {
-      margin-top:1em;
       font-size: 1.84375rem;
     }
   }
