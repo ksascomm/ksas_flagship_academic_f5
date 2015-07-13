@@ -12,28 +12,28 @@
 	if ( $slider_query->have_posts() ) :
 ?>
 <div class="row hide-for-small-only">
-<div class="slideshow-wrapper">
-  <div class="preloader"></div>
-<ul id="slider" data-orbit data-options="animation: fade; animation_speed:2000; timer:true; timer_speed:3000; navigation_arrows:false; bullets:false; slide_number:false;">
-<?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
-<li><a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>">
-<div class="slide">
-	<img src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" class="radius-top" />
-		<div class="orbit-caption">
-			<?php if($theme_option['flagship_sub_slider_style'] == "vertical") { 
-				 	locate_template('parts-vertical-slider.php', true, false); 	
-				 	}
-			 elseif($theme_option['flagship_sub_slider_style'] == "horizontal") { 
-			 		locate_template('parts-horizontal-slider.php', true, false); 
-			  } ?>
-		</div>
-</div>
-</a>
-</li>
-<?php endwhile; ?>
-				
-</ul>
-</div>
+	<div class="slideshow-wrapper">
+	  <div class="preloader"></div>
+			<ul id="slider" data-orbit data-options="animation: fade; animation_speed:2000; timer:true; timer_speed:3000; navigation_arrows:false; bullets:false; slide_number:false;">
+				<?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
+					<li>
+						<a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>">
+							<div class="slide">
+								<img src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" class="radius-top" />
+									<div class="orbit-caption">
+										<?php if($theme_option['flagship_sub_slider_style'] == "vertical") { 
+											 	locate_template('parts-vertical-slider.php', true, false); 	
+											 	}
+										 elseif($theme_option['flagship_sub_slider_style'] == "horizontal") { 
+										 		locate_template('parts-horizontal-slider.php', true, false); 
+										  } ?>
+									</div>
+							</div>
+						</a>
+					</li>
+				<?php endwhile; ?>	
+			</ul>
+	</div>
 </div>
 
 <?php endif; ?>
