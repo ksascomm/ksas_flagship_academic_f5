@@ -16,7 +16,8 @@ Template Name: Testimonial Listing (Alumni)
 			<?php $ksas_internship_testimonial_query = new WP_Query(array(
 					'post-type' => 'testimonial',
 					'testimonialtype' => 'alumni-testimonial',
-					'orderby' => 'title',
+					'meta_key' => 'ecpt_testimonial_alpha',
+					'orderby' => 'meta_value',
 					'order' => 'ASC', 
 					'posts_per_page' => -1));
 			?>
