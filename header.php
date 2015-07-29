@@ -18,7 +18,7 @@
   
   <!-- Modernizr and Jquery Script -->
   <?php wp_enqueue_script('jquery'); ?> 
-  <script src="<?php echo get_template_directory_uri() ?>/js/vendor/modernizr-min.js"></script>
+  <script src="<?php echo get_template_directory_uri() ?>assets/js/vendor/modernizr-min.js"></script>
   <?php wp_head(); ?>
 
   <!-- IE Fix for HTML5 Tags -->

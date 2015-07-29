@@ -1,4 +1,13 @@
 <?php
+
+//livereload
+if ( $_SERVER['REMOTE_ADDR'] === '127.0.0.1' ){
+  add_action( 'wp_enqueue_scripts', 'enqueue_livereload' );
+}
+function enqueue_livereload(){
+  wp_enqueue_script( 'livereload', site_url().'/livereload.js', '', NULL );
+}
+
 //Add Theme Options Page
 if ( !function_exists( 'create_theme_options' ) ) {    
     function create_theme_options() {

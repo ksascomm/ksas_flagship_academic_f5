@@ -131,9 +131,23 @@ ul.nav li {
   }
 }
 
+
+$from: #fcfcfc;
+$to: #cecece;
+$stop: 67%;
+
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+  /* fallback/image non-cover color */
+  background-color: $to;
+  /* Standard */
+  background: linear-gradient(to right, $from 0%, $to $stop);
+}
+
 .sidebar_bg {
   background: #cecece;
-@include background-image(linear-gradient(to right, #fcfcfc 0%, #ffffff 66.6%, #cecece 67%));  margin-bottom: 60px;
+  /*@include linear-gradient(#fcfcfc 0%, #ffffff 66.6%, #cecece 67%);*/
+  @include horizontal-gradient($from, $stop);
+  margin-bottom: 60px;
   .wrapper {
     margin-top: 0px;
     margin-bottom: 0px;
