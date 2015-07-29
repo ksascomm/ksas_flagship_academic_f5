@@ -1,25 +1,25 @@
 theme_flagship_academic_foundation5
 ======================
-**Current Version:** 3.0
+**Current Version:** 4.0
 
-Based off Foundation Compass Template:
+Based off Foundation Grunt/libsass template:
 
 ## Requirements
 
-  * Ruby 1.9+
-  * [Node.js](http://nodejs.org)
-  * [compass](http://compass-style.org/): `gem install compass`
-  * [bower](http://bower.io): `npm install bower -g`
+  * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
+  * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
+  * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
+
 
 ## Installation
   * Clone this repository
-  * cd into `assets` directory
-  * Run `bower install` to install the latest version of Foundation
+  * cd into repo and run `npm install`
+  * Run `cd assets && bower install` to install the latest version of Foundation
   
 Then when you're working on your project, just run the following command:
 
 ```bash
-bundle exec compass watch
+grunt
 ```
 
 ## Upgrading
