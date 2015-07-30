@@ -1,10 +1,10 @@
 <!--
-Non-Foundation js
+For development environment search and replace javascripts/min. for javascripts/
+For production environment search and replace javascripts/ for javascripts/min.
 -->
 <!***********ALL PAGES**************>  
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/foundation.min.js"></script> 
-<script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/app-min.js"></script> 
-
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/app.js"></script> 
 		<script>
 	var $x = jQuery.noConflict();
 		$x('#quicklinks ul.flyout li a').on('click', function() {
@@ -19,7 +19,6 @@ Non-Foundation js
 			    jQuery('#main_nav').meanmenu({meanScreenWidth: "768"});
 			});
 		</script>
-		
 <?php } else { ?>
 	<script>
 		jQuery(document).ready(function () {
@@ -56,6 +55,8 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 	$archive_id = ksas_get_page_id('archive');
 	$people_id = ksas_get_page_id('people');
 	$faculty_id = ksas_get_page_id('faculty');
+	$undergraduate_id = ksas_get_page_id('undergraduate');
+	$testimonial_id = ksas_get_page_id('testimonial');
 ?>
 <?php if (  is_singular('post') ) { ?>
 	<script>
@@ -75,7 +76,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 			$k('li.page-id-<?php echo $faculty_id; ?>').addClass('current_page_parent');
 			});
 	</script>
-<?php } ?>
+<?php } ?> 
 
 <?php if ( is_singular('testimonial') ) { ?>
 	<script>

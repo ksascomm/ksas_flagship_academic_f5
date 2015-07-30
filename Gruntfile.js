@@ -27,6 +27,7 @@ module.exports = function(grunt) {
       }
     },
 
+    //autoprefixer
     postcss: {
       options: {
         map: true,
@@ -43,6 +44,39 @@ module.exports = function(grunt) {
       }
     },
 
+    //imagemin
+    imagemin: {
+       dist: {
+          options: {
+            optimizationLevel: 5
+          },
+          files: [{
+             expand: true,
+             cwd: 'assets/images',
+             src: ['**/*.{png,jpg,gif}'],
+             dest: 'assets/images'
+          }]
+       }
+    },
+    //browserSync
+    browserSync: {
+        dev: {
+            bsFiles: {
+                    src : [
+                        'assets/stylesheets/*.css',
+                        '**/*.php',
+                        'assets/js/vendor/*.js',
+                        'assets/js/*.js',
+                        'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}'
+                    ]
+            },
+            options: {
+                watchTask: true,
+                proxy: "bicycle.dev"
+            }
+        }
+    },
+
     //Watch Task
     watch: {
       grunt: {
@@ -53,19 +87,20 @@ module.exports = function(grunt) {
       },
       sass: {
         files: 'assets/scss/**/*.scss',
-        tasks: ['sass', 'postcss'],
+        tasks: ['sass', 'postcss', 'imagemin'],
       },
-      livereload: {
-          options: { livereload: true },
-          files: ['assets/scss/**/*.scss', 'assets/js/*.js', '**/*.php', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
-      }
-    },
-
+      //livereload: {
+       //  options: { livereload: true },
+        //  files: ['assets/scss/**/*.scss', 'assets/js/*.js', '**/*.php', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+     // }
+    }
   });
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-browser-sync');
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['build','watch']);
+  grunt.registerTask('default', ['sass','browserSync','watch']);
 }

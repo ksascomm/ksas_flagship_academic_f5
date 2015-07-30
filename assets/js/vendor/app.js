@@ -66,14 +66,14 @@ function getParameterByName(name)
     $.fn.meanmenu = function (options) {
         var defaults = {
             meanMenuTarget: jQuery(this), // Target the current HTML markup you wish to replace
-            meanMenuClose: "<h3>CLOSE X</h3>", // single character you want to represent the close menu button
-            meanMenuCloseSize: "18px", // set font size of close button
-            meanMenuOpen: "<h3>Navigation + </h3>", // text/markup you want when menu is closed
+            meanMenuClose: "<h3><i class='fa fa-bars'></i> Collapse Menu</h3>", // single character you want to represent the close menu button
+            meanMenuCloseSize: "24px", // set font size of close button
+            meanMenuOpen: "<h3><i class='fa fa-bars'></i> Menu</h3>", // text/markup you want when menu is closed
             meanRevealPosition: "left", // left right or center positions
             meanRevealPositionDistance: "15px", // Tweak the position of the menu
             meanRevealColour: "", // override CSS colours for the reveal background
             meanRevealHoverColour: "", // override CSS colours for the reveal hover
-            meanScreenWidth: "1024", // set the screen width you want meanmenu to kick in at
+            meanScreenWidth: "1023", // set the screen width you want meanmenu to kick in at
             meanNavPush: "", // set a height here in px, em or % if you want to budge your layout now the navigation is missing.
             meanShowChildren: true, // true to show children in the menu, false to hide them
             meanExpandableChildren: true, // true to allow expand/collapse children

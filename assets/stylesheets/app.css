@@ -7951,15 +7951,19 @@ a.button {
     .mobile-logo img {
       width: 35%; } }
 
-@media only screen and (min-width: 64.063em) {
-  p, ul, ol, dl {
-    font-size: 1.125rem; }
+@media only screen and (max-width: 1023px) {
+  #desktop-nav {
+    display: none; } }
+
+@media only screen and (min-width: 1023px) {
   #mobile-nav {
     display: none; } }
 
+@media only screen and (min-width: 64.063em) {
+  p, ul, ol, dl {
+    font-size: 1.125rem; } }
+
 @media only screen and (max-width: 64em) {
-  #desktop-nav {
-    display: none; }
   #caption.vertical .middle {
     top: 35%; }
   #caption.vertical h3 {
