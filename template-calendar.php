@@ -4,6 +4,7 @@ Template Name: Calendar
 */
 ?>
 <?php get_header(); ?>
+<?php $theme_option = flagship_sub_get_global_options(); ?>
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="large-12 columns">	
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
@@ -14,8 +15,10 @@ Template Name: Calendar
 			<?php endwhile; endif; ?>
 			
 			<!-- /************Calendar display**************/ -->	
-				<div class="row" id="calendar_container"></div>
-
+				<div class="row hide-for-small-only" id="calendar_container"></div>
+				<div class="row show-for-small-only">
+					<a href="<?php echo $theme_option['flagship_sub_calendar_address']; ?>">View our Events Calendar</a>
+				</div>
 		</section>
 	</div>
 </div> 

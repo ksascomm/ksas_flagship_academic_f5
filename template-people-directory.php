@@ -28,7 +28,6 @@ Template Name: People Directory
 	$filter_classes = implode(' ', $filter_slugs);
 	?>
 <div class="row wrapper radius10">
-<div class="small-12 columns">
 	<section class="row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h2><?php the_title();?></h2>
@@ -59,22 +58,22 @@ Template Name: People Directory
 				<li class="person sub-head quicksearch-match"><h2 class="black capitalize"><?php echo $role_name; ?></h2></li>
 				<?php while ($people_query->have_posts()) : $people_query->the_post(); ?>
 					<?php if ( get_post_meta($post->ID, 'ecpt_bio', true) ) { get_template_part('parts','hasbio-loop'); } else { get_template_part('parts', 'nobio-loop'); } ?>
-		<?php endwhile; endif; } } wp_reset_postdata(); ?>
-		<!-- Page Content -->
-	<?php if ( $theme_option['flagship_sub_directory_search']  == '1' ) { ?>
-	<div class="row" id="noresults">
-		<div class="small-4 small-centered columns">
-		</div>
-	</div>
-	<?php } ?>
-</ul>
-</section>
+				<?php endwhile; endif; } } wp_reset_postdata(); ?>
+				<!-- Page Content -->
+			<?php if ( $theme_option['flagship_sub_directory_search']  == '1' ) { ?>
+			<div class="row" id="noresults">
+				<div class="small-4 small-centered columns">
+				</div>
+			</div>
+			<?php } ?>
+		</ul>
+	</section>
 
-<div class="row">
+	<div class="row">
 		<div class="large-12 columns">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();  the_content(); endwhile; endif; ?>
 		</div>
 	</div>	
-</div>
+
 </div> <!-- End content wrapper -->
 <?php get_footer(); ?>

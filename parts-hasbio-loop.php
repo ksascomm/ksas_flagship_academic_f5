@@ -1,6 +1,5 @@
 <li class="person <?php echo get_the_directory_filters($post);?> <?php echo get_the_roles($post); ?>">
 	<div class="row">
-		<div class="small-12 columns">
 			<a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="field">
 			<?php if ( has_post_thumbnail()) { ?> 
 				<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small')); ?>
@@ -32,6 +31,8 @@
 							<span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span>
 						<?php endif; ?>
 					</p>
-		<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?><p><b>Research Interests:&nbsp;</b><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></p><?php endif; ?>
+					<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?>
+						<p><b>Research Interests:&nbsp;</b><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></p>
+					<?php endif; ?>
 	</div>
 </li>		

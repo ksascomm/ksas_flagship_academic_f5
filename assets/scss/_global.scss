@@ -480,6 +480,9 @@ body {
       border-top: 3px solid $black;
     }
   }
+   #mobile-nav {
+    background: $black;
+  }
 }
 
 body.blue {
@@ -518,6 +521,9 @@ body.blue {
     dd.active, li.active {
       border-top: 3px solid $blue;
     }
+  }
+   #mobile-nav {
+    background: $blue;
   }
 }
 
@@ -559,6 +565,9 @@ body.green {
       border-top: 3px solid $green;
     }
   }
+  #mobile-nav {
+    background: $green;
+  }
 }
 
 body.red {
@@ -597,6 +606,9 @@ body.red {
     dd.active, li.active {
       border-top: 3px solid $red;
     }
+  }
+   #mobile-nav {
+    background: $red;
   }
 }
 
@@ -637,6 +649,9 @@ body.yellow {
       border-top: 3px solid $yellow;
     }
   }
+   #mobile-nav {
+    background: $yellow;
+  }
 }
 
 body.aqua {
@@ -676,6 +691,9 @@ body.aqua {
       border-top: 3px solid $aqua;
     }
   }
+   #mobile-nav {
+    background: $aqua;
+  }
 }
 
 body.purple {
@@ -714,6 +732,9 @@ body.purple {
     dd.active, li.active {
       border-top: 3px solid $purple;
     }
+  }
+   #mobile-nav {
+    background: $purple;
   }
 }
 

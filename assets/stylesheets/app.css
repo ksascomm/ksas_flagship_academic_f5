@@ -7635,6 +7635,8 @@ body ul.accordion > li.active {
   border-top: 3px solid #2C2C33; }
 body .tabs dd.active, body .tabs li.active {
   border-top: 3px solid #2C2C33; }
+body #mobile-nav {
+  background: #2C2C33; }
 
 body.blue #sidebar_header, body.blue #site_title, body.blue #main_nav ul, body.blue #logo_nav, body.blue .widget_title, body.blue #main_nav ul li ul li:hover, body.blue #mobile-header, body.blue .button {
   background: #005eb8; }
@@ -7656,6 +7658,8 @@ body.blue ul.accordion > li.active {
   border-top: 3px solid #005eb8; }
 body.blue .tabs dd.active, body.blue .tabs li.active {
   border-top: 3px solid #005eb8; }
+body.blue #mobile-nav {
+  background: #005eb8; }
 
 body.green #sidebar_header, body.green #site_title, body.green #main_nav ul, body.green #logo_nav, body.green .widget_title, body.green #main_nav ul li ul li:hover, body.green #mobile-header, body.green .button {
   background: #007a53; }
@@ -7677,6 +7681,8 @@ body.green ul.accordion > li.active {
   border-top: 3px solid #007a53; }
 body.green .tabs dd.active, body.green .tabs li.active {
   border-top: 3px solid #007a53; }
+body.green #mobile-nav {
+  background: #007a53; }
 
 body.red #sidebar_header, body.red #site_title, body.red #main_nav ul, body.red #logo_nav, body.red .widget_title, body.red #main_nav ul li ul li:hover, body.red #mobile-header, body.red .button {
   background: #8a2a2b; }
@@ -7698,6 +7704,8 @@ body.red ul.accordion > li.active {
   border-top: 3px solid #8a2a2b; }
 body.red .tabs dd.active, body.red .tabs li.active {
   border-top: 3px solid #8a2a2b; }
+body.red #mobile-nav {
+  background: #8a2a2b; }
 
 body.yellow #sidebar_header, body.yellow #site_title, body.yellow #main_nav ul, body.yellow #logo_nav, body.yellow .widget_title, body.yellow #main_nav ul li ul li:hover, body.yellow #mobile-header, body.yellow .button {
   background: #cba052; }
@@ -7719,6 +7727,8 @@ body.yellow ul.accordion > li.active {
   border-top: 3px solid #cba052; }
 body.yellow .tabs dd.active, body.yellow .tabs li.active {
   border-top: 3px solid #cba052; }
+body.yellow #mobile-nav {
+  background: #cba052; }
 
 body.aqua #sidebar_header, body.aqua #site_title, body.aqua #main_nav ul, body.aqua #logo_nav, body.aqua .widget_title, body.aqua #main_nav ul li ul li:hover, body.aqua #mobile-header, body.aqua .button {
   background: #00ab8e; }
@@ -7740,6 +7750,8 @@ body.aqua ul.accordion > li.active {
   border-top: 3px solid #00ab8e; }
 body.aqua .tabs dd.active, body.aqua .tabs li.active {
   border-top: 3px solid #00ab8e; }
+body.aqua #mobile-nav {
+  background: #00ab8e; }
 
 body.purple #sidebar_header, body.purple #site_title, body.purple #main_nav ul, body.purple #logo_nav, body.purple .widget_title, body.purple #main_nav ul li ul li:hover, body.purple #mobile-header, body.purple .button {
   background: #24135f; }
@@ -7761,6 +7773,8 @@ body.purple ul.accordion > li.active {
   border-top: 3px solid #24135f; }
 body.purple .tabs dd.active, body.purple .tabs li.active {
   border-top: 3px solid #24135f; }
+body.purple #mobile-nav {
+  background: #24135f; }
 
 .button .french {
   background: #005eb8; }
@@ -7924,7 +7938,27 @@ a.button {
   #mobile-nav h2 {
     font-size: 1.84375rem; }
   #caption.vertical .middle {
-    top: 60% !important; } }
+    top: 60% !important; }
+  #fields_search input[type="submit"] {
+    width: 35px; }
+  ul.breadcrumbs li {
+    margin-left: 0px; }
+  p.contact span {
+    margin-right: 2px; }
+  .wrapper li {
+    margin-left: 5px; }
+  .faculty {
+    padding-right: 10px; }
+  .headshot {
+    height: auto;
+    width: 75%; }
+  .single-people .tabs dd a {
+    width: 200px; }
+  .book-entry {
+    height: 100%; }
+    .book-entry img {
+      height: auto;
+      width: 84%; } }
 
 @media only screen and (min-width: 767px) and (max-width: 915px) {
   #caption.vertical .middle {
