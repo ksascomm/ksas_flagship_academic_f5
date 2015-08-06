@@ -8019,6 +8019,10 @@ a.button {
   #social-media {
     margin-top: 9px; } }
 
+@media only screen and (max-width: 1045px) {
+  html, body {
+    overflow-x: hidden; } }
+
 @media only screen and (min-width: 86em) {
   p, ul, ol, dl {
     font-size: 1.15rem; }

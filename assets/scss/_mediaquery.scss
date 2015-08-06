@@ -113,37 +113,37 @@ p, ul, ol, dl {
   }
   #fields_search input[type="submit"] {
     width: 35px;
-}
- ul.breadcrumbs {
-  li {
-    margin-left: 0px;
   }
- }
- p.contact {
-  span {
-    margin-right: 2px;
+   ul.breadcrumbs {
+    li {
+      margin-left: 0px;
+    }
+   }
+   p.contact {
+    span {
+      margin-right: 2px;
+    }
+   }
+   .wrapper li {
+      margin-left: 5px;
   }
- }
- .wrapper li {
-    margin-left: 5px;
-}
-.faculty {
-  padding-right: 10px;
-}
-.headshot {
-  height: auto;
-  width: 75%;
-}
-.single-people .tabs dd a {
-  width: 200px;
-}
-.book-entry {
-  height: 100%;
-  img {
+  .faculty {
+    padding-right: 10px;
+  }
+  .headshot {
     height: auto;
-    width: 84%;
+    width: 75%;
   }
-}
+  .single-people .tabs dd a {
+    width: 200px;
+  }
+  .book-entry {
+    height: 100%;
+    img {
+      height: auto;
+      width: 84%;
+    }
+  }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 915px) {
@@ -243,6 +243,13 @@ padding-bottom: 2em;
 margin-top: 9px;
 }
 }
+
+@media only screen and (max-width: 1045px) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
 
 @media only screen and (min-width: 86em) {
 p, ul, ol, dl {
