@@ -77,6 +77,16 @@ module.exports = function(grunt) {
         }
     },
 
+    //Copy Font-Awesome
+    copy: {
+        fontawesome: {
+            expand: true,
+            flatten: true,
+            src: ['assets/bower_components/fontawesome/fonts/*'],
+            dest: 'assets/fonts'
+        }
+    },
+
     //Watch Task
     watch: {
       grunt: {
@@ -101,6 +111,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['sass','browserSync','watch']);
+  grunt.registerTask('default', ['sass','browserSync','copy','watch']);
 }
