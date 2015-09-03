@@ -8753,7 +8753,7 @@ ul.nav li:before, ul.nav li ul li:before {
   margin-bottom: 7px;
   color: #2C2C33; }
 #sidebar p {
-  font-style: normal; }
+  font-size: 1em; }
 
 .sidebar_bg ul.nav li a, #sidebar li a {
   font-family: 'gentona-book', Arial, sans-serif;
@@ -8977,7 +8977,8 @@ div.orbit-wrapper div.timer, .orbit-timer {
     background: #f7f7f7;
     background: rgba(0, 0, 0, 0.05); }
   #directory p {
-    margin-top: 20px; }
+    margin-top: 20px;
+    font-size: 1em; }
 
 #directory li.person.sub-head {
   min-height: 1px;
@@ -9801,11 +9802,11 @@ a.button {
   .hide-for-print {
     display: none !important; } }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 20em) {
   .mobile-logo img {
     width: 90%; } }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 30em) {
   button {
     font-size: 14px; }
   .hide-for-mobile {
@@ -9818,13 +9819,13 @@ a.button {
   #logo_nav {
     margin-top: 0; } }
 
-@media only screen and (min-width: 481px) and (max-width: 640px) {
+@media only screen and (min-width: 30.0625em) and (max-width: 40em) {
   .mobile-logo {
     margin-top: 2em; }
     .mobile-logo img {
       width: 50%; } }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 33.75em) {
   #main_nav ul li {
     padding: 0 5px;
     width: auto; }
@@ -9842,7 +9843,13 @@ a.button {
   p, ul, ol, dl {
     font-size: 1.05rem; } }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 40em) {
+  .faculty {
+    padding-left: 1em; }
+  .single-people .tabs dd a {
+    padding: .88889rem .7rem !important; } }
+
+@media only screen and (max-width: 47.9375em) {
   #logo_nav {
     margin-top: 50px; }
   #main_nav ul {
@@ -9884,20 +9891,6 @@ a.button {
       height: auto;
       width: 84%; } }
 
-@media only screen and (min-width: 767px) and (max-width: 915px) {
-  #caption.vertical .middle {
-    top: 50% !important; } }
-
-@media only screen and (max-width: 975px) {
-  #main_nav ul li {
-    padding: 0 7px; } }
-
-@media only screen and (max-width: 40em) {
-  .faculty {
-    padding-left: 1em; }
-  .single-people .tabs dd a {
-    padding: .88889rem .7rem !important; } }
-
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   .faculty {
     padding-left: 1em; }
@@ -9906,19 +9899,33 @@ a.button {
   .mobile-logo {
     margin-top: 2em; }
     .mobile-logo img {
-      width: 35%; } }
+      width: 35%; }
+  .wrapper p {
+    padding-right: 2em;
+    padding-left: 1em; } }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (min-width: 47.9375em) and (max-width: 57.1875em) {
+  #caption.vertical .middle {
+    top: 50% !important; }
+  #sidebar p {
+    padding-right: 2em;
+    padding-left: 1em; } }
+
+@media only screen and (max-width: 60.9375em) {
+  #main_nav ul li {
+    padding: 0 7px; } }
+
+@media only screen and (max-width: 63.9375em) {
   #desktop-nav {
     display: none; } }
 
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 63.9375em) {
   #mobile-nav {
     display: none; } }
 
 @media only screen and (min-width: 64.063em) {
   p, ul, ol, dl {
-    font-size: 1.125rem; } }
+    font-size: 1.1rem; } }
 
 @media only screen and (max-width: 64em) {
   #caption.vertical .middle {
@@ -9943,7 +9950,7 @@ a.button {
   #social-media {
     margin-top: 9px; } }
 
-@media only screen and (max-width: 1045px) {
+@media only screen and (max-width: 65.3125em) {
   html, body {
     overflow-x: hidden; } }
 
@@ -9963,9 +9970,9 @@ a.button {
   h5 {
     font-size: 1.125rem; }
   h6 {
-    font-size: 1rem; } }
+    font-size: 1.05rem; } }
 
 @media only screen and (min-width: 108em) {
   p, ul, ol, dl {
-    font-size: 1.175rem; } }
+    font-size: 1.2rem; } }
 /*# sourceMappingURL=app.css.map */
