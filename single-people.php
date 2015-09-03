@@ -30,7 +30,7 @@
 						<?php the_post_thumbnail('full', array('class' => 'headshot')); ?>
 					<?php } ?>			    
 					<h4><?php the_title() ?></h4>
-			    <h6><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h6>
+			    <h5><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h5>
 			
 			    <p class="listing">
 			    	<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?>
