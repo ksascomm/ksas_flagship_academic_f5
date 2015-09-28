@@ -9974,5 +9974,7 @@ a.button {
 
 @media only screen and (min-width: 108em) {
   p, ul, ol, dl {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+  #main_nav ul li a {
+    font-size: 1.15rem; } }
 /*# sourceMappingURL=app.css.map */
