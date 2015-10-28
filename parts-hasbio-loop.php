@@ -17,7 +17,7 @@
 					</h5>
 					<p class="contact no-margin">
 						<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>
-							<span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span>
+							<span class="icon-phone"><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span>
 						<?php endif; ?>
 						<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?>
 							<span class="icon-printer"><?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?></span>
