@@ -13,9 +13,9 @@ Template Name: ISIS Courses
 		$department = str_replace(' ', '%20', $department_unclean);
 		$department = str_replace('&', '%26', $department);
 		$fall = 'fall%202015';
-		$spring = 'spring%202015';
-		$intersession = 'intersession%202015';
-		$summer = 'summer%202015';
+		$spring = 'spring%202016';
+		$intersession = 'intersession%202016';
+		//$summer = 'summer%202015';
 		$open = 'open';
 		$approval = 'approval%20required';
 		$closed = 'closed';
@@ -28,7 +28,7 @@ Template Name: ISIS Courses
 		    CURLOPT_TIMEOUT         =>  60,
 		    CURLOPT_CONNECTTIMEOUT  =>  60,
 		));
-		$cache_dir = TEMPLATEPATH . "/assets/functions/cache/";
+		//$cache_dir = TEMPLATEPATH . "/assets/functions/cache/";
 		$course_curl->cache($cache_dir, 2592000);
  
 	//Create API Url calls
@@ -51,10 +51,11 @@ Template Name: ISIS Courses
 			$section_number = $result->body[0]->{'SectionName'};
 			$instructor = $result->body[0]->{'InstructorsFullName'};
 			$description = $result->body[0]->{'SectionDetails'}[0]->{'Description'};
+			$postag = $result->body[0]->{'SectionDetails'}[0]->{'PosTags'}->{'Tags'};
 		    // show everything
 		    echo '<dd class="accordion-navigation ' . $term . '"><a class="courses" href="#course' . $clean_course_number . $section_number . '"><span class="course-number">' . $course_number . '</span> - ' . $title . '</a>';
 		    echo '<div id="course' . $clean_course_number . $section_number . '" class="content"><p>' . $description . '</p>';
-		    echo '<p><b>Credits: </b>' . $credits . '<br><b>Instructor: </b>' . $instructor . '<br><b>Term: </b>' . $term . '<br><b>Meetings: </b>' . $meetings . '<br><b>Status: </b>' . $status . '</p>'; 
+		    echo '<p><b>Credits: </b>' . $credits . '<br><b>Instructor: </b>' . $instructor . '<br><b>Term: </b>' . $term . '<br><b>Meetings: </b>' . $meetings . '<br><b>Status: </b>' . $status . '<br><b>PosTags: </b>' . $postag . '</p>'; 
 		    echo '</div></dd>';
 		 
 		}
@@ -89,7 +90,7 @@ Template Name: ISIS Courses
 			    CURLOPT_TIMEOUT         =>  60,
 			    CURLOPT_CONNECTTIMEOUT  =>  60,
 			));
-			$curl->cache($cache_dir, 2592000);
+			//$curl->cache($cache_dir, 2592000);
 			$curl->get($course_data, 'display_courses');
 			
 		}
@@ -110,13 +111,13 @@ Template Name: ISIS Courses
 							<div class="row filter option-set" data-filter-group="term">
 									<div class="button radio"><a href="#" data-filter="" class="selected">View All</a></div>
 									<div class="button radio"><a href="#" data-filter=".Fall">Fall 2015 Courses</a></div>
-									<div class="button radio"><a href="#" data-filter=".Summer">Summer 2015 Courses</a></div>
-									<div class="button radio"><a href="#" data-filter=".Spring">Spring 2015 Courses</a></div>
+									<div class="button radio"><a href="#" data-filter=".Intersession">Intersession 2016 Courses</a></div>
+									<div class="button radio"><a href="#" data-filter=".Spring">Spring 2016 Courses</a></div>
 									<br><h5 class="inline"><a href="#" class="acc_expandall">[Expand All]</a></h5>
 							</div>
 					<div class="row">		
-						<input type="submit" class="icon-search" placeholder="Search by course number, title, and keyword" value="&#xe004;" />
-						<input type="text" name="search" id="id_search"  /> 
+						<input type="submit" class="icon-search" value="&#xe004;" />
+						<input type="text" name="search" id="id_search" placeholder="Search by course number, title, and keyword" /> 
 					</div>
 				</fieldset>
 			</form>	
