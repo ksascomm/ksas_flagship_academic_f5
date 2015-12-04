@@ -33,10 +33,15 @@ if ( false === ( $job_market_query = get_transient( 'job_market_query' ) ) ) {
 					<div class="row">
 						<div class="small-11 columns">
 							<div class="row">
-							<?php if ( has_post_thumbnail()) { ?> 
-								<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small-only')); ?>
-							<?php } ?>			    
-									<h4 class="no-margin"><?php the_title(); ?></h4>
+									<?php if ( has_post_thumbnail()) { ?> 
+										<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small-only')); ?>
+									<?php } ?>			    
+									<?php if ( get_post_meta($post->ID, 'ecpt_bio', true) ) { ?> 
+										<a href="<?php the_permalink(); ?>"><h4 class="no-margin"><?php the_title(); ?></h4>
+									<?php } else { ?>
+										<h4 class="no-margin"><?php the_title(); ?></h4>
+									<?php } ?>
+									<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?><h5><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h5><?php endif; ?>
 									<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?><h6><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h6><?php endif; ?>
 									<p class="contact no-margin">
 										<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>
