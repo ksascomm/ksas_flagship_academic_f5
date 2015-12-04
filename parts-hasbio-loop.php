@@ -4,13 +4,13 @@
 			<?php if ( has_post_thumbnail()) { ?> 
 				<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small')); ?>
 			<?php } ?>			    
-					<h4 class="no-margin"><?php the_title(); ?></h4></a>
-					<h5 class="no-margin">
+					<h4 class="no-margin"><?php the_title(); ?></h4>
+			</a>
+					<h5 class="subheader no-margin">
 					<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
 						<?php echo get_post_meta($post->ID, 'ecpt_position', true); ?>
 					<?php endif; ?>
-					</h5>
-					<h5 class="subheader no-margin">
+						<br>
 					<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?>
 						<?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?>
 					<?php endif; ?>
