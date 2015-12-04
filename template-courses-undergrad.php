@@ -71,7 +71,7 @@ Template Name: ISIS Courses
 					$parent = the_parent_title();
 					
 					//remove as many multiple-section courses as we can so page isn't impossible to read
-					if(!in_array($section, array('02','03','04','05','06','07','08','09','10')) && (
+					if(!in_array($section, array('03','04','05','06','07','08','09','10')) && (
 								strpos($level, $parent) !== false 
 							||  ($level === "") !== false
 							||  strpos($level, 'Independent Academic Work') !== false
