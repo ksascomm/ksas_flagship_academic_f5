@@ -35,7 +35,7 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	    var $j = jQuery.noConflict();
 	    $j(window).load(function() {
 	        var filterFromQuerystring = getParameterByName('filter');
-	        $j('.filter a[data-filter=".' + filterFromQuerystring  + '"]').click();
+	        $j('a[data-filter=".' + filterFromQuerystring  + '"]').click();
 	    });
 	</script>
 
