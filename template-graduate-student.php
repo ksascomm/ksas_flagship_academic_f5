@@ -21,7 +21,7 @@ Template Name: Graduate Student Listing
        // It wasn't there, so regenerate the data and save the transient
 	$graduate_student_query = new WP_Query(array(
 		'post_type' => 'people',
-		'role' => 'graduate-student',
+		'role' => array('graduate-student', 'ma-student'),
 		'meta_key' => 'ecpt_people_alpha',
 		'orderby' => 'meta_value',
 		'order' => 'ASC',
