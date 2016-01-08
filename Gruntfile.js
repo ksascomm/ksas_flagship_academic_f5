@@ -83,7 +83,7 @@ module.exports = function(grunt) {
         fontawesome: {
             expand: true,
             flatten: true,
-            src: ['assets/bower_components/fontawesome/fonts/*'],
+            src: ['assets/bower_components/font-awesome/fonts/*'],
             dest: 'assets/fonts'
         }
     },
@@ -113,6 +113,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('build', ['sass', 'copy']);
   grunt.registerTask('default', ['sass','browserSync','copy','watch']);
 }
