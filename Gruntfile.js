@@ -73,7 +73,7 @@ module.exports = function(grunt) {
             },
             options: {
                 watchTask: true,
-                proxy: "bicycle.dev"
+                proxy: "bicycle.dev/africana"
             }
         }
     },
