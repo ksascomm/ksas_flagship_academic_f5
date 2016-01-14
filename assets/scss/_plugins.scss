@@ -163,7 +163,8 @@ div.orbit-wrapper div.timer, .orbit-timer {
        .middle {
           position: absolute;           
           top: 50%;                        
-          transform: translate(0, -50%)   
+          transform: translate(0, -50%);
+          margin-right: 10px;
       }
   }
   &.horizontal {
@@ -190,11 +191,7 @@ div.orbit-wrapper div.timer, .orbit-timer {
 }
 
 .orbit-wrapper {
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
   border-top-right-radius: 10px;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
 }
 

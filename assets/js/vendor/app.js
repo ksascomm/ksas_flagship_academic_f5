@@ -66,9 +66,9 @@ function getParameterByName(name)
     $.fn.meanmenu = function (options) {
         var defaults = {
             meanMenuTarget: jQuery(this), // Target the current HTML markup you wish to replace
-            meanMenuClose: "<h3><i class='fa fa-bars'></i> Collapse Menu</h3>", // single character you want to represent the close menu button
+            meanMenuClose: "<h2><i class='fa fa-bars'></i> Collapse Menu</h2>", // single character you want to represent the close menu button
             meanMenuCloseSize: "24px", // set font size of close button
-            meanMenuOpen: "<h3><i class='fa fa-bars'></i> Menu</h3>", // text/markup you want when menu is closed
+            meanMenuOpen: "<h2><i class='fa fa-bars'></i> Menu</h2>", // text/markup you want when menu is closed
             meanRevealPosition: "left", // left right or center positions
             meanRevealPositionDistance: "15px", // Tweak the position of the menu
             meanRevealColour: "", // override CSS colours for the reveal background

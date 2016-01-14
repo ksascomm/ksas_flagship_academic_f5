@@ -55,8 +55,9 @@
     width: 100% !important;
   }
   #mobile-nav {
-        h2 {
+    h1 {
       font-size: 1.6875rem;
+      text-align: center;
     }
   }
   .mobile-logo {
@@ -108,8 +109,9 @@
   padding-right: 0em;
   }
   #mobile-nav {
-        h2 {
+    h1 {
       font-size: 1.84375rem;
+      text-align: center;
     }
   }
    #caption {
@@ -231,10 +233,6 @@ p, ul, ol, dl {
     }
   }
   #search-bar input[type="submit"], #field_search input[type="submit"] {
-  -webkit-border-top-left-radius: 0px;
-  -webkit-border-bottom-left-radius: 0px;
-  -moz-border-radius-topleft: 0px;
-  -moz-border-radius-bottomleft: 0px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   }
@@ -243,8 +241,9 @@ p, ul, ol, dl {
   }
 
   #mobile-nav {
-      h2 {
-        font-size: 2rem;
+    h1 {
+      font-size: 2rem;
+      text-align: center;
     }
   }
   .slideshow-wrapper {

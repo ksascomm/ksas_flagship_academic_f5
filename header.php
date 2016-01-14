@@ -39,7 +39,7 @@
 		  		</div>
 		  		<div class="row">
 		  			<div class="small-12 columns">	
-		  				<h2 align="center"><a class="white" href="<?php echo site_url(); ?>"> <?php echo get_bloginfo( 'title' ); ?></a></h2>
+		  				<h1><a class="white" href="<?php echo site_url(); ?>"><?php echo get_bloginfo( 'title' ); ?></a></h1>
 		  			</div>
 		  		</div>
 	  		</div>
