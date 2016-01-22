@@ -59,7 +59,7 @@ li.logo {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  color: #ccc;
+  color: $grey;
   text-transform: uppercase;
   font-family: $font-subhead;
   font-weight: 400;
@@ -122,7 +122,7 @@ li.logo {
     border: none;
     float: left;
     padding: 0;
-    color: #ccc;
+    color: $grey;
   }
 }
 

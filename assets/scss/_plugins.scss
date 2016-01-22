@@ -468,7 +468,7 @@ div.field {
 }
 
 #fields_search fieldset {
-  background: #ccc;
+  background: $grey;
   background: rgba(0, 0, 0, 0.15);
   padding-bottom: 0px;
   border: none;
@@ -501,7 +501,7 @@ div.field {
     float: left;
     width: 83%;
     background: #666;
-    color: #ccc;
+    color: $grey;
     font-family: $font-stack;
    font-weight: 300;
   font-style: italic;
@@ -523,7 +523,7 @@ div.field {
     border: none;
     float: left;
     padding: 0;
-    color: #ccc;
+    color: $grey;
   }
 }
 
