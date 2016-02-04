@@ -22,20 +22,20 @@ p {
   line-height: 1.5;
 }
 
-h1, h2, h3 {
+h1 {
 color: $blue;
 }
 
-h4, h5, h6, .semibold {
+h1.page-title {
+  font-family: $font-header;
+}
+
+h2, h3, h4, h5, h6, .semibold {
   font-family: $font-subhead;
   color: $blue;
   font-weight: 400;
   font-style: normal;
 }
-
-h1 { font-size: 2.35rem; }
-h2 { font-size: 2rem; }
-
 
 //strong, b, .bold
 %extend_1 {
@@ -114,6 +114,12 @@ h6, time {
   margin-bottom: 3px;
 }
 
+.uppercase {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+}
+
 .small {
   font-size: 40%;
 }
@@ -129,6 +135,28 @@ ol {
   padding: 30px;
   margin-top: 87px;
   margin-bottom: 30px;
+  a {
+    border-bottom: .125em dotted;
+    border-bottom-color: rgba(0,0,0,.2);
+    &:hover, &:active {
+      color: $black;
+      border-bottom-style: solid;
+    }
+  }
+}
+
+#sidebar {
+    p { 
+      a {
+      border-bottom: .125em dotted;
+      border-bottom-color: rgba(0,0,0,.1);
+        &:hover, &:active {
+          color: $black;
+          border-bottom-style: solid;
+        }
+      }
+
+    }
 }
 
 .content {
@@ -183,11 +211,8 @@ ol {
     text-transform: capitalize;
     a {
       color: #FFF;
+      border: none;
       &.selected, &:hover {
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
         border-radius: 5px;
         background-color: none;
         color: #FFF;
@@ -483,6 +508,11 @@ body {
    #mobile-nav {
     background: $black;
   }
+  a, #sidebar a {
+    &:hover {
+      border-bottom-color: $black;
+    }
+  }
 }
 
 body.blue {
@@ -524,6 +554,11 @@ body.blue {
   }
    #mobile-nav {
     background: $blue;
+  }
+  a, #sidebar a {
+    &:hover {
+      border-bottom-color: $blue;
+    }
   }
 }
 
@@ -568,6 +603,11 @@ body.green {
   #mobile-nav {
     background: $green;
   }
+  a, #sidebar a {
+    &:hover {
+      border-bottom-color: $green;
+    }
+  }
 }
 
 body.red {
@@ -609,6 +649,11 @@ body.red {
   }
    #mobile-nav {
     background: $red;
+  }
+  a, #sidebar a {
+    &:hover {
+      border-bottom-color: $red;
+    }
   }
 }
 
@@ -652,6 +697,11 @@ body.yellow {
    #mobile-nav {
     background: $yellow;
   }
+  a, #sidebar a {
+    &:hover {
+      border-bottom-color: $yellow;
+    }
+  }
 }
 
 body.aqua {
@@ -693,6 +743,11 @@ body.aqua {
   }
    #mobile-nav {
     background: $aqua;
+  }
+  a, #sidebar a {
+    &:hover {
+      border-bottom-color: $aqua;
+    }
   }
 }
 
@@ -736,8 +791,12 @@ body.purple {
    #mobile-nav {
     background: $purple;
   }
+  a, #sidebar a {
+    &:hover {
+      border-bottom-color: $purple;
+    }
+  }
 }
-
 
 .button {
 & .french {
@@ -758,4 +817,29 @@ body.purple {
 &.spanish {
   background: $purple;
 }
+}
+
+.content {
+  h1 { font-size: 2.25rem; }
+}
+
+.news, .archive {
+h1 {font-size: 2.125rem;}
+h2 {font-size: 1.25rem; }
+
+h3 {font-size: 1.1875rem; }
+
+h4 {font-size: 1.125rem; }
+
+h5 { font-size: 1.0625rem; }
+
+h6 {font-size: 1rem; }
+}
+
+.news-item {
+  h1 {font-size: 1.25rem;
+    font-family: $font-subhead;
+  }
+  h2 {font-size: 1.1rem;
+    margin-bottom: 3px;}
 }

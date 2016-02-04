@@ -25,7 +25,7 @@
 			</div>
 			<div class="row">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h3><?php the_title(); ?></h3>
+				<h1><?php the_title(); ?></h1>
 				<?php if ( has_post_thumbnail()) {  the_post_thumbnail('thumbnail', array('class'	=> "floatleft circle"));  } ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_class', true) ) : ?>
 					<p><b>Class of: <?php echo get_post_meta($post->ID, 'ecpt_class', true); ?></b></p>

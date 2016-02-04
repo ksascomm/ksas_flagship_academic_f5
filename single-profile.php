@@ -4,7 +4,7 @@
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<section class="content news">
-				<h2><?php the_title(); ?></h2>
+				<h1><?php the_title(); ?></h1>
 				<p class="lead"><?php if( get_post_meta($post->ID, 'ecpt_pull_quote', true)) { echo get_post_meta($post->ID, 'ecpt_pull_quote', true); } ?></p>
 				<?php if ( has_post_thumbnail()) { ?> 
 					<?php the_post_thumbnail('full', array('class'	=> "floatleft")); ?>

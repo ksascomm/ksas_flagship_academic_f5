@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="row sidebar_bg radius10" id="page">
 	<div class="small-8 columns wrapper radius-left offset-topgutter">	
-		<section class="content">
+		<main class="content" role="main">
 		<?php if(is_tax('profiletype', 'spotlight')){ ?>
 		<h2>Spotlights</h2>
 		<?php } elseif(is_tax('profiletype', 'undergraduate-profile')){ ?>
@@ -24,7 +24,7 @@
 		<div class="row">
 			<?php flagship_pagination(); ?>		
 		</div>	
-		</section>
+		</main>
 	</div>	<!-- End main content (left) section -->
 <?php locate_template('parts-sidebar-nav.php', true, false); ?>
 </div> <!-- End #landing -->

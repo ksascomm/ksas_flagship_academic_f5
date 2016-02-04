@@ -231,6 +231,7 @@ button:hover, .button:hover, .select-buttons li:hover {
 
 button a {
   color: #fff;
+  border-bottom: none !important;
   &:hover, &:visited {
     color: #fff;
   }
@@ -238,6 +239,7 @@ button a {
 
 .button a {
   color: #fff;
+  border-bottom: none !important;
   &:hover, &:visited {
     color: #fff;
   }

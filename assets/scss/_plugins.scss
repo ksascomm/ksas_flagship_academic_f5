@@ -179,13 +179,21 @@ div.orbit-wrapper div.timer, .orbit-timer {
   summary {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.9);
-  }
-  h6 {
-    color: #dbb003 !important;
-    font-size: 100%;
+    h1 {
+      font-size: 1.6875rem;
+    }  
+    .yellow {
+      color: #dbb003 !important;
+    }
+    p {
+      vertical-align: top;
+      line-height: 1.4em;
+    }
+    .icon-arrow-right-2 {
+      padding-left: 6px;
+    }
   }
 }
-
 .orbit div.orbit-slide {
   left: 0 !important;
 }
@@ -193,16 +201,6 @@ div.orbit-wrapper div.timer, .orbit-timer {
 .orbit-wrapper {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-}
-
-.slide {
-  h5 {
-    vertical-align: top;
-    line-height: 1.4em;
-  }
-  .icon-arrow-right-2 {
-    padding-left: 6px;
-  }
 }
 
 .orbit {
@@ -267,6 +265,8 @@ li.person {
   }
 }
 
+
+/*microsoft academic*/
 #LibraInsideDiv {
   .statistic, .author, .title h1 {
     display: none;
@@ -274,31 +274,47 @@ li.person {
 }
 
 .libra {
+  
   .list-paper a {
-    font-size: 14px;
-    color: $black;
-    font-family: $font-header; font-weight: 400; font-style: normal;
+    font-size: 1.1rem;
+    color: $blue;
+    font-family: $font-stack; 
+    font-weight: 400; 
+    font-style: normal;
     &:link {
-      font-size: 14px;
+      font-size: 1.1rem;
+      color: $blue;
+      font-family: $font-stack; 
+      font-weight: 400; 
+      font-style: normal;
+    }
+    &:hover {
       color: $black;
-      font-family: $font-header; font-weight: 400; font-style: normal;
+      text-decoration: none;
     }
   }
   .conference {
-    font-size: 12px;
+    font-size: 1rem;
     font-family: $font-stack;
     font-weight: 300;
     font-style: normal;
   }
   .list-conference a {
-    &:link, &:visited {
-      color: #3478b6;
+    &:link {
+      color: $blue !important;
+    }
+    &:hover {
+      color: $black!important;
+      text-decoration: none;
     }
   }
   .logo {
-    position: absolute;
-    bottom: -40px;
+    position: relative;
+    bottom: 0;
     right: 0px;
+    a {
+      border-bottom: none;
+    }
   }
 }
 
@@ -433,6 +449,16 @@ ul.nav {
   font-size: 48px;
 }
 
+.bio {
+ h1 {
+  font-size: 1.4375rem;
+  font-family: $font-subhead;
+}
+ h2 {
+  font-size: 1.125rem;
+ }
+}
+
 
 //Fields of Study ------------------------------------
 
@@ -542,6 +568,7 @@ button {
     a {
       color: #333;
       padding: 5px;
+      border: none;
       &.selected, &:hover {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -567,4 +594,13 @@ border-radius: 2px;
 -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+//Bulletins ------------------------------------
+
+.bulletin {
+  margin-left: 10px;
+  h1 { 
+    font-family: $font-subhead;
+    font-size: 1.25rem;}
 }

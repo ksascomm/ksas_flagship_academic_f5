@@ -4,8 +4,8 @@
 ?>
 
 <div class="row wrapper radius10">
-	<section class="large-12 columns no-gutter" role="main-content">
-			<h2>Whoops...</h2>
+	<main class="large-12 columns no-gutter" role="main-content">
+			<h1 class="page-title">Whoops...</h1>
 			<p>This page does not exist.  Try searching</p>
        <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
                     <fieldset>
@@ -17,7 +17,7 @@
                     </fieldset>
        </form>        
 
-	</section>
+	</main>
 </div>
 
 <?php get_footer(); ?>

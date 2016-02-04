@@ -28,9 +28,9 @@ Template Name: People Directory
 	$filter_classes = implode(' ', $filter_slugs);
 	?>
 <div class="row wrapper radius10">
-	<section class="row">
+	<section class="content row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h2><?php the_title();?></h2>
+			<h1 class="page-title"><?php the_title();?></h1>
 		<?php endwhile; endif; ?>
 		<?php $theme_option = flagship_sub_get_global_options();
 				if ( $theme_option['flagship_sub_directory_search']  == '1' ) { get_template_part('parts', 'directory-search'); } ?>
@@ -70,7 +70,7 @@ Template Name: People Directory
 	</section>
 
 	<div class="row">
-		<div class="large-12 columns">
+		<div class="content large-12 columns">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();  the_content(); endwhile; endif; ?>
 		</div>
 	</div>	

@@ -1,9 +1,11 @@
 <summary class="small-4 small-offset-8 columns black_bg vertical radius-topright" id="caption">
 		<div class="middle">
-			<h3 class="white"><?php the_title(); ?></h3>
-			<h5 class="white"><?php echo get_the_content(); ?></h5>
+			<h1 class="white"><?php the_title(); ?></h1>
+			<?php $slidercontent = get_the_content(); if($slidercontent != '') { ?>
+				<p class="white"><?php echo get_the_content(); ?></p>
+			<?php } ?>
 		   	<?php if ( get_post_meta($post->ID, 'ecpt_button', true) ) : ?>				
-				<h6 class="yellow">Find Out More <span class="icon-arrow-right-2"></span></h6>
+				<p class="yellow">Find Out More <span class="icon-arrow-right-2"></span></p>
 			<?php endif;?>
 		</div>
 </summary>

@@ -7,8 +7,8 @@ Template Name: Faculty Books
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="small-10 columns">	
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
-		<section class="content">
-			<h2><?php the_title(); ?></h2>
+		<section class="content news">
+			<h1 class="page-title"><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 			<?php 
 			$paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
@@ -31,12 +31,12 @@ Template Name: Faculty Books
 				<?php if ( get_post_meta($post->ID, 'ecpt_pub_link', true) ) :?>
 					<a href="http://<?php echo get_post_meta($post->ID, 'ecpt_pub_link', true); ?>">
 				<?php endif; ?>
-						<h5><?php the_title();?></h5>
+						<h2><?php the_title();?></h2>
 				<?php if ( get_post_meta($post->ID, 'ecpt_pub_link', true) ) :?></a><?php endif; ?>
-				<h6>
+				<h3>
 					<?php if ( get_post_meta($post->ID, 'ecpt_pub_date', true) ) : echo get_post_meta($post->ID, 'ecpt_pub_date', true);  endif; ?>
 					<?php if ( get_post_meta($post->ID, 'ecpt_publisher', true) ) :?>, <?php echo get_post_meta($post->ID, 'ecpt_publisher', true);  endif; ?>
-				</h6>
+				</h3>
 				<p><b><a href="<?php echo get_permalink($faculty_post_id); ?>"><?php echo get_the_title($faculty_post_id); ?> 
 				<?php if ( get_post_meta($post->ID, 'ecpt_pub_role', true)) :?>, <?php echo get_post_meta($post->ID, 'ecpt_pub_role', true); endif; ?>
 				</a></b>

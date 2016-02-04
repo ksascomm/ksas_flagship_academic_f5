@@ -19,9 +19,9 @@ if ( false === ( $job_market_query = get_transient( 'job_market_query' ) ) ) {
 ?>
 <div class="row wrapper radius10">
 <div class="small-12 columns">		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
-	<section class="row">
+	<section class="content row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h2><?php the_title();?></h2>
+			<h1 class="page-title"><?php the_title();?></h1>
 		<?php endwhile; endif; ?>	
 	</section>
 	<section class="row" id="fields_container">

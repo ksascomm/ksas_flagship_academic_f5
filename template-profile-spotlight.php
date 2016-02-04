@@ -11,7 +11,7 @@ Template Name: Profiles - Spotlights
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
 		<section class="content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h2><?php the_title(); ?></h2>
+				<h1 class="page-title"><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 			<?php endwhile; endif; ?>
 			
@@ -28,7 +28,7 @@ Template Name: Profiles - Spotlights
 			?>
 		<?php if($ksas_profile_spotlight_query->have_posts()) : while ($ksas_profile_spotlight_query->have_posts()) : $ksas_profile_spotlight_query->the_post(); ?>
 					<a href="<?php the_permalink(); ?>">	
-				<h5><?php the_title();?></h5>
+				<h2><?php the_title();?></h2>
 					<?php if ( has_post_thumbnail()) { ?> 
 						<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
 					<?php } ?>

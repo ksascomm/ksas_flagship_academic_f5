@@ -8,9 +8,9 @@ Template Name: Graduate Student Listing
 <div class="row wrapper radius10">
 <div class="small-12 columns">		
 <?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
-	<section class="row">
+	<section class="content row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h2><?php the_title();?></h2>
+			<h1 class="page-title"><?php the_title();?></h1>
 		<?php endwhile; endif; ?>	
 	</section>
 	<section class="row" id="fields_container">
@@ -42,19 +42,19 @@ Template Name: Graduate Student Listing
 									<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?><h6><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h6><?php endif; ?>
 									<p class="contact no-margin">
 										<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>
-											<span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span>
+											<span class="icon-mobile"> <?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span>
 										<?php endif; ?>
 										<?php if ( get_post_meta($post->ID, 'ecpt_fax', true) ) : ?>
-											<span class="icon-printer"><?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?></span>
+											<span class="icon-printer"> <?php echo get_post_meta($post->ID, 'ecpt_fax', true); ?></span>
 										<?php endif; ?>
 										<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : ?>
-											<span class="icon-mail"><a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_email', true); ?>"><?php echo get_post_meta($post->ID, 'ecpt_email', true); ?></a></span>
+											<span class="icon-mail"> <a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_email', true); ?>"><?php echo get_post_meta($post->ID, 'ecpt_email', true); ?></a></span>
 										<?php endif; ?>
 										<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?>
-											<span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span>
+											<span class="icon-location"> <?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span>
 										<?php endif; ?>
 										<?php if ( get_post_meta($post->ID, 'ecpt_website', true) ) : ?>
-												<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" target="_blank"><span class="icon-globe">Personal Website</a></span>
+												<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" target="_blank"><span class="icon-globe"> Personal Website</a></span>
 										<?php endif; ?>
 									</p>
 						<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?><p><b>Research Interests:&nbsp;</b><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); endif; ?>

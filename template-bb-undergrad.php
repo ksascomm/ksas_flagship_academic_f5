@@ -8,9 +8,9 @@ Template Name: Bulletin Board - Undergrad
 <div class="row sidebar_bg radius10" id="page">
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">	
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
-		<section class="content">
+		<section class="content news">
  			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> <!--Start the loop -->
-				<h2><?php the_title(); ?></h2>
+				<h1 class="page-title"><?php the_title(); ?></h1>
 				<?php the_content() ?>
 			<?php endwhile; endif ?>
 			
@@ -29,14 +29,14 @@ Template Name: Bulletin Board - Undergrad
 					        $bulletins = new WP_Query( "taxonomy=$taxonomy&term=$term->slug&posts_per_page=2" );
 
 					        if( $bulletins->have_posts() ): ?>
-							<div class="small-12 columns">	
-					        	<h3>Latest <?php echo $term->name ;?></h3> 
-							</div>     
+							
+					        <h2>Latest <?php echo $term->name ;?></h2> 
+					   
 					        <?php while( $bulletins->have_posts() ) : $bulletins->the_post(); 
 					         //Do you general query loop here  ?>				   
 							<article class="bulletin small-12 columns">
 								<a href="<?php the_permalink(); ?>">	
-										<h4><?php the_title();?></h4>
+										<h1 class="page-title"><?php the_title();?></h1>
 											<?php if ( has_post_thumbnail()) { ?> 
 												<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
 											<?php } ?>
@@ -46,7 +46,7 @@ Template Name: Bulletin Board - Undergrad
 		
 					        <?php endwhile; ?>
 					        <div class="small-12 columns">
-								<h5 class="floatright"><a href="<?php echo home_url('/bbtype/'); echo $term->slug?>">View all <?php echo $term->name ;?></a></h5>
+								<h3 class="floatright"><a href="<?php echo home_url('/bbtype/'); echo $term->slug?>">View all <?php echo $term->name ;?></a></h3>
 							</div>	
 							<hr>
 

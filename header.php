@@ -81,7 +81,7 @@
 					</div>	
 				</div>
 			</div>
-			<div class="row hide-for-print">
+			<div class="row hide-for-print" role="navigation">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 
 					'menu_class' => '', 

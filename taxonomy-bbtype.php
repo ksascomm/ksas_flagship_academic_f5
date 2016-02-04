@@ -2,7 +2,7 @@
 <div class="row sidebar_bg radius10" id="page">
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">	
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>		
-		<section class="content">
+		<main class="content" role="main">
 		<?php if(is_tax('bbtype', 'jobs-bb')){ ?>
 			<h2>Jobs Opportunities</h2>
 		<?php } elseif(is_tax('bbtype', 'internships-bb')){ ?>
@@ -29,7 +29,7 @@
 		<div class="row">
 			<?php flagship_pagination($wp_query->max_num_pages); ?>		
 		</div>	
-		</section>
+		</main>
 	</div>	<!-- End main content (left) section -->
 <?php locate_template('parts-sidebar.php', true, false); ?>
 </div> <!-- End #landing -->
