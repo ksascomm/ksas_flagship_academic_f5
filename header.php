@@ -43,33 +43,13 @@
 		  			</div>
 		  		</div>
 	  		</div>
+	  		<div class="row hide-for-print">
+				<?php get_template_part( 'parts', 'search-mobile' ); ?>
+			</div>
 		</div>
 		<div id="desktop-nav">
 			<div class="row hide-for-print">
-				<div id="search-bar" class="small-12 medium-5 medium-offset-7 columns">
-					<div class="row">
-						<div class="small-6 columns">
-						<?php $theme_option = flagship_sub_get_global_options(); 
-								$collection_name = $theme_option['flagship_sub_search_collection'];
-						?>
-
-						<form method="GET" action="<?php echo site_url('/search'); ?>">
-							<input type="submit" class="icon-search" value="&#xe004;" />
-							<input type="text" name="q" placeholder="Search this site" />
-							<input type="hidden" name="site" value="<?php echo $collection_name; ?>" />
-						</form>
-						</div>
-							<?php wp_nav_menu( array( 
-								'theme_location' => 'search_bar', 
-								'menu_class' => '', 
-								'fallback_cb' => 'foundation_page_menu', 
-								'container' => 'div',
-								'container_id' => 'search_links', 
-								'container_class' => 'small-6 columns links inline',
-								'depth' => 1,
-								'items_wrap' => '%3$s', )); ?> 
-					</div>	
-				</div>	<!-- End #search-bar	 -->
+				<?php get_template_part( 'parts', 'search-bar' ); ?>
 			</div>
 			<div class="row">
 				<div class="small-12 columns" id="logo_nav">
@@ -92,4 +72,4 @@
 					'walker'=> new page_id_classes )); ?> 
 			</div>
 		</div>
-		</header>
+	</header>

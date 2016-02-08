@@ -54,7 +54,7 @@ li.logo {
   }
 }
 
-#search-bar {
+.search-bar, #search-bar {
   background: #333;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -70,7 +70,7 @@ li.logo {
     padding: 0;
   }
   a {
-    color: #FFF;
+    color: #FFF !important;
     font-size: 9px;
     letter-spacing: 1px;
   }
@@ -90,16 +90,12 @@ li.logo {
   }
 }
 
-#search-bar input {
+.search-bar input, #search-bar input {
   &[type="text"] {
     height: 31px;
     margin-bottom: 0px;
     background: rgb(255, 255, 255);
     background: rgba(255, 255, 255, 0.75);
-    -webkit-border-top-right-radius: 0px;
-    -webkit-border-bottom-right-radius: 0px;
-    -moz-border-radius-topright: 0px;
-    -moz-border-radius-bottomright: 0px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     display: inline;
@@ -112,10 +108,6 @@ li.logo {
     height: 31px;
     width: 30px;
     font-family: 'flagship-icon';
-    -webkit-border-top-left-radius: 7px;
-    -webkit-border-bottom-left-radius: 7px;
-    -moz-border-radius-topleft: 7px;
-    -moz-border-radius-bottomleft: 7px;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     font-size: 16px;
@@ -123,6 +115,26 @@ li.logo {
     float: left;
     padding: 0;
     color: $grey;
+  }
+}
+
+.search-bar {
+  button {
+    background: #666;
+    height: 31px;
+    width: 30px;
+    border-radius: inherit;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border: none;
+    float: left;
+    padding: 0;
+    color: $grey;
+    margin-right: inherit;
+    margin-bottom: inherit;
+  }
+  label {
+    display: none;
   }
 }
 

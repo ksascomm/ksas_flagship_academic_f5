@@ -4,9 +4,10 @@
 		<section class="content">
 			<div class="row">
 				<div class="small-12 medium-5 medium-offset-7 columns">
-				<h6>Jump to Faculty Member</h6>
-				<form name="jump">
-					<select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+					<label for="jump">
+						<h5>Jump to Faculty Member</h5>
+					</label>
+					<select name="jump" id="jump" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 							<option>---<?php the_title(); ?></option> 
 						<?php endwhile; endif; ?>
@@ -21,7 +22,6 @@
 							<option value="<?php the_permalink() ?>"><?php the_title(); ?></option>
 						<?php endwhile; ?>
 					</select>
-				</form>
 				</div>
 			</div>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
