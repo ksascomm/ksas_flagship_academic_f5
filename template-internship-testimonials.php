@@ -28,7 +28,7 @@ Template Name: Testimonial Listing (Internship)
 					<a href="#post<?php the_ID(); ?>" title="<?php the_title(); ?>">
 						<h3><?php the_title(); ?>
 							<?php if ( has_post_thumbnail()) {  the_post_thumbnail('thumbnail', array('class'	=> "floatleft circle"));  } ?>
-							<i class="fa fa-caret-down"></i><i class="fa fa-caret-up"></i>
+							<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span>
 						</h3>
 						<ul class="no-bullet">
 							<?php if ( get_post_meta($post->ID, 'ecpt_internship', true) ) : ?>

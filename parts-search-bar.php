@@ -7,9 +7,9 @@
 			<form method="GET" action="<?php echo site_url('/search'); ?>" role="search">
 				<input type="hidden" name="site" value="<?php echo $collection_name; ?>" aria-label="<?php echo $collection_name; ?>"/>
 				<button type="submit" aria-label="submit"/>
-					<i class="fa fa-search"></i>
+					<span class="fa fa-search"></span>
 				</button>
-				<label for="search">
+				<label for="search" class="screen-reader-text">
 					Search
 				</label>
 				<input type="text" id="search" name="q" placeholder="Search this site" aria-label="search"/>

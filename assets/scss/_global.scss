@@ -843,3 +843,13 @@ h6 {font-size: 1rem; }
   h2 {font-size: 1.1rem;
     margin-bottom: 3px;}
 }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+

@@ -8524,6 +8524,14 @@ body.purple a:hover, body.purple #sidebar a:hover {
   font-size: 1.1rem;
   margin-bottom: 3px; }
 
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
 .SEClear {
   float: left; }
 
@@ -9555,8 +9563,6 @@ li.logo {
   color: #B4B2AD;
   margin-right: inherit;
   margin-bottom: inherit; }
-.search-bar label {
-  display: none; }
 
 #mobile-nav {
   padding-top: 4%; }

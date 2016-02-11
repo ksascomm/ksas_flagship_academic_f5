@@ -9,8 +9,8 @@
 				<button type="submit" aria-label="submit"/>
 					<i class="fa fa-search"></i>
 				</button>
-				<label for="search-mobile">
-					Mobile Search
+				<label for="search-mobile" class="screen-reader-text">
+					Search This Website
 				</label>
 				<input type="text" id="search-mobile" name="q" placeholder="Search this site" aria-label="search"/>
 					
