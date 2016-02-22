@@ -85,6 +85,12 @@ module.exports = function(grunt) {
             flatten: true,
             src: ['assets/bower_components/font-awesome/fonts/*'],
             dest: 'assets/fonts'
+        },
+        foundation: {
+            expand: true,
+            flatten: true,
+            src: ['assets/bower_components/foundation/js/*'],
+            dest: 'assets/js'
         }
     },
 
