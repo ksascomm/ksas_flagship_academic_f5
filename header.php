@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-57x57-precomposed.png" />
 
   <!-- CSS Files: All pages -->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/stylesheets/app.min.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/stylesheets/app.css">
   <!-- CSS Files: Conditionals -->
   <!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 10]>
@@ -48,9 +48,7 @@
 			</div>
 		</div>
 		<div id="desktop-nav">
-			<div class="row hide-for-print">
-				<?php get_template_part( 'parts', 'search-bar' ); ?>
-			</div>
+			<?php get_template_part( 'parts', 'offcanvas' ); ?>
 			<div class="row">
 				<div class="small-12 columns" id="logo_nav">
 					<div class="medium-3 columns">

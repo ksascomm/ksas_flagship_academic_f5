@@ -359,7 +359,7 @@ ul {
 }
 
 .panel {
-  background: #3478b6;
+  background: lighten($grey, 15%);
   border: none;
   color: #FFF;
   font-size: 14px;

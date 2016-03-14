@@ -5,11 +5,7 @@ li.logo {
   background: rgba(0,0,0,0.75);
   margin-left: 5px;
   padding: 20px 10px 10px;
-  margin-top: -61px;
-  -webkit-border-bottom-right-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  -moz-border-radius-bottomright: 20px;
-  -moz-border-radius-bottomleft: 20px;
+  margin-top: -55px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -36,11 +32,7 @@ li.logo {
   background: rgba(51, 102, 153, 0.9);
   width: 100%;
   max-width: 1000px;
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
   border-top-right-radius: 10px;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
   margin: 0;
   h1 {
@@ -56,8 +48,6 @@ li.logo {
 
 .search-bar, #search-bar {
   background: #333;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
   border-radius: 10px;
   color: $grey;
   text-transform: uppercase;
@@ -101,7 +91,7 @@ li.logo {
     display: inline;
     float: left;
     width: 75%;
-    border: none;
+    border: 1px solid $grey;
   }
   &[type="submit"] {
     background: #666;

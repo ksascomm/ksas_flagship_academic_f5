@@ -83,6 +83,18 @@
   }
 }
 
+@media only screen and (max-width: 767px) {
+    #desktop-nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+    #mobile-nav {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 47.9375em) {
   #logo_nav {
     margin-top: 50px;
@@ -173,6 +185,15 @@
   }
 }
 
+@media only screen and (max-width: 890px) {
+  #main_nav ul li a {
+    font-size: 16px;
+  }
+  .nav-bar > li.has-flyout > a:first-child {
+    padding-right: 10px!important;
+  }
+}
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   .faculty {
     padding-left: 1em;
@@ -217,7 +238,7 @@
 }
 
 
-@media only screen and (max-width: 63.9375em) {
+/*@media only screen and (max-width: 63.9375em) {
     #desktop-nav {
     display: none;
   }
@@ -227,7 +248,9 @@
     #mobile-nav {
     display: none;
   }
-}
+}*/
+
+
 
 @media only screen and (min-width: 64.063em){
 p, ul, ol, dl {
@@ -269,6 +292,29 @@ p, ul, ol, dl {
   #social-media {
     margin-top: 9px;
   }
+  .slide {
+    summary {
+      h1 {
+        font-size: 1.45rem
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.2em;
+      }
+    }
+  }
+  .o-content {
+    a {
+      font-size: 13px;
+    }
+    h1 {
+      font-size: 15px;
+    }
+    li {
+      font-size: 13px;
+      margin-top: -2px;
+    }
+  }  
 }
 
 @media only screen and (max-width: 65.3125em) {

@@ -5,6 +5,7 @@ For production environment search and replace javascripts/ for javascripts/min.
 <!***********ALL PAGES**************>  
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/foundation.min.js"></script> 
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/app.js"></script> 
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/offcanvas.js"></script>
 		<script>
 	var $x = jQuery.noConflict();
 		$x('#quicklinks ul.flyout li a').on('click', function() {
@@ -16,7 +17,7 @@ For production environment search and replace javascripts/ for javascripts/min.
 <?php if(is_tablet()) {  ?>
 		<script>
 			jQuery(document).ready(function () {
-			    jQuery('#main_nav').meanmenu({meanScreenWidth: "768"});
+			    jQuery('#main_nav').meanmenu({meanScreenWidth: "767"});
 			});
 		</script>
 <?php } else { ?>
