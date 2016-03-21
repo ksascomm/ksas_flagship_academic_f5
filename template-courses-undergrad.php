@@ -117,6 +117,9 @@ Template Name: ISIS Courses
 					<div class="row">		
 						<input type="submit" class="icon-search" value="&#xe004;" />
 						<input type="text" name="search" id="id_search" placeholder="Search by course number, title, and keyword" /> 
+							<label for="id_search" class="screen-reader-text">
+								Search by course number, title, and keyword
+							</label>
 					</div>
 				</fieldset>
 			</form>	

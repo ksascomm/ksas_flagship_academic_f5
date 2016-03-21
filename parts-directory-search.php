@@ -24,6 +24,9 @@
 					<div class="row">		
 						<input type="submit" class="icon-search" value="&#xe004;" />
 						<input type="text" name="search" id="id_search" placeholder="Search by name, title, and research interests"  /> 
+							<label for="id_search" class="screen-reader-text">
+								Search by name, title, and research interests
+							</label>
 					</div>
 			<?php if ($theme_option['flagship_sub_research_search'] == true) { ?>
 					<div class="row">
