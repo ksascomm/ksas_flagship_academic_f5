@@ -28,7 +28,7 @@
 
     });
 
-    $z('<a class="button" href="#" id="trigger">Explore KSAS +</a>').appendTo($container);
+    $z('<a class="button" href="#" id="trigger">Explore KSAS</a>').appendTo($container);
 
     $z('#trigger').bind('click', function(e) {
       e.preventDefault();
@@ -37,11 +37,11 @@
       if ($container.hasClass('active')) {
         $container.height($cHeightMin);
        $z('.o-content').show();
-        $this.text('Hide -');
+        $this.text('Hide');
       } else {
         $container.height(50);
         $z('.o-content').hide();
-        $this.text('Explore KSAS +');
+        $this.text('Explore KSAS');
         $z(".off-canvas-submenu").hide();
         $z(".off-canvas-submenu-call span").text('+');
       }

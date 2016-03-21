@@ -359,7 +359,7 @@ ul {
 }
 
 .panel {
-  background: lighten($grey, 15%);
+  background: $grey;
   border: none;
   color: #FFF;
   font-size: 14px;
@@ -513,6 +513,9 @@ body {
       border-bottom-color: $black;
     }
   }
+  .sb-icon-search {
+  background: $black;
+  }
 }
 
 body.blue {
@@ -559,6 +562,9 @@ body.blue {
     &:hover {
       border-bottom-color: $blue;
     }
+  }
+  .sb-icon-search {
+  background: $blue;
   }
 }
 
@@ -608,6 +614,9 @@ body.green {
       border-bottom-color: $green;
     }
   }
+  .sb-icon-search {
+  background: $green;
+  }
 }
 
 body.red {
@@ -654,6 +663,9 @@ body.red {
     &:hover {
       border-bottom-color: $red;
     }
+  }
+  .sb-icon-search {
+  background: $red;
   }
 }
 
@@ -702,6 +714,9 @@ body.yellow {
       border-bottom-color: $yellow;
     }
   }
+  .sb-icon-search {
+  background: $yellow;
+  }
 }
 
 body.aqua {
@@ -749,6 +764,9 @@ body.aqua {
       border-bottom-color: $aqua;
     }
   }
+  .sb-icon-search {
+  background: $aqua;
+  }
 }
 
 body.purple {
@@ -795,6 +813,9 @@ body.purple {
     &:hover {
       border-bottom-color: $purple;
     }
+  }
+  .sb-icon-search {
+  background: $purple;
   }
 }
 

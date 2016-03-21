@@ -8626,7 +8626,7 @@ ul {
   line-height: 1.4em; }
 
 .panel {
-  background: #d9d8d5;
+  background: #e5e2e0;
   border: none;
   color: #FFF;
   font-size: 14px;
@@ -8750,6 +8750,9 @@ body #mobile-nav {
 body a:hover, body #sidebar a:hover {
   border-bottom-color: #2C2C33; }
 
+body .sb-icon-search {
+  background: #2C2C33; }
+
 body.blue #sidebar_header, body.blue #site_title, body.blue #main_nav ul, body.blue #logo_nav, body.blue .widget_title, body.blue #main_nav ul li ul li:hover, body.blue #mobile-header, body.blue .button {
   background: #005eb8; }
 
@@ -8784,6 +8787,9 @@ body.blue #mobile-nav {
 
 body.blue a:hover, body.blue #sidebar a:hover {
   border-bottom-color: #005eb8; }
+
+body.blue .sb-icon-search {
+  background: #005eb8; }
 
 body.green #sidebar_header, body.green #site_title, body.green #main_nav ul, body.green #logo_nav, body.green .widget_title, body.green #main_nav ul li ul li:hover, body.green #mobile-header, body.green .button {
   background: #007a53; }
@@ -8820,6 +8826,9 @@ body.green #mobile-nav {
 body.green a:hover, body.green #sidebar a:hover {
   border-bottom-color: #007a53; }
 
+body.green .sb-icon-search {
+  background: #007a53; }
+
 body.red #sidebar_header, body.red #site_title, body.red #main_nav ul, body.red #logo_nav, body.red .widget_title, body.red #main_nav ul li ul li:hover, body.red #mobile-header, body.red .button {
   background: #8a2a2b; }
 
@@ -8854,6 +8863,9 @@ body.red #mobile-nav {
 
 body.red a:hover, body.red #sidebar a:hover {
   border-bottom-color: #8a2a2b; }
+
+body.red .sb-icon-search {
+  background: #8a2a2b; }
 
 body.yellow #sidebar_header, body.yellow #site_title, body.yellow #main_nav ul, body.yellow #logo_nav, body.yellow .widget_title, body.yellow #main_nav ul li ul li:hover, body.yellow #mobile-header, body.yellow .button {
   background: #cba052; }
@@ -8890,6 +8902,9 @@ body.yellow #mobile-nav {
 body.yellow a:hover, body.yellow #sidebar a:hover {
   border-bottom-color: #cba052; }
 
+body.yellow .sb-icon-search {
+  background: #cba052; }
+
 body.aqua #sidebar_header, body.aqua #site_title, body.aqua #main_nav ul, body.aqua #logo_nav, body.aqua .widget_title, body.aqua #main_nav ul li ul li:hover, body.aqua #mobile-header, body.aqua .button {
   background: #00ab8e; }
 
@@ -8925,6 +8940,9 @@ body.aqua #mobile-nav {
 body.aqua a:hover, body.aqua #sidebar a:hover {
   border-bottom-color: #00ab8e; }
 
+body.aqua .sb-icon-search {
+  background: #00ab8e; }
+
 body.purple #sidebar_header, body.purple #site_title, body.purple #main_nav ul, body.purple #logo_nav, body.purple .widget_title, body.purple #main_nav ul li ul li:hover, body.purple #mobile-header, body.purple .button {
   background: #24135f; }
 
@@ -8959,6 +8977,9 @@ body.purple #mobile-nav {
 
 body.purple a:hover, body.purple #sidebar a:hover {
   border-bottom-color: #24135f; }
+
+body.purple .sb-icon-search {
+  background: #24135f; }
 
 .button .french {
   background: #005eb8; }
@@ -9225,7 +9246,7 @@ footer {
   border-bottom: .125em solid; }
 
 .inline-list li a {
-  color: #B4B2AD; }
+  color: #e5e2e0; }
 
 #social-media a {
   padding: 10px;
@@ -9291,7 +9312,7 @@ footer {
   #copyright p {
     text-align: center;
     font-size: 12px;
-    color: #B4B2AD;
+    color: #e5e2e0;
     margin: 20px 0 0px 0; }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
@@ -10072,6 +10093,10 @@ a.off-canvas-submenu-call {
   display: block;
   font-size: 1em;
   margin-right: 16px; }
+  #trigger::after {
+    content: "\f0c9";
+    font-family: FontAwesome;
+    padding-left: 5px; }
 
 li.logo {
   list-style: none; }
@@ -10115,7 +10140,7 @@ li.logo {
 .search-bar, #search-bar {
   background: #333;
   border-radius: 10px;
-  color: #B4B2AD;
+  color: #e5e2e0;
   text-transform: uppercase;
   font-family: "gentona-book", Arial, sans-serif;
   font-weight: 400;
@@ -10142,14 +10167,15 @@ li.logo {
 .search-bar input[type="text"], #search-bar input[type="text"] {
   height: 31px;
   margin-bottom: 0px;
-  background: white;
-  background: rgba(255, 255, 255, 0.75);
+  background-color: #e5e2e0;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   display: inline;
   float: left;
-  width: 75%;
-  border: 1px solid #B4B2AD; }
+  width: 50%;
+  border: 1px solid #e5e2e0;
+  color: #333;
+  font-size: 1em; }
 
 .search-bar input[type="submit"], #search-bar input[type="submit"] {
   background: #666;
@@ -10162,7 +10188,21 @@ li.logo {
   border: none;
   float: left;
   padding: 0;
-  color: #B4B2AD; }
+  color: #e5e2e0; }
+
+.search-bar input::-webkit-input-placeholder, #search-bar input::-webkit-input-placeholder {
+  color: #2C2C33; }
+
+.search-bar input:-moz-placeholder, #search-bar input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #2C2C33; }
+
+.search-bar input::-moz-placeholder, #search-bar input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #2C2C33; }
+
+.search-bar input:-ms-input-placeholder, #search-bar input:-ms-input-placeholder {
+  color: #2C2C33; }
 
 .search-bar button {
   background: #666;
@@ -10174,12 +10214,107 @@ li.logo {
   border: none;
   float: left;
   padding: 0;
-  color: #B4B2AD;
+  color: #e5e2e0;
   margin-right: inherit;
   margin-bottom: inherit; }
 
 #mobile-nav {
   padding-top: 4%; }
+
+.sb-search {
+  position: relative;
+  margin-top: 10px;
+  width: 0%;
+  min-width: 50px;
+  height: 50px;
+  float: right;
+  overflow: hidden;
+  transition: width 0.3s;
+  -webkit-backface-visibility: hidden; }
+
+.sb-search-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  z-index: 10;
+  padding: 20px 65px 20px 20px;
+  font-family: inherit;
+  font-size: 20px;
+  color: #2C2C33; }
+
+input[type="search"].sb-search-input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px; }
+
+.sb-search-input::-webkit-input-placeholder, .sb-search-input:-moz-placeholder, .sb-search-input::-moz-placeholder, .sb-search-input:-ms-input-placeholder {
+  color: #2C2C33; }
+
+.sb-icon-search {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer; }
+
+.sb-search-submit {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  /* IE needs this */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /* IE 8 */
+  filter: alpha(opacity=0);
+  /* IE 5-7 */
+  opacity: 0;
+  color: transparent;
+  border: none;
+  outline: none;
+  z-index: -1; }
+
+.sb-icon-search {
+  color: #fff;
+  z-index: 90;
+  font-size: 18px;
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased; }
+  .sb-icon-search:before {
+    content: "\f002"; }
+
+.sb-search.sb-search-open, .no-js .sb-search {
+  width: 12%; }
+
+.sb-search.sb-search-open .sb-icon-search, .no-js .sb-search .sb-icon-search {
+  color: #fff;
+  z-index: 11; }
+
+.sb-search.sb-search-open .sb-search-submit, .no-js .sb-search .sb-search-submit {
+  z-index: 90; }
 
 .no-gutter {
   padding: 0; }
@@ -10655,7 +10790,7 @@ div.field {
   float: right; }
 
 #fields_search fieldset {
-  background: #B4B2AD;
+  background: #e5e2e0;
   background: rgba(0, 0, 0, 0.15);
   padding-bottom: 0px;
   border: none; }
@@ -10688,7 +10823,7 @@ div.field {
   float: left;
   width: 83%;
   background: #666;
-  color: #B4B2AD;
+  color: #e5e2e0;
   font-family: "gentona-light", Arial, sans-serif;
   font-weight: 300;
   font-style: italic;
@@ -10710,7 +10845,7 @@ div.field {
   border: none;
   float: left;
   padding: 0;
-  color: #B4B2AD; }
+  color: #e5e2e0; }
 
 button a.selected {
   color: #FFF;
@@ -10830,18 +10965,18 @@ a.button {
   color: white !important; }
 
 ::-webkit-input-placeholder {
-  color: #B4B2AD; }
+  color: #e5e2e0; }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #B4B2AD; }
+  color: #e5e2e0; }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #B4B2AD; }
+  color: #e5e2e0; }
 
 :-ms-input-placeholder {
-  color: #B4B2AD; }
+  color: #e5e2e0; }
 
 @media print {
   dl.accordion .content {

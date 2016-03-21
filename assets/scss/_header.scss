@@ -84,14 +84,15 @@ li.logo {
   &[type="text"] {
     height: 31px;
     margin-bottom: 0px;
-    background: rgb(255, 255, 255);
-    background: rgba(255, 255, 255, 0.75);
+    background-color: $grey;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     display: inline;
     float: left;
-    width: 75%;
+    width: 50%;
     border: 1px solid $grey;
+    color: #333;
+    font-size: 1em;
   }
   &[type="submit"] {
     background: #666;
@@ -106,6 +107,22 @@ li.logo {
     padding: 0;
     color: $grey;
   }
+  // style placeholder text cross browser
+    &::-webkit-input-placeholder {
+      color: $black;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: $black;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: $black;
+    }
+
+    &:-ms-input-placeholder {
+       color: $black;
+    }
 }
 
 .search-bar {
@@ -127,4 +144,115 @@ li.logo {
 
 #mobile-nav {
   padding-top: 4%;
+}
+
+.sb-search {
+  position: relative;
+  margin-top: 10px;
+  width: 0%;
+  min-width: 50px;
+  height: 50px;
+  float: right;
+  overflow: hidden;
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  transition: width 0.3s;
+  -webkit-backface-visibility: hidden;
+}
+
+.sb-search-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  z-index: 10;
+  padding: 20px 65px 20px 20px;
+  font-family: inherit;
+  font-size: 20px;
+  color: $black;
+}
+
+input[type="search"].sb-search-input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+.sb-search-input {
+  &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+    color: $black;
+  }
+}
+
+.sb-icon-search {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sb-search-submit {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  /* IE needs this */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /* IE 8 */
+  filter: alpha(opacity = 0);
+  /* IE 5-7 */
+  opacity: 0;
+  color: transparent;
+  border: none;
+  outline: none;
+  z-index: -1;
+}
+
+.sb-icon-search {
+  color: #fff;
+  z-index: 90;
+  font-size: 18px;
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  &:before {
+    content: "\f002";
+  }
+}
+
+
+.sb-search.sb-search-open, .no-js .sb-search {
+  width: 12%;
+}
+
+.sb-search.sb-search-open .sb-icon-search, .no-js .sb-search .sb-icon-search {
+  color: #fff;
+  z-index: 11;
+}
+
+.sb-search.sb-search-open .sb-search-submit, .no-js .sb-search .sb-search-submit {
+  z-index: 90;
 }

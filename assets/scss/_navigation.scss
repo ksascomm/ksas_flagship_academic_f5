@@ -666,4 +666,9 @@ a.off-canvas-submenu-call {
   display: block;
   font-size: 1em;
   margin-right: 16px;
+  &::after {
+    content: "\f0c9";
+    font-family: FontAwesome;
+    padding-left: 5px;
+  }
 }
