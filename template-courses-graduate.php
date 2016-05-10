@@ -54,11 +54,11 @@ Template Name: ISIS Courses (Graduate)
 			$section_number = $result->body[0]->{'SectionName'};
 			$instructor = $result->body[0]->{'InstructorsFullName'};
 			$description = $result->body[0]->{'SectionDetails'}[0]->{'Description'};
-			$postag = $result->body[0]->{'SectionDetails'}[0]->{'PosTags'}->{'Tags'};
+			//$postag = $result->body[0]->{'SectionDetails'}[0]->{'PosTags'}->{'Tags'};
 		    // show everything
 		    echo '<dd class="accordion-navigation ' . $term . '"><a class="courses" href="#course' . $clean_course_number . $section_number . '"><span class="course-number">' . $course_number . '</span> - ' . $title . '</a>';
 		    echo '<div id="course' . $clean_course_number . $section_number . '" class="content"><p>' . $description . '</p>';
-		    echo '<p><b>Credits: </b>' . $credits . '<br><b>Instructor: </b>' . $instructor . '<br><b>Term: </b>' . $term . '<br><b>Meetings: </b>' . $meetings . '<br><b>Status: </b>' . $status . '<br><b>PosTags: </b>' . $postag . '<br><b>Level: </b>' . $course_level  .'<br><b>Departments: </b>' . $clean_all_departments . '</p>'; 
+		    echo '<p><b>Credits: </b>' . $credits . '<br><b>Instructor: </b>' . $instructor . '<br><b>Term: </b>' . $term . '<br><b>Meetings: </b>' . $meetings . '<br><b>Status: </b>' . $status . '<br><b>Level: </b>' . $course_level  .'<br><b>Departments: </b>' . $clean_all_departments . '</p>'; 
 		    echo '</div></dd>';
 		 
 		}
