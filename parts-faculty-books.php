@@ -27,7 +27,7 @@
 	    		<ul class="no-bullet">
 	    			<li><strong><a href="<?php the_permalink(); ?>"><?php the_title();?></a></strong></li>
 					<li><?php if ( get_post_meta($post->ID, 'ecpt_pub_date', true) ) : echo get_post_meta($post->ID, 'ecpt_pub_date', true);  endif; ?><?php if ( get_post_meta($post->ID, 'ecpt_publisher', true) ) :?>, <?php echo get_post_meta($post->ID, 'ecpt_publisher', true);  endif; ?></li>
-					<li><strong>Role:</strong> <span style="text-transform:capitalize;"><?php echo get_post_meta($post->ID, 'ecpt_pub_role', true); ?></span></li>
+					<li><strong>Role:</strong> <span class="capitalize"><?php echo get_post_meta($post->ID, 'ecpt_pub_role', true); ?></span></li>
 					<li><?php if (get_post_meta($post->ID, 'ecpt_author_cond', true) == 'on') { $faculty_post_id2 = get_post_meta($post->ID, 'ecpt_pub_author2', true); ?><br>
 				   <?php echo get_the_title($faculty_post_id2); ?>,&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_pub_role2', true); ?>
 				<?php } ?></li>
