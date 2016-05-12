@@ -43,7 +43,7 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	
 <!***********DIRECTORY**************>
 <?php } 
-if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( 'template-courses-all.php' ))   { ?>
+if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( 'template-courses-all.php' ) || is_page_template( 'template-courses-graduate.php' ))   { ?>
   	<script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.courses-min.js"></script>
 
 
