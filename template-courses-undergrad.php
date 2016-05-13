@@ -28,7 +28,7 @@ Template Name: ISIS Courses
 		    CURLOPT_TIMEOUT         =>  60,
 		    CURLOPT_CONNECTTIMEOUT  =>  60,
 		));
-		//$cache_dir = TEMPLATEPATH . "/assets/functions/cache/";
+		$cache_dir = TEMPLATEPATH . "/assets/functions/cache/";
 		$course_curl->cache($cache_dir, 2592000);
  
 	//Create API Url calls
@@ -36,7 +36,11 @@ Template Name: ISIS Courses
 		$courses_fall_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $fall . '&Department=AS%20' . $department;
 		$courses_intersession_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $intersession . '&Department=AS%20' . $department;
 		$courses_summer_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $summer . '&Department=AS%20' . $department;
-		$courses_call = array($courses_spring_url, $courses_fall_url, $courses_intersession_url, $courses_summer_url);
+		$courses_call = array(
+			//$courses_spring_url, 
+			$courses_fall_url, 
+			//$courses_intersession_url, 
+			$courses_summer_url);
 	
 	//Course display callback function
 		function display_courses($result) {
@@ -90,7 +94,7 @@ Template Name: ISIS Courses
 			    CURLOPT_TIMEOUT         =>  60,
 			    CURLOPT_CONNECTTIMEOUT  =>  60,
 			));
-			//$curl->cache($cache_dir, 2592000);
+			$curl->cache($cache_dir, 2592000);
 			$curl->get($course_data, 'display_courses');
 			
 		}
