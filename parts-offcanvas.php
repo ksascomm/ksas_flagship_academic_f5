@@ -49,7 +49,7 @@
                 </ul>
             </li>
             <li role="menuitem">
-                <a href="/giving/" class="button" onclick="ga('send', 'event', 'Offcanvas', 'ETC', 'Giving')"><span class="fa fa-gift"></span> Give Now!</a>
+                <a href="http://krieger.jhu.edu/giving/" class="button" onclick="ga('send', 'event', 'Offcanvas', 'ETC', 'Giving')"><span class="fa fa-gift"></span> Give Now!</a>
                 <form method="GET" action="<?php echo site_url('/search'); ?>" role="search" id="search-bar">
                       <input type="submit" class="icon-search" value="&#xe004;" />
                       <label for="search" class="screen-reader-text">Search</label>
