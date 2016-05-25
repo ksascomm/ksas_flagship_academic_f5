@@ -95,6 +95,22 @@ module.exports = function(grunt) {
         }
     },
 
+    //modernizr
+    modernizr: {
+      dist: {
+        devFile: 'assets/bower_components/foundation/bower_components/modernizr/modernizr.js',
+        dest: 'assets/js/vendor/ksas-modernizr.js',
+        files: {
+          src: [
+            'assets/bower_components/foundation/**/*.js',
+            'assets/bower_components/foundation/**/*.css',
+            'assets/stylesheets/**/*.css',
+            'assets/js/vendor/**/*.js',
+          ]
+        },
+      }
+    },
+
     //Watch Task
     watch: {
       grunt: {
@@ -107,10 +123,6 @@ module.exports = function(grunt) {
         files: 'assets/scss/**/*.scss',
         tasks: ['sass', 'postcss', 'imagemin'],
       },
-      //livereload: {
-       //  options: { livereload: true },
-        //  files: ['assets/scss/**/*.scss', 'assets/js/*.js', '**/*.php', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
-     // }
     }
   });
 
@@ -120,6 +132,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.registerTask('build', ['sass', 'copy']);
-  grunt.registerTask('default', ['sass','browserSync','copy','watch']);
+  grunt.loadNpmTasks("grunt-modernizr");
+  grunt.registerTask('build', ['sass', 'copy', 'modernizr']);
+  grunt.registerTask('default', ['sass','browserSync','copy','modernizr','watch']);
 }
