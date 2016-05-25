@@ -20,11 +20,14 @@
 	    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/app.ie.css">
+		<div data-alert class="alert-box alert">
+        <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.'); ?>	
+        </div>	
 	<![endif]-->
 
   <!-- Modernizr and Jquery Script -->
   <?php wp_enqueue_script('jquery'); ?> 
-  <script src="<?php echo get_template_directory_uri() ?>assets/js/vendor/modernizr-min.js"></script>
+  <script src="<?php echo get_template_directory_uri() ?>assets/js/vendor/ksas-modernizr.js"></script>
   <?php wp_head(); ?>
 
 
