@@ -87,6 +87,11 @@
     #desktop-nav {
     display: none;
   }
+  .search-bar input, #search-bar input {
+    &[type="text"] {
+      width: 88%;
+    }
+  }
 }
 
 @media only screen and (min-width: 767px) {
