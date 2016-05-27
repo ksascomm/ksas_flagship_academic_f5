@@ -17,7 +17,7 @@
 			<ul id="slider" data-orbit data-options="animation: fade; animation_speed:2000; timer:true; timer_speed:3000; navigation_arrows:false; bullets:false; slide_number:false;">
 				<?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
 					<li>
-						<a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>">
+						<a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>" onclick="ga('send', 'event', 'Slider', 'Click', 'Homepage Slider')">
 							<div class="slide">
 								<img src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" alt="<?php the_title(); ?>" class="radius-top" />
 									<div class="orbit-caption">
