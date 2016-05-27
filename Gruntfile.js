@@ -92,23 +92,26 @@ module.exports = function(grunt) {
             flatten: true,
             src: ['assets/bower_components/foundation/js/*'],
             dest: 'assets/js'
+        },
+        modernizr: {
+            expand: true,
+            flatten: true,
+            src: ['assets/bower_components/foundation/bower_components/modernizr/modernizr.js'],
+            dest: 'assets/js/vendor'
         }
     },
 
-    //modernizr
-    modernizr: {
-      dist: {
-        devFile: 'assets/bower_components/foundation/bower_components/modernizr/modernizr.js',
-        dest: 'assets/js/vendor/ksas-modernizr.js',
-        files: {
-          src: [
-            'assets/bower_components/foundation/**/*.js',
-            'assets/bower_components/foundation/**/*.css',
-            'assets/stylesheets/**/*.css',
-            'assets/js/vendor/**/*.js',
-          ]
+    //minify js with uglify
+     uglify: {
+        dist: {
+        options: {
+          mangle: false,
+          compress: true
         },
-      }
+        files: {
+          "assets/js/vendor/modernizr.min.js": ["assets/js/vendor/modernizr.js"]
+        }
+      },
     },
 
     //Watch Task
@@ -133,6 +136,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks("grunt-modernizr");
-  grunt.registerTask('build', ['sass', 'copy', 'modernizr']);
-  grunt.registerTask('default', ['sass','browserSync','copy','modernizr','watch']);
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.registerTask('build', ['sass', 'copy']);
+  grunt.registerTask('default', ['sass','browserSync','copy','uglify','watch']);
 }
