@@ -142,6 +142,20 @@ li.logo {
   }
 }
 
+.directory-search {
+    background: #333;
+    height: 42px;
+    width: 45px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    float: left;
+    padding: 0;
+    .fa.fa-search {
+        color: $grey;
+        padding: 5px;
+    }
+}
+
 #mobile-nav {
   padding-top: 4%;
 }

@@ -148,7 +148,7 @@
       text-align: center;
     }
   }
-   #caption {
+   .caption {
     &.vertical {
        .middle {       
           top: 60%!important;                         
@@ -221,7 +221,7 @@
 }
 
 @media only screen and (min-width: 47.9375em) and (max-width: 57.1875em) {
-   #caption {
+   .caption {
     &.vertical {
        .middle {       
           top: 50%!important;                         
@@ -264,7 +264,7 @@ p, ul, ol, dl {
 }
 
 @media only screen and (max-width: 64em) {
-  #caption {
+  .caption {
   &.vertical {
        .middle {       
           top: 35%;                         

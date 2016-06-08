@@ -10218,6 +10218,18 @@ li.logo {
   margin-right: inherit;
   margin-bottom: inherit; }
 
+.directory-search {
+  background: #333;
+  height: 42px;
+  width: 45px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  float: left;
+  padding: 0; }
+  .directory-search .fa.fa-search {
+    color: #e5e2e0;
+    padding: 5px; }
+
 #mobile-nav {
   padding-top: 4%; }
 
@@ -10529,18 +10541,18 @@ ul.orbit-bullets {
 div.orbit-wrapper div.timer, .orbit-timer {
   display: none; }
 
-#caption.vertical {
+.caption.vertical {
   min-height: 425px;
   position: relative;
   bottom: 0; }
-  #caption.vertical .middle {
+  .caption.vertical .middle {
     position: absolute;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     margin-right: 10px; }
 
-#caption.horizontal {
+.caption.horizontal {
   position: absolute;
   bottom: 0;
   max-height: 100px;
@@ -11074,7 +11086,7 @@ a.button {
   #mobile-nav h1 {
     font-size: 1.84375rem;
     text-align: center; }
-  #caption.vertical .middle {
+  .caption.vertical .middle {
     top: 60% !important; }
   #fields_search input[type="submit"] {
     width: 35px; }
@@ -11117,7 +11129,7 @@ a.button {
     padding-left: 1em; } }
 
 @media only screen and (min-width: 47.9375em) and (max-width: 57.1875em) {
-  #caption.vertical .middle {
+  .caption.vertical .middle {
     top: 50% !important; }
   #sidebar p {
     padding-right: 2em;
@@ -11143,11 +11155,11 @@ a.button {
     font-size: 1.1rem; } }
 
 @media only screen and (max-width: 64em) {
-  #caption.vertical .middle {
+  .caption.vertical .middle {
     top: 35%; }
-  #caption.vertical h3 {
+  .caption.vertical h3 {
     font-size: 1.375em; }
-  #caption.vertical h5 {
+  .caption.vertical h5 {
     font-size: 1em; }
   .search-bar input[type="submit"], #search-bar input[type="submit"], #field_search input[type="submit"] {
     border-top-left-radius: 0px;

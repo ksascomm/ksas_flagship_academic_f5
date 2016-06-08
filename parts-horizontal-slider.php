@@ -1,4 +1,4 @@
-<summary class="small-12 columns horizontal black_bg" id="caption">
+<summary class="small-12 columns horizontal black_bg caption">
 			<h3 class="white no-margin"><?php the_title(); ?></h3>
 			<h5 class="white italic floatleft no-margin"><?php echo get_the_content(); ?></h5>
 		   	<?php if ( get_post_meta($post->ID, 'ecpt_button', true) ) : ?>				
