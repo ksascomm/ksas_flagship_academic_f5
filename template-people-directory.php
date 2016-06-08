@@ -27,7 +27,7 @@ Template Name: People Directory
 	}
 	$filter_classes = implode(' ', $filter_slugs);
 	?>
-<div class="row wrapper radius10">
+<main class="row wrapper radius10">
 	<section class="content row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1 class="page-title"><?php the_title();?></h1>
@@ -75,5 +75,5 @@ Template Name: People Directory
 		</div>
 	</div>	
 
-</div> <!-- End content wrapper -->
+</main> <!-- End content wrapper -->
 <?php get_footer(); ?>
