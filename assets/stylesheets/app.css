@@ -10801,63 +10801,35 @@ div.field {
   margin-left: 10px;
   float: right; }
 
-#fields_search fieldset {
-  background: #e5e2e0;
+#fields_search {
   background: rgba(0, 0, 0, 0.15);
   padding-bottom: 0px;
-  border: none; }
-
-#field_search {
+  border: none;
   font-family: "quadon", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #FFF;
   font-size: 16px; }
-  #field_search label {
-    font-family: "quadon", Arial, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #FFF;
-    font-size: 16px;
+  #fields_search label {
     margin-top: 6px;
     display: inline; }
-
-#fields_search input[type="text"] {
-  height: 42px;
-  margin-bottom: 10px;
-  -webkit-border-top-right-radius: 7px;
-  -webkit-border-bottom-right-radius: 7px;
-  -moz-border-radius-topright: 7px;
-  -moz-border-radius-bottomright: 7px;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-  display: inline;
-  float: left;
-  width: 83%;
-  background: #666;
-  color: #e5e2e0;
-  font-family: "gentona-light", Arial, sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 16px;
-  border: none; }
-
-#fields_search input[type="submit"] {
-  background: #333;
-  height: 42px;
-  width: 45px;
-  font-family: 'flagship-icon';
-  -webkit-border-top-left-radius: 7px;
-  -webkit-border-bottom-left-radius: 7px;
-  -moz-border-radius-topleft: 7px;
-  -moz-border-radius-bottomleft: 7px;
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-  font-size: 26px;
-  border: none;
-  float: left;
-  padding: 0;
-  color: #e5e2e0; }
+  #fields_search h3 {
+    font-size: 18px; }
+  #fields_search input[type="text"] {
+    height: 42px;
+    margin-bottom: 10px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    display: inline;
+    float: left;
+    width: 83%;
+    background: #666;
+    color: #e5e2e0;
+    font-family: "gentona-light", Arial, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+    border: none; }
 
 button a.selected {
   color: #FFF;
@@ -10880,12 +10852,14 @@ button.radio {
       color: #FFF; }
 
 .book-entry {
-  height: 200px;
+  height: 100%;
   background-color: #ededed;
-  padding: 20px 25px 30px;
+  padding: 20px 25px 10px;
   margin: 0 auto 25px;
   border-radius: 2px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
+  .book-entry img {
+    margin-bottom: 25px; }
 
 .bulletin {
   margin-left: 10px; }
@@ -11103,11 +11077,9 @@ a.button {
     width: 75%; }
   .single-people .tabs dd a {
     width: 200px; }
-  .book-entry {
-    height: 100%; }
-    .book-entry img {
-      height: auto;
-      width: 84%; } }
+  .book-entry img {
+    height: auto;
+    width: 84%; } }
 
 @media only screen and (max-width: 890px) {
   #main_nav ul li a {
@@ -11161,7 +11133,7 @@ a.button {
     font-size: 1.375em; }
   .caption.vertical h5 {
     font-size: 1em; }
-  .search-bar input[type="submit"], #search-bar input[type="submit"], #field_search input[type="submit"] {
+  .search-bar input[type="submit"], #search-bar input[type="submit"], #fields_search input[type="submit"] {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px; }
   .sidebar_bg {

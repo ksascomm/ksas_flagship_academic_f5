@@ -23,9 +23,11 @@
     
 	if ( $single_books_query->have_posts() ) : while ($single_books_query->have_posts()) : $single_books_query->the_post(); ?>
 		<article class="book-entry">
+		
 	    		<?php if ( has_post_thumbnail()) {  the_post_thumbnail('directory', array('class'	=> "floatleft"));  } ?>
+	    
 	    		<ul class="no-bullet">
-	    			<li><strong><a href="<?php the_permalink(); ?>"><?php the_title();?></a></strong></li>
+	    			<li><h5><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h5></li>
 					<li><?php if ( get_post_meta($post->ID, 'ecpt_pub_date', true) ) : echo get_post_meta($post->ID, 'ecpt_pub_date', true);  endif; ?><?php if ( get_post_meta($post->ID, 'ecpt_publisher', true) ) :?>, <?php echo get_post_meta($post->ID, 'ecpt_publisher', true);  endif; ?></li>
 					<li><strong>Role:</strong> <span class="capitalize"><?php echo get_post_meta($post->ID, 'ecpt_pub_role', true); ?></span></li>
 					<li><?php if (get_post_meta($post->ID, 'ecpt_author_cond', true) == 'on') { $faculty_post_id2 = get_post_meta($post->ID, 'ecpt_pub_author2', true); ?><br>
@@ -37,7 +39,7 @@
 							</a>
 						<?php endif; ?></li>
 	    		</ul>
-				
+		
 			
 		</article>
 	<?php endwhile; endif; wp_reset_query(); ?>

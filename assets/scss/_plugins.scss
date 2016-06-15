@@ -493,63 +493,39 @@ div.field {
   float: right;
 }
 
-#fields_search fieldset {
-  background: $grey;
-  background: rgba(0, 0, 0, 0.15);
+#fields_search {
+  background: rgba(0,0,0,0.15);
   padding-bottom: 0px;
   border: none;
-}
-
-#field_search {
-  font-family: $font-header; font-weight: 400; font-style: normal;
+  font-family: $font-header; 
+  font-weight: 400; 
+  font-style: normal;
   color: #FFF;
   font-size: 16px;
   label {
-    font-family: $font-header; font-weight: 400; font-style: normal;
-    color: #FFF;
-    font-size: 16px;
     margin-top: 6px;
     display: inline;
   }
-}
-
-#fields_search input {
-  &[type="text"] {
-    height: 42px;
-    margin-bottom: 10px;
-    -webkit-border-top-right-radius: 7px;
-    -webkit-border-bottom-right-radius: 7px;
-    -moz-border-radius-topright: 7px;
-    -moz-border-radius-bottomright: 7px;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
-    display: inline;
-    float: left;
-    width: 83%;
-    background: #666;
-    color: $grey;
-    font-family: $font-stack;
-   font-weight: 300;
-  font-style: italic;
-    font-size: 16px;
-    border: none;
+  h3 {
+    font-size: 18px;
   }
-  &[type="submit"] {
-    background: #333;
-    height: 42px;
-    width: 45px;
-    font-family: 'flagship-icon';
-    -webkit-border-top-left-radius: 7px;
-    -webkit-border-bottom-left-radius: 7px;
-    -moz-border-radius-topleft: 7px;
-    -moz-border-radius-bottomleft: 7px;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    font-size: 26px;
-    border: none;
-    float: left;
-    padding: 0;
-    color: $grey;
+  input {
+    &[type="text"] {
+      height: 42px;
+      margin-bottom: 10px;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      display: inline;
+      float: left;
+      width: 83%;
+      background: #666;
+      color: $grey;
+      font-family: $font-stack;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 16px;
+      border: none;
+    }
   }
 }
 
@@ -584,16 +560,15 @@ button {
 
 //Faculty Books ------------------------------------
 .book-entry {
-height: 200px;
+height: 100%;
 background-color: #ededed;
-padding: 20px 25px 30px;
+padding: 20px 25px 10px;
 margin: 0 auto 25px;
--moz-border-radius: 2px;
--webkit-border-radius: 2px;
 border-radius: 2px;
--moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
--webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  img {
+    margin-bottom: 25px;
+  }
 }
 
 //Bulletins ------------------------------------
