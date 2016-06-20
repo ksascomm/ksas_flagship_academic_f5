@@ -34,6 +34,11 @@
 						<?php if ( get_post_meta($post->ID, 'ecpt_office', true) ) : ?>
 							<span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span>
 						<?php endif; ?>
+						<?php if ( get_post_meta($post->ID, 'ecpt_lab_website', true) ) : ?>
+				    		<span class="icon-globe">
+				    			<a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" target="_blank">Group/Lab Website</a>
+				    		</span>
+			    		<?php endif; ?>
 					</p>
 					<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?>
 						<p><strong>Research Interests:&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></p>
