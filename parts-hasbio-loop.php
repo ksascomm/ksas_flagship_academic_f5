@@ -36,7 +36,7 @@
 						<?php endif; ?>
 						<?php if ( get_post_meta($post->ID, 'ecpt_lab_website', true) ) : ?>
 				    		<span class="icon-globe">
-				    			<a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" target="_blank">Group/Lab Website</a>
+				    			<a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" onclick="ga('send', 'event', 'People Directory', 'Group/Lab Website', '<?php the_title(); ?> | <?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>')" target="_blank">Group/Lab Website</a>
 				    		</span>
 			    		<?php endif; ?>
 					</p>
