@@ -93,6 +93,12 @@ module.exports = function(grunt) {
             src: ['assets/bower_components/foundation/js/*'],
             dest: 'assets/js'
         },
+        foundation_plugins: {
+            expand: true,
+            flatten: true,
+            src: ['assets/bower_components/foundation/js/foundation/*'],
+            dest: 'assets/js/foundation'
+        },        
         modernizr: {
             expand: true,
             flatten: true,
@@ -135,7 +141,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks("grunt-modernizr");
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('build', ['sass', 'copy']);
   grunt.registerTask('default', ['sass','browserSync','copy','uglify','watch']);

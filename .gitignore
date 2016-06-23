@@ -9,6 +9,8 @@ assets/scss/.sass-cache/
 assets/config.codekit
 
 /assets/functions/cache/
+/assets/functions/cookies/
+/assets/functions/cookies/tmp
 
 node_modules
 assets/scss/.sass-cache/7855a286caa898b775b3d4eca3628e96e5148273/_settings.scssc
@@ -16,3 +18,9 @@ assets/scss/.sass-cache/7855a286caa898b775b3d4eca3628e96e5148273/_settings.scssc
 assets/config (Timmy’s MacBook Pro's conflicted copy 2015-01-26).codekit
 
 *.codekit
+
+assets/stylesheets/app-blessed1.css
+
+assets/functions/cookies/tmp/scholarcookietemp.txt
+
+assets/functions/cookies/tmp/scholarcookietemp.txt
