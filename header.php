@@ -72,6 +72,7 @@
 					'container_id' => 'main_nav', 
 					'container_class' => 'small-12 columns',
 					'depth' => 2,
+					'items_wrap' => '<ul id="%1$s" class="%2$s" role="navigation" aria-label="Main menu">%3$s</ul>',
 					'walker'=> new page_id_classes )); ?> 
 			</div>
 		</div>
