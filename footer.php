@@ -22,15 +22,16 @@
 			
 		?>
 		<!-- Footer Links -->
-		<nav class="medium-5 columns">
+		<nav class="medium-6 columns">
 			<ul id="menu-footer-links" class="inline-list hide-for-small-only" role="menu">
+				<li role="menuitem"><a href="<?php echo get_site_url(); ?>/sitemap">Sitemap</a></li>
 			<?php if(get_page_by_title('Jobs') || get_page_by_title('Employment Opportunities') || get_page_by_title('Employment') ) : ?>
-					<li role="menuitem"><a href="<?php echo get_site_url(); ?>/about/jobs/">Employment</a></li>
-				<?php else : ?>
-					<li role="menuitem"><a href="http://krieger.jhu.edu/faculty-jobs/">Employment</a></li>	
+				<li role="menuitem"><a href="<?php echo get_site_url(); ?>/about/jobs/">Employment</a></li>
+			<?php else : ?>
+				<li role="menuitem"><a href="http://krieger.jhu.edu/faculty-jobs/">Employment</a></li>	
 			<?php endif;?>
-					<li role="menuitem"><a href="http://krieger.jhu.edu/communications-office/">Communications Office</a></li>
-					<li role="menuitem"><a href="https://www.jhu.edu/alert/">Emergency Alerts & Info</a></li>
+				<li role="menuitem"><a href="http://krieger.jhu.edu/communications-office/">Communications Office</a></li>
+				<li role="menuitem"><a href="https://www.jhu.edu/alert/">Emergency Alerts & Info</a></li>
 			</ul>
 		</nav>
 
