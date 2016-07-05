@@ -19,16 +19,18 @@
 				<?php the_title(); ?>
 			<?php endif; ?>
 		</h4>
-	
+
+	<?php if (get_post_meta($post->ID, 'ecpt_position', true)) : ?>	
 		<h5 class="subheader">
-		<?php  if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
-			<?php  echo get_post_meta($post->ID, 'ecpt_position', true); ?>
-		<?php  endif; ?>
-			<br>
-		<?php  if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?>
-			<?php  echo get_post_meta($post->ID, 'ecpt_degrees', true); ?>
-		<?php  endif; ?>
+			<?php  if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?>
+				<?php  echo get_post_meta($post->ID, 'ecpt_position', true); ?>
+			<?php  endif; ?>
+			<?php  if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?>
+				<?php  echo '<br>' . get_post_meta($post->ID, 'ecpt_degrees', true); ?>
+			<?php  endif; ?>
 		</h5>
+	<?php endif;?>	
+		
 		<p class="contact no-margin">
 			<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>
 				<span class="icon-phone"><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span>
