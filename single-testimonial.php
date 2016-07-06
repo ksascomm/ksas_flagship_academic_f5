@@ -28,13 +28,13 @@
 				<h1><?php the_title(); ?></h1>
 				<?php if ( has_post_thumbnail()) {  the_post_thumbnail('thumbnail', array('class'	=> "floatleft circle"));  } ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_class', true) ) : ?>
-					<p><b>Class of: <?php echo get_post_meta($post->ID, 'ecpt_class', true); ?></b></p>
+					<p><strong>Class of: <?php echo get_post_meta($post->ID, 'ecpt_class', true); ?></strong></p>
 				<?php endif; ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_internship', true) ) : ?>
-					<p><b>Internship:</b> <?php echo get_post_meta($post->ID, 'ecpt_internship', true); ?></p>
+					<p><strong>Internship:</strong> <?php echo get_post_meta($post->ID, 'ecpt_internship', true); ?></p>
 				<?php endif; ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_job', true) ) : ?>
-					<p><b>Current Job:</b> <?php echo get_post_meta($post->ID, 'ecpt_job', true); ?></p>
+					<p><strong>Current Job:</strong> <?php echo get_post_meta($post->ID, 'ecpt_job', true); ?></p>
 				<?php endif; ?>
 				<p><?php the_content()?></p>
 			<?php endwhile; endif;?>
