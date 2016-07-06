@@ -7,7 +7,7 @@
 			$article_title = $post->post_title;
 			//$article_link = $post->guid;
 		?>
-		<nav role="navigation" aria-label="breadcrumbs">
+		<nav aria-label="breadcrumbs">
 			<ul id="menu-main-menu-2" class="breadcrumbs">
 				<li><a href="<?php echo $home_url; ?>">Home</a></li>
 				<li><a href="<?php echo $home_url; ?>/about">About</a></li>
@@ -26,4 +26,4 @@
 				'walker'=> new flagship_bread_crumb )); 
 	}
 	
-?>				
+?>
