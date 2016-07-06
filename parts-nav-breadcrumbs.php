@@ -27,6 +27,5 @@
 				'menu_class' => 'breadcrumbs',
 				'items_wrap' => '<ul id="%1$s" class="%2$s"><li><a href="' . $home_url . '">' . $theme_option['flagship_sub_breadcrumb_home'] . '</a></li>%3$s</ul>',
 				'walker'=> new flagship_bread_crumb )); 
-	}
-	
-?>
+		} ?>
+		</nav>
