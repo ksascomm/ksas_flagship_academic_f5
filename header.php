@@ -64,16 +64,16 @@
 					</div>	
 				</div>
 			</div>
-			<div class="row hide-for-print" role="navigation" aria-labelledby="main_nav">
+			<nav class="row hide-for-print" aria-label="Main Menu">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 
 					'menu_class' => '', 
-					'container' => 'nav',
+					'container' => 'false',
 					'container_id' => 'main_nav', 
 					'container_class' => 'small-12 columns',
 					'depth' => 2,
-					'items_wrap' => '<ul id="%1$s" class="%2$s" role="navigation" aria-label="Main Menu">%3$s</ul>',
+					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 					'walker'=> new page_id_classes )); ?> 
-			</div>
+			</nav>
 		</div>
 	</header>
