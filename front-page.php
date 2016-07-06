@@ -39,7 +39,7 @@
 <?php endif; ?>
 
 <div class="row sidebar_bg radius10 <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?> <?php } ?>">
-	<main class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer" role="main">		
+	<main class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer">		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php $frontpagecontent = the_content(); if($frontpagecontent != '') { ?>
 				<?php the_content(); ?>	

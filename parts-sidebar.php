@@ -1,4 +1,4 @@
-	<aside class="small-12 large-4 columns hide-for-print" id="sidebar" role="complementary"> <!-- Begin Sidebar -->
+	<aside class="small-12 large-4 columns hide-for-print" id="sidebar"> <!-- Begin Sidebar -->
 		<!-- Start Featured Image -->
 		
 		<!-- Start Navigation for Sibling Pages -->		<!-- END Featured Image --> <?php 

@@ -5,7 +5,7 @@
   <div id="pattern" class="pattern">
     <div class="offcanvas-top">
         <div class="o-content" aria-hidden="false" role="navigation">
-          <ul class="small-block-grid-4" id="global-links" role="list">
+          <ul class="small-block-grid-4" id="global-links">
               <li class="black"><h1>Academics</h1>
                   <ul class="no-bullet" role="menu">
                     <li role="menuitem"><a href="http://krieger.jhu.edu/academics/departments-programs-and-centers/" onclick="ga('send', 'event', 'Offcanvas', 'Academics', 'Departments')";>Departments, Programs, and Centers</a></li>

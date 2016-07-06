@@ -4,7 +4,7 @@
 ?>
 
 <div class="row wrapper radius10">
-	<main class="large-12 columns no-gutter" role="main-content">
+	<main class="large-12 columns no-gutter">
 			<h1 class="page-title">Whoops...</h1>
 			<p>This page does not exist.  Try searching</p>
        <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">

@@ -2,7 +2,7 @@
 <div class="row sidebar_bg radius10" id="page">
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">	
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>		
-		<main class="content" role="main">
+		<main class="content">
 		<?php if(is_tax('bbtype', 'jobs-bb')){ ?>
 			<h2>Jobs Opportunities</h2>
 		<?php } elseif(is_tax('bbtype', 'internships-bb')){ ?>
