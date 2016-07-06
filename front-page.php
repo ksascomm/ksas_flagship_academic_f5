@@ -82,7 +82,7 @@
 		<?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
 		<div class="row">		
-			<article class="small-12 columns news-item">
+			<article class="small-12 columns news-item" aria-label="<?php the_title();?> article">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<h2 class="uppercase"><?php the_date(); ?></h2>
 						<h1 class="black"><?php the_title();?></h1>
