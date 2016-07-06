@@ -64,7 +64,7 @@
 					</div>	
 				</div>
 			</div>
-			<div class="row hide-for-print" role="navigation">
+			<div class="row hide-for-print" role="navigation" aria-labelledby="main_nav">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 
 					'menu_class' => '', 
