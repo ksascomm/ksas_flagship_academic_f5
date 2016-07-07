@@ -4,18 +4,22 @@
 	if ( false === ( $slider_query = get_transient( 'slider_query' ) ) ) {
 		$slider_query = new WP_Query(array(
 			'post_type' => 'slider',
-			'posts_per_page' => '10',
-			'orderby' => 'menu_order', 
+			'posts_per_page' => '-1',
+			'orderby' => 'rand', 
 			'order' => 'ASC'));
-		set_transient( 'slider_query', $slider_query, 2592000 );
+		set_transient( 'slider_query', $slider_query, 86400 );
 	} 	
 	if ( $slider_query->have_posts() ) :
 ?>
 <div class="row hide-for-small-only">
 	<div class="slideshow-wrapper">
 	  <div class="preloader"></div>
-			<ul id="slider" data-orbit data-options="animation: fade; animation_speed:2000; timer:true; timer_speed:3000; navigation_arrows:false; bullets:false; slide_number:false;">
-				<?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
+			<?php if ($slider_query->post_count == 1) : ?>
+				<ul id="slider" data-orbit data-options="navigation_arrows:false; bullets:false; slide_number:false;">
+			<?php else :?> 
+				<ul id="slider" data-orbit data-options="animation: fade; animation_speed:2000; timer:true; timer_speed:4000; navigation_arrows:true; bullets:false; slide_number:false;">
+			<?php endif; ?>
+			<?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
 					<li>
 						<a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>" onclick="ga('send', 'event', 'Homepage Slider', 'Click', '<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>')">
 							<div class="slide">
