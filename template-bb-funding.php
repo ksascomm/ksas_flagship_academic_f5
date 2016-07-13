@@ -1,15 +1,16 @@
 <?php
 /*
-Template Name: Bulletin Board - Undergrad
+Template Name: Bulletin Board - Funding Opportunites
 */
 ?>
 
 <?php get_header(); ?>
-<div class="row sidebar_bg radius10" id="page">
-	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">	
+<div class="row wrapper radius10" id="page" role="main">
+	<div class="small-12 columns">	
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
-		<section class="content news">
- 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> <!--Start the loop -->
+		<section class="content">
+ 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
+ 				<!--Start the loop -->
 				<h1 class="page-title"><?php the_title(); ?></h1>
 				<?php the_content() ?>
 			<?php endwhile; endif ?>
@@ -26,11 +27,16 @@ Template Name: Bulletin Board - Undergrad
 
 					    foreach( $terms as $term ) : 
 
-					        $bulletins = new WP_Query( "taxonomy=$taxonomy&term=$term->slug&posts_per_page=2;" );
+					        $bulletins = new WP_Query(array(
+					        	'taxonomy' => $taxonomy,
+					        	'term' => $term->slug,
+					        	'orderby' => 'title',
+					        	'order' => 'ASC',
+					        	'posts_per_page' => -1 ));
 
 					        if( $bulletins->have_posts() ): ?>
 							
-					        <h2>Latest <?php echo $term->name ;?></h2> 
+					        <h3><?php echo $term->name ;?></h3> 
 					   
 					        <?php while( $bulletins->have_posts() ) : $bulletins->the_post(); 
 					         //Do you general query loop here  ?>				   
@@ -42,13 +48,11 @@ Template Name: Bulletin Board - Undergrad
 											<?php } ?>
 										<?php the_excerpt(); ?>
 									</a>
+							<hr>		
 							 </article>		
 		
-					        <?php endwhile; ?>
-					        <div class="small-12 columns">
-								<h3 class="floatright"><a href="<?php echo home_url('/bbtype/'); echo $term->slug;?>">View all <?php echo $term->name ;?></a></h3>
-							</div>	
-							<hr>
+					        <?php endwhile; ?>	
+							
 
 				<?php endif; endforeach; endforeach; ?>
 

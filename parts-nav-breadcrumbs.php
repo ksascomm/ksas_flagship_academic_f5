@@ -2,7 +2,7 @@
 	$home_url = home_url();
 	$theme_option = flagship_sub_get_global_options();	
 	
-		if ( is_single()) { 
+		if ( is_single() && !is_singular('bulletinboard')) { 
 			global $post;
 			$article_title = $post->post_title;
 			//$article_link = $post->guid;
