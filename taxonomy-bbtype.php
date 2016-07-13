@@ -5,7 +5,7 @@
 		<main class="content">
 		<?php if(is_tax('bbtype', 'jobs-bb')){ ?>
 			<h1 class="page-title">Job Opportunities</h1>
-		<?php if(is_tax('bbtype', 'research-bb')){ ?>
+		<?php } elseif(is_tax('bbtype', 'research-bb')){ ?>
 			<h1 class="page-title">Research Opportunities</h1>
 		<?php } elseif(is_tax('bbtype', 'internships-bb')){ ?>
 			<h1 class="page-title">Internship Opportunities</h1>
