@@ -42,7 +42,7 @@ if ( false === ( $job_market_query = get_transient( 'job_market_query' ) ) ) {
 										<h4 class="no-margin"><?php the_title(); ?></h4>
 									<?php } ?>
 									<?php if ( get_post_meta($post->ID, 'ecpt_position', true) ) : ?><h5><?php echo get_post_meta($post->ID, 'ecpt_position', true); ?></h5><?php endif; ?>
-									<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?><h6><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h6><?php endif; ?>
+									<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?><h5><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h5><?php endif; ?>
 									<p class="contact no-margin">
 										<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>
 											<span class="icon-mobile"><?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span>
