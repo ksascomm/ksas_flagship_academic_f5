@@ -11,19 +11,17 @@
 			<h1 class="page-title">Internship Opportunities</h1>
 		<?php } elseif(is_tax('bbtype', 'volunteering-bb')){ ?>
 			<h1 class="page-title">Volunteering Opportunities</h1>
-		<?php } elseif(is_tax('bbtype', 'co-sponsorships')){ ?>	
-			<h1 class="page-title">Co-Sponsorships</h1>	
-		<?php } elseif(is_tax('bbtype', 'jhu')){ ?>
-			<h1 class="page-title">Grants from Across JHU</h1>
-		<?php } elseif(is_tax('bbtype', 'isp')){ ?>
-			<h1 class="page-title">ISP Study Abroad Grants</h1>
-		<?php } elseif(is_tax('bbtype', 'language-fellowships')){ ?>
-			<h1 class="page-title">Language Fellowships</h1>
+		<?php } elseif(is_tax('bbtype', 'research-internships')){ ?>
+			<h1 class="page-title">Funding for Research & Internships</h1>
+		<?php } elseif(is_tax('bbtype', 'international-programs')){ ?>
+			<h1 class="page-title">International Programs</h1>
+		<?php } elseif(is_tax('bbtype', 'language-grants')){ ?>
+			<h1 class="page-title">Language Learning Grants</h1>
 		<?php } else { ?>
 			<h1 class="page-title">Bulletin Board</h1>
 		<?php } ?>
 
-		<?php if(is_tax('bbtype', 'jhu') || is_tax('bbtype', 'isp') || is_tax('bbtype', 'co-sponsorships') || is_tax('bbtype', 'language-fellowships') ){ ?>	
+		<?php if(is_tax('bbtype', 'research-internships') || is_tax('bbtype', 'international-programs') || is_tax('bbtype', 'language-grants') ){ ?>	
 
 			<?php $posts = query_posts($query_string . '&orderby=title&order=asc&posts_per_page=-1'); ?>
 
