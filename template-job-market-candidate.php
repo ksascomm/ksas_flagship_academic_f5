@@ -37,7 +37,7 @@ if ( false === ( $job_market_query = get_transient( 'job_market_query' ) ) ) {
 										<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small-only')); ?>
 									<?php } ?>			    
 									<?php if ( get_post_meta($post->ID, 'ecpt_bio', true) ) { ?> 
-										<a href="<?php the_permalink(); ?>"><h4 class="no-margin"><?php the_title(); ?></h4>
+										<h4 class="no-margin"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 									<?php } else { ?>
 										<h4 class="no-margin"><?php the_title(); ?></h4>
 									<?php } ?>
