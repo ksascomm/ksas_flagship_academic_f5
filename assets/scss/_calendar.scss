@@ -262,3 +262,60 @@ button a {
     background: #3478b6 !important;
   }
 }
+
+.event_meta li, .event_desc p {
+  font-size: 1rem;
+}
+
+/*table.tribe-events-calendar thead tr th {
+    color: white !important;
+}
+
+.tribe-events-day .tribe-events-day-time-slot h5 {
+  color: $black !important;
+}
+
+#tribe-events-day .tribe-events-content {
+  float: left !important;
+  width: inherit !important;
+}
+
+.tribe-events-event-meta.vcard {
+    padding: 0;
+}
+
+.tribe-event-title {
+  font-size: 1.125rem;
+  margin-bottom: 5px;
+}
+
+.tribe-event-duration {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.tribe-events-widget-link {
+  padding: 0 20px;
+}
+
+.tribe-events-event-meta .tribe-events-meta-group {
+  display: inherit !important;
+  float: none !important;
+  width: inherit !important;
+} */
+
+footer.timely.ai1ec-event-footer {
+    background: inherit;
+}
+
+.timely p {
+  font-size: 16px;
+  font-family: $font-stack !important;
+}
+
+.ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details {
+  font-family: $font-subhead !important;
+}
+
+span.ai1ec-event-title {
+  font-size: 1.1rem !important;
+}
