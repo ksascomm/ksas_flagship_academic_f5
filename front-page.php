@@ -87,21 +87,23 @@
 
 		<div class="row">		
 			<article class="small-12 columns news-item" aria-label="<?php the_title();?> article">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<h2 class="uppercase"><?php the_date(); ?></h2>
-						<h1 class="black"><?php the_title();?></h1>
-						<?php if ( has_post_thumbnail()) { ?> 
-							<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
-						<?php } ?>
-						<?php the_excerpt(); ?>
-					</a>
+				<h2 class="uppercase black"><?php the_date(); ?></h2>
+				<h1>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title();?></a>
+				</h1>
+				<?php if ( has_post_thumbnail()) { ?> 
+					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+				<?php } ?>
+				<?php the_excerpt(); ?>
 					<hr>
 			</article>
 		</div>
 		
 		<?php endwhile; ?>
 		<div class="row">
-			<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><h5 class="black">View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h5></a>
+			<h5>
+				<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</a>
+			</h5>
 		</div>
 		<?php endif; ?>
 		
