@@ -40,7 +40,8 @@ Template Name: ISIS Courses (Graduate)
 			$courses_fall_url, 
 			//$courses_intersession_url,
 			//$courses_spring_url,  
-			$courses_summer_url);
+			//$courses_summer_url
+			);
 	
 	//Course display callback function
 		function display_courses($result) {
@@ -113,7 +114,6 @@ Template Name: ISIS Courses (Graduate)
 					<div id="fields_search" class="panel radius10">			
 						<div class="row filter option-set" data-filter-group="term">
 								<div class="button radio"><a href="#" data-filter="*" class="selected" onclick="ga('send', 'event', 'ISIS', 'Courses', 'All');">View All</a></div>
-								<div class="button radio"><a href="#" data-filter=".Summer" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Summer');">Summer 2016 Courses</a></div>
 								<div class="button radio"><a href="#" data-filter=".Fall" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Fall');">Fall 2016 Courses</a></div>
 								<h5 class="inline"><a href="#" class="acc_expandall" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Expand All');">[Expand All]</a></h5>
 						</div>
