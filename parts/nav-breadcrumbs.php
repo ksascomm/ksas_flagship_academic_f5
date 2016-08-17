@@ -2,7 +2,7 @@
 	$home_url = home_url();
 	$theme_option = flagship_sub_get_global_options();	
 	
-		if ( is_single() && !is_singular('bulletinboard')) { 
+		if ( is_single() && !is_singular(array( 'bulletinboard', 'ai1ec_event' ))) { 
 			global $post;
 			$article_title = $post->post_title;
 			//$article_link = $post->guid;
@@ -15,7 +15,15 @@
 				<li><a href="<?php echo get_permalink(); ?>"><?php echo $article_title; ?></a></li>
 			</ul>
 		</nav>	<?php } 
-
+	elseif (is_singular('ai1ec_event')) { ?>
+		<nav aria-label="breadcrumbs">
+			<ul id="menu-main-menu-2" class="breadcrumbs">
+				<li><a href="<?php echo $home_url; ?>">Home</a></li>
+				<li><a href="<?php echo $home_url; ?>/events">Events</a></li>
+				<li><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></li>
+			</ul>
+		</nav>
+		<?php }	
 	elseif ( $theme_option['flagship_sub_breadcrumbs']  == '1' ) { ?>
 
 		<nav aria-label="breadcrumbs">

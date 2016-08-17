@@ -522,6 +522,12 @@ body {
   .sb-icon-search {
   background: $black;
   }
+  .ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
+    background: $black;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+    color: $black;
+  }
 }
 
 body.blue {
@@ -571,6 +577,12 @@ body.blue {
   }
   .sb-icon-search {
   background: $blue;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
+    background: $blue;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+    color: $blue;
   }
 }
 
@@ -623,6 +635,12 @@ body.green {
   .sb-icon-search {
   background: $green;
   }
+  .ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
+    background: $green;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+    color: $green;
+  }
 }
 
 body.red {
@@ -672,6 +690,12 @@ body.red {
   }
   .sb-icon-search {
   background: $red;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
+    background: $red;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+    color: $red;
   }
 }
 
@@ -723,6 +747,12 @@ body.yellow {
   .sb-icon-search {
   background: $yellow;
   }
+  .ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
+    background: $yellow;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+    color: $yellow;
+  }
 }
 
 body.aqua {
@@ -773,6 +803,12 @@ body.aqua {
   .sb-icon-search {
   background: $aqua;
   }
+  .ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
+    background: $aqua;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+    color: $aqua;
+  }
 }
 
 body.purple {
@@ -822,6 +858,12 @@ body.purple {
   }
   .sb-icon-search {
   background: $purple;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
+    background: $purple;
+  }
+  .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, .ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+    color: $purple;
   }
 }
 
