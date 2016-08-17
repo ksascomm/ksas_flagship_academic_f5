@@ -13,25 +13,22 @@
 
   <!-- CSS Files: All pages -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/stylesheets/app.min.css">
-  <!-- CSS Files: Conditionals -->
-  <!-- IE Fix for HTML5 Tags -->
-	<!--[if lt IE 10]>
-	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/app.ie.css">
+	<!-- Make IE a modern browser -->
+	<!--[if IE]>
+		<script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/css3-mediaqueries/0.1/css3-mediaqueries.min.js"></script>
+	<![endif]-->
+  	<!--[if lt IE 11]>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/app.ie.css">
 		<div data-alert class="alert-box alert">
-        <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.'); ?>	
-        </div>	
+		<?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.'); ?>	
+		</div>		
 	<![endif]-->
 
-  <!-- Modernizr and Jquery Script -->
-  <?php wp_enqueue_script('jquery'); ?> 
-  <script src="<?php echo get_template_directory_uri() ?>assets/js/vendor/ksas-modernizr.js"></script>
   <?php wp_head(); ?>
 
 
-  <?php include_once("parts-analytics.php"); ?>
+  <?php include_once("analytics.php"); ?>
 </head>
 <?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme']; global $blog_id; $site_id = 'site-' . $blog_id; ?>
 <body <?php body_class($color_scheme . ' ' . $site_id); ?> onLoad="viewport()">	
@@ -48,11 +45,11 @@
 		  		</div>
 	  		</div>
 	  		<div class="row hide-for-print">
-				<?php get_template_part( 'parts', 'search-mobile' ); ?>
+				<?php get_template_part( '/parts/search-mobile' ); ?>
 			</div>
 		</div>
 		<div id="desktop-nav">
-			<?php get_template_part( 'parts', 'offcanvas' ); ?>
+			<?php get_template_part( '/parts/offcanvas' ); ?>
 						
 			<div class="row">
 				<div class="small-12 columns" id="logo_nav">

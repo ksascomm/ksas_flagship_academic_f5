@@ -1,13 +1,5 @@
 <?php
 
-//livereload
-//if ( $_SERVER['REMOTE_ADDR'] === '127.0.0.1' ){
- // add_action( 'wp_enqueue_scripts', 'enqueue_livereload' );
-//}
-//function enqueue_livereload(){
- // wp_enqueue_script( 'livereload', site_url().'/livereload.js', '', NULL );
-//}
-
 //Add Theme Options Page
 if ( !function_exists( 'create_theme_options' ) ) {    
     function create_theme_options() {
@@ -207,26 +199,7 @@ function my_sitemap_replacement ($content) {
 }
 add_filter('simple_sitemaps-generated_urlset', 'my_sitemap_replacement');
 
-/* ======================================================================
- * Disable-Inline-Styles.php
- * Removes inline styles and other coding junk added by the WYSIWYG editor.
- * Script by Chris Ferdinandi - http://gomakethings.com
- * ====================================================================== */
-
-add_filter( 'the_content', 'clean_post_content' );
-function clean_post_content($content) {
-
-    // Remove inline styling
-    $content = preg_replace('/(<[^>]+) style=".*?"/i', '$1', $content);
-
-    // Remove font tag
-    $content = preg_replace('/<font[^>]+>/', '', $content);
-
-    // Remove empty tags
-    $post_cleaners = array('<p></p>' => '', '<p> </p>' => '', '<p>&nbsp;</p>' => '', '<span></span>' => '', '<span> </span>' => '', '<span>&nbsp;</span>' => '', '<span>' => '', '</span>' => '', '<font>' => '', '</font>' => '');
-    $content = strtr($content, $post_cleaners);
-
-    return $content;
-}
+// Register scripts and stylesheets
+require_once(get_template_directory().'/assets/functions/enqueue-scripts.php'); 
 
 ?>

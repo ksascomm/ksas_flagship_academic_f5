@@ -26,10 +26,10 @@
 								<img src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" alt="<?php the_title(); ?>" class="radius-top" />
 									<div class="orbit-caption">
 										<?php if($theme_option['flagship_sub_slider_style'] == "vertical") { 
-											 	locate_template('parts-vertical-slider.php', true, false); 	
+											 	locate_template('parts/vertical-slider.php', true, false); 	
 											 	}
 										 elseif($theme_option['flagship_sub_slider_style'] == "horizontal") { 
-										 		locate_template('parts-horizontal-slider.php', true, false); 
+										 		locate_template('parts/horizontal-slider.php', true, false); 
 										  } ?>
 									</div>
 							</div>
@@ -108,6 +108,6 @@
 		<?php endif; ?>
 		
 	</main>	<!-- End main content (left) section -->
-<?php locate_template('parts-sidebar.php', true, false); ?>	
+<?php locate_template('parts/sidebar.php', true, false); ?>	
 </div> <!-- End #landing -->
 <?php get_footer(); ?>

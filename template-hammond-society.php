@@ -19,7 +19,7 @@ if ( false === ( $job_market_query = get_transient( 'job_market_query' ) ) ) {
 ?>
 <div class="row sidebar_bg radius10" id="page">
 	<div class="small-8 columns wrapper radius-left offset-topgutter">	
-		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
+		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
 	<section class="content row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1 class="page-title"><?php the_title();?></h1>
@@ -68,7 +68,7 @@ if ( false === ( $job_market_query = get_transient( 'job_market_query' ) ) ) {
 			</ul>
 </section>
 </div>
-<?php locate_template('parts-sidebar.php', true, false); ?>
+<?php locate_template('parts/sidebar.php', true, false); ?>
 </div> <!-- End content wrapper -->
 <?php get_footer(); ?>		
 

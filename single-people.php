@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="radius-left offset-topgutter">	
-		<section class="content">
+		<setion class="content">
 			<div class="row">
 				<div class="small-12 medium-5 medium-offset-7 columns">
 					<label for="jump">
@@ -110,10 +110,10 @@
 							</script>
 							<script language="javascript" id="insideJs" src="http://academic.research.microsoft.com/LibraInside?js&infos=<?php echo $author_id; ?>|5|0|20"></script>						
 						<?php endif; ?>
-						<?php if ( get_post_meta($post->ID, 'ecpt_google_id', true) ) : locate_template('parts-google-scholar.php', true, false); endif; ?>
+						<?php if ( get_post_meta($post->ID, 'ecpt_google_id', true) ) : locate_template('parts/google-scholar.php', true, false); endif; ?>
 					</div>
 				<?php endif; ?>
-				<?php if ( get_post_meta($post->ID, 'ecpt_books_cond', true) == 'on' ) : locate_template('parts-faculty-books.php', true, false); endif;?>
+				<?php if ( get_post_meta($post->ID, 'ecpt_books_cond', true) == 'on' ) : locate_template('parts/faculty-books.php', true, false); endif;?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_extra_tab', true) ) : ?>
 					<div class="content"  id="extraTab"><?php echo get_post_meta($post->ID, 'ecpt_extra_tab', true); ?></div>
 				<?php endif; ?>
@@ -124,7 +124,7 @@
 			</div>
 			</div>
 			<?php endwhile; endif; ?>	
-		</section>
+		</main>
 	</div>	<!-- End main content (left) section -->
 </div> <!-- End #page -->
 <?php get_footer(); ?>

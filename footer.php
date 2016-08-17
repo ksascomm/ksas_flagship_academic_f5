@@ -57,9 +57,8 @@
   		</div>
 </footer>
   
-  <?php //Call all the javascript
-  		get_template_part('parts', 'script-initiators'); 
-  		wp_footer(); ?>
+<?php wp_footer(); 
+  locate_template('/parts/script-initiators.php', true, false); ?>
 
 	</body>
 </html>

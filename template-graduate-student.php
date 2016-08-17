@@ -7,7 +7,7 @@ Template Name: Graduate Student Listing
 <?php get_header(); ?>
 <div class="row wrapper radius10">
 <div class="small-12 columns">		
-<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
+<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
 	<section class="content row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1 class="page-title"><?php the_title();?></h1>
@@ -37,8 +37,14 @@ Template Name: Graduate Student Listing
 							<div class="row">
 							<?php if ( has_post_thumbnail()) { ?> 
 								<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small-only')); ?>
-							<?php } ?>			    
+							<?php } ?>
+								<?php if ( get_post_meta($post->ID, 'ecpt_bio', true) ) { ?> 
+									<h4 class="no-margin">
+										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									</h4>
+								<?php } else { ?>	    
 									<h4 class="no-margin"><?php the_title(); ?></h4>
+								<?php } ?>
 									<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?><h6><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h6><?php endif; ?>
 									<p class="contact no-margin">
 										<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>

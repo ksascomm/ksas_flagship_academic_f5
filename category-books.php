@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="row sidebar_bg radius10" id="page">
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">	
-		<?php locate_template('parts-nav-breadcrumbs.php', true, false);
+		<?php locate_template('parts/nav-breadcrumbs.php', true, false);
 		$theme_option = flagship_sub_get_global_options(); $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>	
 		<main class="content archive">
 		<h1 class="page-title">Faculty Books Archive</h1>
@@ -45,6 +45,6 @@
 		</div>
 		</main>
 	</div>	<!-- End main content (left) section -->
-<?php locate_template('parts-sidebar.php', true, false); ?>
+<?php locate_template('parts/sidebar.php', true, false); ?>
 </div> <!-- End #landing -->
 <?php get_footer(); ?>
