@@ -1,4 +1,4 @@
-<?php require_once('assets/functions/simple_html_dom.php');
+<?php require_once dirname(__FILE__) . ('/../assets/functions/simple_html_dom.php');
 $google_id = get_post_meta($post->ID, 'ecpt_google_id', true);
 $google = new simple_html_dom;
 $google_url = 'http://scholar.google.com/citations?user=' . $google_id . '&view_op=list_works&sortby=pubdate&pagesize=20';
