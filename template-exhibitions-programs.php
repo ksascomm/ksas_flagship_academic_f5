@@ -17,14 +17,14 @@ Template Name: Exhibitions & Programs
 	<div class="small-12 columns">
 		<div class="row">
 			
-			<div class="small-12 large-7 columns content">
+			<div class="small-12 columns content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<h1 class="page-title"><?php the_title();?></h1>
 				<p><?php the_content(); ?></p>
 			<?php endwhile; endif; ?>
 			</div>
 
-			<div class="small-12 large-5 columns panel radius10" id="fields_search" role="search">
+			<div class="small-12 columns panel radius10" id="fields_search" role="search">
 
 						<?php $exhibits = get_terms('exhibition_type', array(
 							'orderby' 		=> 'ID',
@@ -35,7 +35,7 @@ Template Name: Exhibitions & Programs
 						$count_exhibits = count($exhibits);
 						if ($count_exhibits > 0) { ?>
 						<div class="row">
-							<h6>Filter by Exhibit Type:</h6>
+							<h3>Filter by Exhibit Type:</h3>
 						</div>
 						
 						<div class="row filter option-set" data-filter-group="exhibition_type">
@@ -46,11 +46,11 @@ Template Name: Exhibitions & Programs
 						</div>
 					<?php } ?>
 					<div class="row">
-						<h5>Search by keyword:</h5>		
+						<h3>Search by keyword:</h3>		
 						<div class="directory-search">
 							<span class="fa fa-search fa-2x" aria-hidden="true"></span>
 						</div>
-						<input type="text" name="search" value="" id="id_search" aria-label="Search"  /> 
+						<input type="text" name="search" id="id_search" aria-label="Search" placeholder="Search by keyword"  /> 
 						<label for="id_search" class="screen-reader-text">
 							Search by keyword
 						</label>
@@ -78,28 +78,29 @@ Template Name: Exhibitions & Programs
 		<!-- Set classes for isotype.js filter buttons -->
 		<div class="medium-4 small-12 columns mobile-field  <?php echo $program_type_name . ' ' . $school_name; ?>">
 			
-			<div class="small-12 columns field radius10" id="<?php echo $program_name; ?>">
-				<a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>" class="field">
+			<div class="small-12 columns field" id="<?php echo $program_name; ?>">
+				
 					<?php if ( has_post_thumbnail()) { ?> 
 						<?php the_post_thumbnail('exhibits'); ?>
 					<?php } ?>			    
-					<h4 class="white"><?php the_title(); ?></h4>
-				</a>
+					<h4><a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>" class="field"><?php the_title(); ?></a></h4>
+				
 
 				<div class="row">
 					<div class="small-12 columns fields ">
-						<p>
+						<h5 class="black">
 							<?php if (get_post_meta($post->ID, 'ecpt_location', true)) : ?>
-										<strong><?php echo get_post_meta($post->ID, 'ecpt_location', true); ?></strong><br>
-									<?php endif; ?>
+								<?php echo get_post_meta($post->ID, 'ecpt_location', true); ?><br>
+							<?php endif; ?>
 							<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
-										<strong><?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?></strong><br>
-									<?php endif; ?>
+								<?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?><br>
+							<?php endif; ?>
+						</h5>			
+						<p>
 							<?php if (get_post_meta($post->ID, 'ecpt_description_short', true)) : ?>
-										<?php echo get_post_meta($post->ID, 'ecpt_description_short', true); ?><br>
-									<?php endif; ?>
+								<?php echo get_post_meta($post->ID, 'ecpt_description_short', true); ?><br>
+							<?php endif; ?>
 						</p>
-
 					</div>
 				</div>
 			</div>
