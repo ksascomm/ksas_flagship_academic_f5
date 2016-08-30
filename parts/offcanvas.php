@@ -23,7 +23,7 @@
               </li>
               <li class="black"><h1>Student & Faculty Resources</h1>    
                   <ul class="no-bullet" role="menu">
-                    <li role="menuitem"><a href="https://isis.jhu.edu/sswf/" onclick="ga('send', 'event', 'Offcanvas', 'Resources', 'ISIS')">Course Listings & Registration</a></li>
+                    <li role="menuitem"><a href="https://sis.jhu.edu/sswf/" onclick="ga('send', 'event', 'Offcanvas', 'Resources', 'ISIS')">Course Listings & Registration</a></li>
                     <li role="menuitem"><a href="http://finaid.johnshopkins.edu/" onclick="ga('send', 'event', 'Offcanvas', 'Resources', 'Financial Aid')">Financial Aid</a></li>
                     <li role="menuitem"><a href="https://hrnt.jhu.edu/" onclick="ga('send', 'event', 'Offcanvas', 'Resources', 'Human Resources')">Human Resources</a></li>
                     <li role="menuitem"><a href="#" class="off-canvas-submenu-call">KSAS Policies<span>+</span></a></li>
