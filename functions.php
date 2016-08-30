@@ -160,6 +160,7 @@ function delete_academic_transients($post_id) {
 			$role_slug = $role->slug;
 				delete_transient('people_query_' . $role_slug);
 				delete_transient('job_market_query');
+				delete_transient('graduate_student_query');
 			}
 		break;
 		
