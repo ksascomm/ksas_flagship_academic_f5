@@ -145,3 +145,15 @@ ul.nav li {
     padding-right: 30px;
   }
 }
+
+.ecpt-page-sidebar ul li {
+  font-size: 16px;
+  a {
+    border-bottom: .125em dotted;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    &:hover, &:active {
+      color: $black !important;
+      border-bottom-style: solid;
+    }
+  }
+}

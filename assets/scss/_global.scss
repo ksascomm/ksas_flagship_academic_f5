@@ -514,7 +514,7 @@ body {
    #mobile-nav {
     background: $black;
   }
-  a, #sidebar a {
+  a, #sidebar a, .ecpt-page-sidebar ul li a {
     &:hover {
       border-bottom-color: $black;
     }
@@ -570,7 +570,7 @@ body.blue {
    #mobile-nav {
     background: $blue;
   }
-  a, #sidebar a {
+  a, #sidebar a, .ecpt-page-sidebar ul li a  {
     &:hover {
       border-bottom-color: $blue;
     }
@@ -627,7 +627,7 @@ body.green {
   #mobile-nav {
     background: $green;
   }
-  a, #sidebar a {
+  a, #sidebar a, .ecpt-page-sidebar ul li a  {
     &:hover {
       border-bottom-color: $green;
     }
@@ -683,7 +683,7 @@ body.red {
    #mobile-nav {
     background: $red;
   }
-  a, #sidebar a {
+  a, #sidebar a, .ecpt-page-sidebar ul li a  {
     &:hover {
       border-bottom-color: $red;
     }
@@ -739,7 +739,7 @@ body.yellow {
    #mobile-nav {
     background: $yellow;
   }
-  a, #sidebar a {
+  a, #sidebar a, .ecpt-page-sidebar ul li a  {
     &:hover {
       border-bottom-color: $yellow;
     }
@@ -795,7 +795,7 @@ body.aqua {
    #mobile-nav {
     background: $aqua;
   }
-  a, #sidebar a {
+  a, #sidebar a, .ecpt-page-sidebar ul li a  {
     &:hover {
       border-bottom-color: $aqua;
     }
@@ -851,7 +851,7 @@ body.purple {
    #mobile-nav {
     background: $purple;
   }
-  a, #sidebar a {
+  a, #sidebar a, .ecpt-page-sidebar ul li a  {
     &:hover {
       border-bottom-color: $purple;
     }

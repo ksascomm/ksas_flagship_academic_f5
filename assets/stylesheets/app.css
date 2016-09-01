@@ -8750,7 +8750,7 @@ body .tabs dd.active, body .tabs li.active {
 body #mobile-nav {
   background: #2C2C33; }
 
-body a:hover, body #sidebar a:hover {
+body a:hover, body #sidebar a:hover, body .ecpt-page-sidebar ul li a:hover {
   border-bottom-color: #2C2C33; }
 
 body .sb-icon-search {
@@ -8794,7 +8794,7 @@ body.blue .tabs dd.active, body.blue .tabs li.active {
 body.blue #mobile-nav {
   background: #005eb8; }
 
-body.blue a:hover, body.blue #sidebar a:hover {
+body.blue a:hover, body.blue #sidebar a:hover, body.blue .ecpt-page-sidebar ul li a:hover {
   border-bottom-color: #005eb8; }
 
 body.blue .sb-icon-search {
@@ -8838,7 +8838,7 @@ body.green .tabs dd.active, body.green .tabs li.active {
 body.green #mobile-nav {
   background: #007a53; }
 
-body.green a:hover, body.green #sidebar a:hover {
+body.green a:hover, body.green #sidebar a:hover, body.green .ecpt-page-sidebar ul li a:hover {
   border-bottom-color: #007a53; }
 
 body.green .sb-icon-search {
@@ -8882,7 +8882,7 @@ body.red .tabs dd.active, body.red .tabs li.active {
 body.red #mobile-nav {
   background: #8a2a2b; }
 
-body.red a:hover, body.red #sidebar a:hover {
+body.red a:hover, body.red #sidebar a:hover, body.red .ecpt-page-sidebar ul li a:hover {
   border-bottom-color: #8a2a2b; }
 
 body.red .sb-icon-search {
@@ -8926,7 +8926,7 @@ body.yellow .tabs dd.active, body.yellow .tabs li.active {
 body.yellow #mobile-nav {
   background: #cba052; }
 
-body.yellow a:hover, body.yellow #sidebar a:hover {
+body.yellow a:hover, body.yellow #sidebar a:hover, body.yellow .ecpt-page-sidebar ul li a:hover {
   border-bottom-color: #cba052; }
 
 body.yellow .sb-icon-search {
@@ -8970,7 +8970,7 @@ body.aqua .tabs dd.active, body.aqua .tabs li.active {
 body.aqua #mobile-nav {
   background: #00ab8e; }
 
-body.aqua a:hover, body.aqua #sidebar a:hover {
+body.aqua a:hover, body.aqua #sidebar a:hover, body.aqua .ecpt-page-sidebar ul li a:hover {
   border-bottom-color: #00ab8e; }
 
 body.aqua .sb-icon-search {
@@ -9014,7 +9014,7 @@ body.purple .tabs dd.active, body.purple .tabs li.active {
 body.purple #mobile-nav {
   background: #24135f; }
 
-body.purple a:hover, body.purple #sidebar a:hover {
+body.purple a:hover, body.purple #sidebar a:hover, body.purple .ecpt-page-sidebar ul li a:hover {
   border-bottom-color: #24135f; }
 
 body.purple .sb-icon-search {
@@ -10359,6 +10359,15 @@ ul.nav li:before, ul.nav li ul li:before {
     margin-bottom: 0px;
     padding-bottom: 100px;
     padding-right: 30px; }
+
+.ecpt-page-sidebar ul li {
+  font-size: 16px; }
+  .ecpt-page-sidebar ul li a {
+    border-bottom: .125em dotted;
+    border-bottom-color: rgba(0, 0, 0, 0.2); }
+    .ecpt-page-sidebar ul li a:hover, .ecpt-page-sidebar ul li a:active {
+      color: #2C2C33 !important;
+      border-bottom-style: solid; }
 
 dl.expander > dd {
   width: 100%; }
