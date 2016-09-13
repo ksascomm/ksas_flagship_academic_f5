@@ -103,6 +103,7 @@
 					<div class="content" id="publicationsTab">
 						<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) ) : echo get_post_meta($post->ID, 'ecpt_publications', true); endif; ?>
 						<?php if ( get_post_meta($post->ID, 'ecpt_microsoft_id', true) ) : ?>
+							<!-- microsoft academic -->
 							<?php $author_id = get_post_meta($post->ID, 'ecpt_microsoft_id', true); ?>
 							<div id="LibraInsideDiv" class="libra">[Loading...]</div>
 							<script language="javascript">
