@@ -43,7 +43,7 @@
 <?php endif; ?>
 
 <div class="row sidebar_bg radius10 <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?> <?php } ?>">
-	<main class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer">		
+	<main class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer">	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php $frontpagecontent = the_content(); if($frontpagecontent != '') { ?>
 				<?php the_content(); ?>	
@@ -84,20 +84,23 @@
 		<h3><?php echo $theme_option['flagship_sub_feed_name']; ?></h3>
 
 		<?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
-
-		<div class="row">		
-			<article class="small-12 columns news-item" aria-label="<?php the_title();?> article">
+	
+		<article class="small-12 columns news-item" aria-label="<?php the_title();?> article" id="post-<?php the_ID(); ?>">
+			<header class="entry-header">
 				<h2 class="uppercase black"><?php the_date(); ?></h2>
 				<h1>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title();?></a>
 				</h1>
-				<?php if ( has_post_thumbnail()) { ?> 
-					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
-				<?php } ?>
-				<?php the_excerpt(); ?>
-					<hr>
-			</article>
-		</div>
+			</header>
+			<div class="entry-content">	
+			<?php if ( has_post_thumbnail()) { ?> 
+				<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+			<?php } ?>
+			<?php the_excerpt(); ?>
+				<hr>
+			</div>	
+		</article>
+		
 		
 		<?php endwhile; ?>
 		<div class="row">

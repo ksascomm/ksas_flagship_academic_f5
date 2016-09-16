@@ -32,18 +32,26 @@
 			} 	
 
 		while ($news_archive_query->have_posts()) : $news_archive_query->the_post(); ?>
+
+		<article id="post-<?php the_ID(); ?>">
+			<header class="entry-header">
 				<h3 class="uppercase black"><?php the_date(); ?></h3>
 				<h2>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title();?>">	
 						<?php the_title();?>
 					</a>
 				</h2>
+			</header><!-- .entry-header -->		
+			<div class="entry-content">
 					<?php if ( has_post_thumbnail()) { ?> 
 						<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
 					<?php } ?>
 				<?php the_excerpt(); ?>
 				<hr>
+			</div>	
+		</article>		
 			<?php endwhile; ?>
+		
 		<div class="row">
 			<?php flagship_pagination($news_archive_query->max_num_pages); ?>		
 		</div>	
