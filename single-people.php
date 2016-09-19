@@ -52,21 +52,27 @@
 			    	<?php endif; ?>
 			    
 			    	<?php if ( get_post_meta($post->ID, 'ecpt_email', true) ) : $email = get_post_meta($post->ID, 'ecpt_email', true); ?>
-											<span class="icon-mail"></span><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;<?php echo email_munge($email); ?>">
-											
-											<?php echo email_munge($email); ?> </a><br>
-										<?php endif; ?>
-			    	
+							<span class="icon-mail"></span> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;<?php echo email_munge($email); ?>">
+							
+								<?php echo email_munge($email); ?> </a><br>
+						<?php endif; ?>
+	
 			    	<?php if ( get_post_meta($post->ID, 'ecpt_cv', true) ) : ?>
-			    		<a href="<?php echo get_post_meta($post->ID, 'ecpt_cv', true); ?>"><span class="icon-file-pdf"></span>Curriculum Vitae</a><br>
+			    		<span class="icon-file-pdf"></span> <a href="<?php echo get_post_meta($post->ID, 'ecpt_cv', true); ?>">Curriculum Vitae</a><br>
 			    	<?php endif; ?>
 			    
 			    	<?php if ( get_post_meta($post->ID, 'ecpt_website', true) ) : ?>
-			    		<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" target="_blank"><span class="icon-globe"></span>Personal Website</a><br>
+			    		<span class="icon-globe"></span> <a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" target="_blank">Personal Website</a><br>
 			    	<?php endif; ?>
 			    	<?php if ( get_post_meta($post->ID, 'ecpt_lab_website', true) ) : ?>
-			    		<a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" target="_blank"><span class="icon-globe"></span>Group/Lab Website</a>
+			    		<span class="icon-globe"></span> <a href="<?php echo get_post_meta($post->ID, 'ecpt_lab_website', true); ?>" target="_blank">Group/Lab Website</a>
 			    	<?php endif; ?>
+			    	<?php if (get_post_meta($post->ID, 'ecpt_google_id', true) ) : ?>
+			    		<span class="fa fa-google"></span> <a href="http://scholar.google.com/citations?user=<?php echo get_post_meta($post->ID, 'ecpt_google_id', true); ?>" target="_blank">Google Scholar Profile</a><br>
+			    	<?php endif; ?>
+			    	<?php if (get_post_meta($post->ID, 'ecpt_microsoft_id', true)) : ?>
+			    		<span class="fa fa-windows"></span> <a href="https://academic.microsoft.com/#/detail/<?php echo get_post_meta($post->ID, 'ecpt_microsoft_id', true); ?>" target="_blank"> Microsoft Academic Profile</a>
+					<?php endif; ?>
 			    </p>
 			</div>
 			<div class="small-12 medium-8 columns">
@@ -77,7 +83,7 @@
 				
 				<?php if ( get_post_meta($post->ID, 'ecpt_teaching', true) ) : ?><dd><a href="#teachingTab">Teaching</a></dd><?php endif; ?>
 				
-				<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) || get_post_meta($post->ID, 'ecpt_microsoft_id', true) || get_post_meta($post->ID, 'ecpt_google_id', true)) : ?><dd><a href="#publicationsTab">Publications</a></dd><?php endif; ?>
+				<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) || get_post_meta($post->ID, 'ecpt_google_id', true)) : ?><dd><a href="#publicationsTab">Publications</a></dd><?php endif; ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_books_cond', true) == 'on' ) : ?><dd><a href="#booksTab">Books</a></dd><?php endif; ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_extra_tab_title', true) ) : ?><dd><a href="#extraTab"><?php echo get_post_meta($post->ID, 'ecpt_extra_tab_title', true); ?></a></dd><?php endif; ?>
 				
@@ -99,20 +105,9 @@
 					<div class="content" id="teachingTab"><?php echo get_post_meta($post->ID, 'ecpt_teaching', true); ?></div>
 				<?php endif; ?>
 				
-				<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) || get_post_meta($post->ID, 'ecpt_microsoft_id', true) || get_post_meta($post->ID, 'ecpt_google_id', true) ) : ?>
+				<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) || get_post_meta($post->ID, 'ecpt_google_id', true) ) : ?>
 					<div class="content" id="publicationsTab">
 						<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) ) : echo get_post_meta($post->ID, 'ecpt_publications', true); endif; ?>
-						<?php if ( get_post_meta($post->ID, 'ecpt_microsoft_id', true) ) : ?>
-							<!-- microsoft academic -->
-							<?php $author_id = get_post_meta($post->ID, 'ecpt_microsoft_id', true); ?>
-							<div id="LibraInsideDiv" class="libra">[Loading...]</div>
-							<script language="javascript">
-							    g_libraBase="http://academic.research.microsoft.com/";
-							    g_authorID=<?php echo $author_id;?>;
-							    g_showMask=5;g_orderBy=0;g_topN=20;g_showStyle="LibraStyle";g_content=2;g_ws_head="http://academic.research.microsoft.com/";
-							</script>
-							<script language="javascript" id="insideJs" src="http://academic.research.microsoft.com/LibraInside?js&infos=<?php echo $author_id; ?>|5|0|20"></script>						
-						<?php endif; ?>
 						<?php if ( get_post_meta($post->ID, 'ecpt_google_id', true) ) : locate_template('/parts/google-scholar.php', true, false); endif; ?>
 					</div>
 				<?php endif; ?>

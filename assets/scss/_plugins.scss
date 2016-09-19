@@ -265,59 +265,6 @@ li.person {
   }
 }
 
-
-/*microsoft academic*/
-#LibraInsideDiv {
-  .statistic, .author, .title h1 {
-    display: none;
-  }
-}
-
-.libra {
-  
-  .list-paper a {
-    font-size: 1.1rem;
-    color: $blue;
-    font-family: $font-stack; 
-    font-weight: 400; 
-    font-style: normal;
-    &:link {
-      font-size: 1.1rem;
-      color: $blue;
-      font-family: $font-stack; 
-      font-weight: 400; 
-      font-style: normal;
-    }
-    &:hover {
-      color: $black;
-      text-decoration: none;
-    }
-  }
-  .conference {
-    font-size: 1rem;
-    font-family: $font-stack;
-    font-weight: 300;
-    font-style: normal;
-  }
-  .list-conference a {
-    &:link {
-      color: $blue !important;
-    }
-    &:hover {
-      color: $black!important;
-      text-decoration: none;
-    }
-  }
-  .logo {
-    position: relative;
-    bottom: 0;
-    right: 0px;
-    a {
-      border-bottom: none;
-    }
-  }
-}
-
 p.pub {
   margin-bottom: 3px;
   line-height: 1.6em;

@@ -33,8 +33,8 @@ $google = str_get_html($data);
 
 //Updated by TG on 9/2/14. Google changed citation markup from tr.item & td#col-title to tr.gsc_a_tr & td.gsc_a_t/c/y
 
-echo '<p><strong>Displaying the 20 most recent publications. (Please refresh the page if no publications initially appear.)</p>'; 
-echo '<p>View the <a href="' . $older_pubs . '">Google Scholar Profile</a> for complete publications list.</strong></p>';
+echo '<div class="panel"><p>Displaying the 20 most recent publications. View the <a href="' . $older_pubs . '">Google Scholar Profile</a> for complete publications list.</p>'; 
+echo '<p>Note: Please refresh the page if no publications initially appear.</p></div>';
 
 
 foreach($google->find('tr.gsc_a_tr') as $article) {
