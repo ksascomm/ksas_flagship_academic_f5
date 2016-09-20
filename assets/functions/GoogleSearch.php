@@ -253,13 +253,15 @@ class KSAS_GoogleSearchResults extends KSAS_SearchResults {
      * @returns array
      */
     public function getResultsetLinks() {
+        $theme_option = flagship_sub_get_global_options(); 
+        $collection_name = $theme_option['flagship_sub_search_collection'];
         $links = array();
         $site_path = site_url('/search?q=');
         for ($resultsPageNum = 1; $resultsPageNum <= $this->lastResultsPageNum; $resultsPageNum++) {
             if ($resultsPageNum == $this->resultsPageNum) {
                 $links[] = "<a class=\"current\">$resultsPageNum</a>";
             } else {
-                $url = $site_path . $this->query . "&resultsPageNum=" . ($resultsPageNum);
+                $url = $site_path . $this->query . "&site=" . $collection_name . "&resultsPageNum=" . ($resultsPageNum);
                 $links[] = "<a href=\"$url\">$resultsPageNum</a>";
             }
         }

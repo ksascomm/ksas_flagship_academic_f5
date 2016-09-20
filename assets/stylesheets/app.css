@@ -10944,6 +10944,12 @@ a.button {
 :-ms-input-placeholder {
   color: #e5e2e0; }
 
+#sponsored h2 {
+  font-size: 1.75rem; }
+
+#sponsored h3 {
+  font-size: 1.5rem; }
+
 @media print {
   dl.accordion .content {
     display: block !important; }

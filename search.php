@@ -22,7 +22,7 @@ try {
     if (array_key_exists('resultsPageNum', $_REQUEST)) {
         $resultsPageNum = $_REQUEST['resultsPageNum'];
     }
-    $resultsPerPage = 10;
+    $resultsPerPage = 35;
     $baseQueryURL = 'http://search.johnshopkins.edu/search?&client=ksas_frontend';
     $results = $search->query($_REQUEST['q'], $_REQUEST['site'], $baseQueryURL, $resultsPageNum, $resultsPerPage);
     $hits = $results->getNumHits();
@@ -35,20 +35,33 @@ try {
     if ($hits > 0) {
         ?>
        <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
-                    <fieldset>
-                        <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
-                        <label>Search:</label>
-                        <input type="radio" name="site" value="<?php echo $collection_name; ?>" checked>This site only
-                        <input type="radio" name="site" value="krieger_collection">All of JHU
-                        <input type="submit" class="button blue_bg" value="Search Again" />
-                    </fieldset>
+            <fieldset> 
+                <label>
+                    Search:
+                    <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
+                </label>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <input type="radio" name="site" id="thisSite" value="<?php echo $collection_name; ?>">
+                            <label for="thisSite">This & Related Websites</label>
+                        <input type="radio" name="site" id="krieger" value="krieger_collection">
+                            <label for="krieger">Krieger Network</label>
+                        <input type="radio" name="site" id="allJHU" value="jhuedu">
+                            <label for="allJHU">All of JHU</label>
+                    </div>   
+                </div>                    
+                <input type="submit" class="button blue_bg" id="search_again" value="Search Again" />
+                    <label for="search_again" class="screen-reader-text">
+                    Search Again
+                    </label>
+            </fieldset>
        </form>        
-       <h6>Results <span class="black"><?php echo $results->getFirstResultNum() ?> - <?php echo $results->getLastResultNum() ?></span> of about <span class="black"><?php echo $hits ?></span></h6>
+       <p>Results <strong><?php echo $results->getFirstResultNum() ?> - <?php echo $results->getLastResultNum() ?></strong> of about <strong><?php echo $hits ?></strong></p>
            
         <?php if (empty($sponsored_result) == false) { ?>
-	        <div class="panel callout radius10" id="sponsored">
-	        	<h6 class="black">Featured Result</h6>
-	        	<a href="<?php echo $sponsored_result['sponsored_url']; ?>"><h3><?php echo $sponsored_result['sponsored_title']; ?><small class="italic"> &mdash;<?php echo $sponsored_result['sponsored_url']; ?></small></h3></a>
+	        <div class="panel radius10" id="sponsored">
+	        	<h2 class="black">Featured Result</h2>
+	        	<h3><a href="<?php echo $sponsored_result['sponsored_url']; ?>"><?php echo $sponsored_result['sponsored_title']; ?></a><small class="italic"> &mdash;<?php echo $sponsored_result['sponsored_url']; ?></small></h3>
 	        </div>
          <?php } ?>   
             <div id="search-results">
@@ -59,11 +72,12 @@ try {
             // note what results are PDFs
             $pdfNote = '';
             if (preg_match('{application/pdf}', $result['mimeType'])) {
-                $pdfNote = '<span class="black">[PDF]</span> ';
+                $pdfNote = '<span class="black"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+[PDF]</span> ';
             }
             ?>
                     <li>
-                        <h5><?php echo $pdfNote ?><a href="<?php echo $result['path'] ?>"><?php echo $result['title'] ?></a></h5>
+                        <h4><?php echo $pdfNote ?><a href="<?php echo $result['path'] ?>"><?php echo $result['title'] ?></a></h4>
             <?php
             if (array_key_exists('description', $result) && $result['description']) {
                 ?>
@@ -115,15 +129,28 @@ try {
             }
         ?>
              
-            <p style="font-weight: bold;">There are no pages matching your search.</p>
+            <h3 class="black">There are no pages matching your search.</h3>
        <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
-                    <fieldset>
-                        <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
-                        <label class="inline bold">Search:</label>
-                        <input type="radio" name="site" value="<?php echo $collection_name; ?>" checked>This site only
-                        <input type="radio" name="site" value="krieger_collection">All JHU websites
-                        <input type="submit" class="button blue_bg" value="Search Again" />
-                    </fieldset>
+            <fieldset> 
+                <label>
+                    Search:
+                    <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
+                </label>
+                <div class="row">
+                    <div class="small-12  columns">
+                        <input type="radio" name="site" id="thisSite" value="<?php echo $collection_name; ?>">
+                            <label for="thisSite">This & Related Websites</label>
+                        <input type="radio" name="site" id="krieger" value="krieger_collection">
+                            <label for="krieger">Krieger Network</label> 
+                        <input type="radio" name="site" id="allJHU" value="jhuedu">
+                            <label for="allJHU">All of JHU</label>
+                    </div>   
+                </div>                    
+                <input type="submit" class="button blue_bg" id="search_again" value="Search Again" />
+                    <label for="search_again" class="screen-reader-text">
+                    Search Again
+                    </label>
+            </fieldset>
        </form>        
 
         <?php
