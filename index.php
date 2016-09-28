@@ -35,7 +35,7 @@
 
 		<article id="post-<?php the_ID(); ?>">
 			<header class="entry-header">
-				<h3 class="uppercase black"><?php the_date(); ?></h3>
+				<h3 class="uppercase black"><?php the_time( get_option( 'date_format' ) ); ?></h3>
 				<h2>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title();?>">	
 						<?php the_title();?>

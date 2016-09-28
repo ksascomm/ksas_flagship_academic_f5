@@ -87,7 +87,7 @@
 	
 		<article class="small-12 columns news-item" aria-label="<?php the_title();?> article" id="post-<?php the_ID(); ?>">
 			<header class="entry-header">
-				<h2 class="uppercase black"><?php the_date(); ?></h2>
+				<h2 class="uppercase black"><?php the_time( get_option( 'date_format' ) ); ?></h2>
 				<h1>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title();?></a>
 				</h1>
