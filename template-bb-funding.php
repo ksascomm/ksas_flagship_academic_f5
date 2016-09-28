@@ -8,7 +8,7 @@ Template Name: Bulletin Board - Funding Opportunites
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="small-12 columns">	
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
-		<section class="content">
+		<div class="content">
  			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 
  				<!--Start the loop -->
 				<h1 class="page-title"><?php the_title(); ?></h1>
@@ -57,7 +57,7 @@ Template Name: Bulletin Board - Funding Opportunites
 				<?php endif; endforeach; endforeach; ?>
 
 			</article>
-		</section>
+		</div>
 	</div>	<!-- End main content (left) section -->
 <?php locate_template('parts/sidebar.php', true, false); ?>
 </div> <!-- End #landing -->

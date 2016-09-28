@@ -8,7 +8,7 @@ Template Name: Testimonial Listing (Alumni)
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="large-12 columns">	
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
-		<section class="content">
+		<div class="content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<h1 class="page-title"><?php the_title(); ?></h1>
 				<?php the_content(); ?>
@@ -47,7 +47,7 @@ Template Name: Testimonial Listing (Alumni)
 		<?php endwhile; ?>
 			</dl>
 		<?php endif; ?>
-		</section>
+		</div>
 	</div>
 </div> 
 <?php get_footer(); ?>

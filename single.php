@@ -11,12 +11,12 @@
 				<h2><?php the_date(); ?></h2>
 				<h1><?php the_title();?></h1>
 			</header> <!-- end article header -->
-			<section class="entry-content" itemprop="articleBody">
+			<div class="entry-content" itemprop="articleBody">
 			<?php if ( has_post_thumbnail()) { ?> 
 				<?php the_post_thumbnail('full', array('class'	=> "floatleft")); ?>
 			<?php } ?>
 			<?php the_content(); }?>
-			</section> <!-- end article section -->
+			</div> <!-- end article section -->
 		</article> <!-- end article -->
 		<?php endwhile; endif; ?>
 	</div>	<!-- End main content (left) section -->

@@ -7,7 +7,7 @@ Template Name: Faculty Books
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="small-10 columns">	
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
-		<section class="content news">
+		<div class="content news">
 			<h1 class="page-title"><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 			<?php 
@@ -59,10 +59,10 @@ Template Name: Faculty Books
 				<hr>
 			</article>	
 			<?php endwhile; endif; ?>
-		<div class="row">
-			<?php flagship_pagination($faculty_books_query->max_num_pages); ?>		
-		</div>	
-		</section>
+			<div class="row">
+				<?php flagship_pagination($faculty_books_query->max_num_pages); ?>		
+			</div>	
+		</div>
 	</div>	<!-- End main content (left) section -->
 </div> <!-- End #landing -->
 <?php get_footer(); ?>

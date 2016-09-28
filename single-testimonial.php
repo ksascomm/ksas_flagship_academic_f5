@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="small-12 columns radius-left offset-topgutter">	
-		<section class="content">
+		<div class="content">
 		<div class="row">
 				<div class="small-5 small-offset-7 columns">
 				<h6>View Other Testimonials</h6>
@@ -39,7 +39,7 @@
 				<p><?php the_content()?></p>
 			<?php endwhile; endif;?>
 			</div>
-		</section>
+		</div>
 	</div>	<!-- End main content (left) section -->
 <?php locate_template('parts/sidebar-nav.php', true, false); ?>
 </div> <!-- End #landing -->

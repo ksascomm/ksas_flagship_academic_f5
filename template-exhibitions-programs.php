@@ -13,7 +13,7 @@ Template Name: Exhibitions & Programs
 					));
 					 ?>
 
-<div class="row wrapper radius10">
+<div class="row wrapper radius10" role="main">
 	<div class="small-12 columns">
 		<div class="row">
 			
