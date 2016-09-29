@@ -31,3 +31,12 @@ $u(document).ready(function () { // Backstretch
         speed: 10
     });
 });
+
+var $a = jQuery.noConflict();
+$a(document).ready(function() {
+  $a('#photo img').each(function(){
+    var $img = $a(this);
+    var filename = $img.attr('src')
+    $img.attr('alt', " ");
+  });
+});
