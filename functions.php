@@ -200,7 +200,11 @@ function my_sitemap_replacement ($content) {
 }
 add_filter('simple_sitemaps-generated_urlset', 'my_sitemap_replacement');
 
+
 add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+function my_css_attributes_filter($var) {
+  return is_array($var) ? array() : '';
+}
 
 // Register scripts and stylesheets
 require_once(get_template_directory().'/assets/functions/enqueue-scripts.php'); 
