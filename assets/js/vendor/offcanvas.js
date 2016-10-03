@@ -49,9 +49,4 @@
 
   }
 
-  $z(window).resize(function() { //On Window resizeBy(
-    $cHeight = $z('.o-content').outerHeight();
-    console.log($cHeight);
-  });
-
 })(this);
