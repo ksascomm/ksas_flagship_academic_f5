@@ -15,3 +15,17 @@ function site_scripts() {
     wp_enqueue_script( 'offcanvas-js', get_template_directory_uri() . '/assets/js/vendor/offcanvas.min.js', array( 'jquery' ), '', true );
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
+
+function add_defer_attribute($tag, $handle) {
+   // add script handles to the array below
+   $scripts_to_defer = array('app-js', 'offcanvas-js');
+   
+   foreach($scripts_to_defer as $defer_script) {
+      if ($defer_script === $handle) {
+         return str_replace(' src', ' defer="defer" src', $tag);
+      }
+   }
+   return $tag;
+}
+
+add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
