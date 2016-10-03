@@ -3,7 +3,7 @@ function site_scripts() {
   global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
     // Load modernizr files in footer
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.min.js', array(), '', true );
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.min.js', array(), '', false );
     
     // Adding Foundation scripts file in the footer
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/foundation.min.js', array( 'jquery' ), '5.5.3', true );
@@ -16,16 +16,17 @@ function site_scripts() {
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
 
-function add_defer_attribute($tag, $handle) {
-   // add script handles to the array below
-   $scripts_to_defer = array('app-js', 'offcanvas-js');
-   
-   foreach($scripts_to_defer as $defer_script) {
-      if ($defer_script === $handle) {
-         return str_replace(' src', ' defer="defer" src', $tag);
-      }
-   }
-   return $tag;
-}
 
-add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
+// Defer Plugin Javascripts
+// Defer jQuery Parsing using the HTML5 defer property
+if (!(is_admin() )) {
+    function defer_parsing_of_js ( $url ) {
+        if ( FALSE === strpos( $url, '.js' ) ) return $url;
+        if ( strpos( $url, 'jquery.js' ) ) return $url;
+        if ( strpos( $url, 'modernizr.min.js' ) ) return $url;
+        if ( strpos( $url, 'foundation.min.js' ) ) return $url;
+        // return "$url' defer ";
+        return "$url' defer onload='";
+    }
+    add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+}
