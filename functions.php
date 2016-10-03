@@ -56,7 +56,7 @@ add_action('after_setup_theme','academic_flagship_theme_support');
 			'name'          => 'Default Sidebar',
 			'id'            => 'page-sb',
 			'description'   => 'This is the default sidebar',
-			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'before_widget' => '<div id="%1$s" class="widget %2$s row">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<div class="widget_title"><h5 class="white">',
 			'after_title'   => '</h5></div>' 
@@ -66,7 +66,7 @@ add_action('after_setup_theme','academic_flagship_theme_support');
 			'name'          => 'Graduate Sidebar',
 			'id'            => 'graduate-sb',
 			'description'   => 'This sidebar will appear on pages under Graduate',
-			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'before_widget' => '<div id="%1$s" class="widget %2$s row">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<div class="widget_title"><h5 class="white">',
 			'after_title'   => '</h5></div>' 
@@ -76,7 +76,7 @@ add_action('after_setup_theme','academic_flagship_theme_support');
 			'name'          => 'Undergraduate Sidebar',
 			'id'            => 'undergrad-sb',
 			'description'   => 'This sidebar will appear on pages under Undergraduate',
-			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'before_widget' => '<div id="%1$s" class="widget %2$s row">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<div class="widget_title"><h5 class="white">',
 			'after_title'   => '</h5></div>' 
@@ -86,7 +86,7 @@ add_action('after_setup_theme','academic_flagship_theme_support');
 			'name'          => 'Research Sidebar',
 			'id'            => 'research-sb',
 			'description'   => 'This sidebar will appear on pages under Research',
-			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'before_widget' => '<div id="%1$s" class="widget %2$s row">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<div class="widget_title"><h5 class="white">',
 			'after_title'   => '</h5></div>' 
@@ -96,7 +96,7 @@ add_action('after_setup_theme','academic_flagship_theme_support');
 			'name'          => 'Homepage Sidebar',
 			'id'            => 'homepage-sb',
 			'description'   => 'This sidebar will only appear on the homepage',
-			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'before_widget' => '<div id="%1$s" class="widget %2$s row">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<div class="widget_title"><h5 class="white">',
 			'after_title'   => '</h5></div>' 
@@ -106,7 +106,7 @@ add_action('after_setup_theme','academic_flagship_theme_support');
 			'name'          => 'News Archive Sidebar',
 			'id'            => 'archive-sb',
 			'description'   => 'This sidebar will only appear on the news archive page',
-			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'before_widget' => '<div id="%1$s" class="widget %2$s row">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<div class="widget_title"><h5 class="white">',
 			'after_title'   => '</h5></div>' 
