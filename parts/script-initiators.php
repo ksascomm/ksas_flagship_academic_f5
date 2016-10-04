@@ -96,7 +96,16 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 
 		<?php if(is_front_page()) : ?>
 			<script defer src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/jquery.backstretch.min.js"></script>
-
+			<script>
+				var $a = jQuery.noConflict();
+				$a(document).ready(function() {
+				  $a('.backstretch img').each(function(){
+				    var $img = $a(this);
+				    var filename = $img.attr('src')
+				    $img.attr('alt', " ");
+				  });
+				});					
+			</script>
 		<?php endif; ?>
 
 	<?php } ?>
