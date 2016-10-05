@@ -22,6 +22,7 @@ if ( !function_exists( 'create_theme_options' ) ) {
 //Add custom background option
 	
 function academic_flagship_theme_support() {
+	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 125, 125, true );   // default thumb size
 	add_image_size( 'rss', 300, 150, true );
