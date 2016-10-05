@@ -9141,22 +9141,22 @@ body.purple .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, body.purp
 .content h1 {
   font-size: 2.25rem; }
 
-.news h1, .archive h1 {
+.news h1, .post-archive h1 {
   font-size: 1.5rem; }
 
-.news h2, .archive h2 {
+.news h2, .post-archive h2 {
   font-size: 1.2rem; }
 
-.news h3, .archive h3 {
+.news h3, .post-archive h3 {
   font-size: 1.1875rem; }
 
-.news h4, .archive h4 {
+.news h4, .post-archive h4 {
   font-size: 1.125rem; }
 
-.news h5, .archive h5 {
+.news h5, .post-archive h5 {
   font-size: 1.0625rem; }
 
-.news h6, .archive h6 {
+.news h6, .post-archive h6 {
   font-size: 1rem; }
 
 .news-item h1 {
@@ -10843,6 +10843,9 @@ button.radio {
 
 .bulletin-archive h1.page-title {
   font-size: 2.25rem; }
+
+.bulletin-archive h2 {
+  font-size: 1.2rem; }
 
 .bulletin {
   margin-left: 1rem;
