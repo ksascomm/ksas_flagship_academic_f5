@@ -22,7 +22,6 @@ if ( !function_exists( 'create_theme_options' ) ) {
 //Add custom background option
 	
 function academic_flagship_theme_support() {
-	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 125, 125, true );   // default thumb size
 	add_image_size( 'rss', 300, 150, true );
@@ -206,6 +205,14 @@ add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
 function my_css_attributes_filter($var) {
   return is_array($var) ? array() : '';
 }
+
+function add_theme_support_child() {
+
+    add_theme_support( 'title-tag' );
+
+}
+
+add_action( 'after_setup_theme', 'add_theme_support_child', 11 );
 
 // Register scripts and stylesheets
 require_once(get_template_directory().'/assets/functions/enqueue-scripts.php'); 
