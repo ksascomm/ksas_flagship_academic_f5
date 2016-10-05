@@ -214,10 +214,22 @@ function theme_slug_setup() {
 add_action( 'after_setup_theme', 'theme_slug_setup' );
 
 function custom_title($title_parts) {
-    $title_parts['title'] = get_the_title();
+ if ( is_front_page() ) {
+    $title_parts['title'] = __( 'Home' ) . ' - ' . get_bloginfo('name');
     return $title_parts;
 }
+ elseif ( is_home()) {
+ 	 $title_parts['title'] = "Archive";
+    return $title_parts;
+	 }
+ else {
+ 	$title_parts['title'] = get_the_title();
+    return $title_parts;
+ }
+}
 add_filter( 'document_title_parts', 'custom_title' );
+
+
 
 // Register scripts and stylesheets
 require_once(get_template_directory().'/assets/functions/enqueue-scripts.php'); 
