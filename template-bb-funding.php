@@ -15,7 +15,7 @@ Template Name: Bulletin Board - Funding Opportunites
 				<?php the_content() ?>
 			<?php endwhile; endif ?>
 			
-			<article class="bulletinboard">
+			<div class="bulletinboard">
 				<?php $bulletin_type = 'bulletinboard';
 					// Get all the taxonomies for this post type
 					$taxonomies = get_object_taxonomies( (object) array( 'post_type' => $bulletin_type ) );
@@ -36,27 +36,31 @@ Template Name: Bulletin Board - Funding Opportunites
 
 					        if( $bulletins->have_posts() ): ?>
 							
-					        <h3><?php echo $term->name ;?></h3> 
+					        <h2><?php echo $term->name ;?></h2> 
 					   
 					        <?php while( $bulletins->have_posts() ) : $bulletins->the_post(); 
 					         //Do you general query loop here  ?>				   
 							<article class="bulletin small-12 columns">
-								<a href="<?php the_permalink(); ?>">	
-										<h1 class="page-title"><?php the_title();?></h1>
-											<?php if ( has_post_thumbnail()) { ?> 
-												<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
-											<?php } ?>
-										<?php the_excerpt(); ?>
-									</a>
-							<hr>		
-							 </article>		
+								<header class="article-header">	
+									<h1 class="page-title">
+										<a href="<?php the_permalink(); ?>"><?php the_title();?></a>
+									</h1>
+								</header>
+								<div class="entry-content" itemprop="articleBody">
+									<?php if ( has_post_thumbnail()) { ?> 
+										<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+									<?php } ?>
+									<?php the_excerpt(); ?>
+								</div>	
+							</article>		
+					        <?php endwhile; ?>	
 		
 					        <?php endwhile; ?>	
 							
 
 				<?php endif; endforeach; endforeach; ?>
 
-			</article>
+			</div>
 		</div>
 	</div>	<!-- End main content (left) section -->
 <?php locate_template('parts/sidebar.php', true, false); ?>

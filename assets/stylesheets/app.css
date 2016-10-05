@@ -10841,11 +10841,25 @@ button.radio {
   .book-entry img {
     margin-bottom: 25px; }
 
+.bulletin-archive h1.page-title {
+  font-size: 2.25rem; }
+
 .bulletin {
-  margin-left: 10px; }
+  margin-left: 1rem;
+  margin-bottom: 1rem; }
   .bulletin h1 {
     font-family: "gentona-book", Arial, sans-serif;
     font-size: 1.25rem; }
+
+.bulletinboard h2 {
+  font-size: 1.75rem; }
+
+.bulletinboard h3 {
+  font-size: 1.25rem; }
+
+.bulletinboard a.button {
+  border-bottom: inherit;
+  border-bottom-color: inherit; }
 
 .pagination {
   clear: both;

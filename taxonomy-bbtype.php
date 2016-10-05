@@ -2,7 +2,7 @@
 <div class="row sidebar_bg radius10" id="page">
 	<div class="small-12 columns wrapper radius-left offset-topgutter">	
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>		
-		<main class="content">
+		<main class="content bulletin-archive">
 		<?php if(is_tax('bbtype', 'jobs-bb')){ ?>
 			<h1 class="page-title">Job Opportunities</h1>
 		<?php } elseif(is_tax('bbtype', 'research-bb')){ ?>
@@ -27,13 +27,14 @@
 
 			<?php while ( have_posts()) : the_post(); ?>
 				<div class="small-12 columns"> 
-					<a href="<?php the_permalink(); ?>">	
-						<h2><?php the_title();?></h2>
-							<?php if ( has_post_thumbnail()) { ?> 
-								<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
-							<?php } ?>
-						<?php the_excerpt(); ?>
-					</a>
+					<h2>
+						<a href="<?php the_permalink(); ?>"><?php the_title();?></a>
+					</h2>
+						<?php if ( has_post_thumbnail()) { ?> 
+							<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+						<?php } ?>
+					<?php the_excerpt(); ?>
+
 					<hr>
 				</div>	
 			<?php endwhile; ?>
@@ -41,14 +42,14 @@
 		<?php } else { ?>
 
 			<?php while ( have_posts()) : the_post(); ?>
-				<div class="small-12 columns"> 
-					<a href="<?php the_permalink(); ?>">	
-						<h2><?php the_title();?></h2>
-							<?php if ( has_post_thumbnail()) { ?> 
-								<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
-							<?php } ?>
-						<?php the_excerpt(); ?>
-					</a>
+				<div class="small-12 columns"> 	
+					<h2>
+						<a href="<?php the_permalink(); ?>"><?php the_title();?></a>
+					</h2>
+						<?php if ( has_post_thumbnail()) { ?> 
+							<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+						<?php } ?>
+					<?php the_excerpt(); ?>
 					<hr>
 				</div>	
 			<?php endwhile; ?>
