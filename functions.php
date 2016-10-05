@@ -206,13 +206,10 @@ function my_css_attributes_filter($var) {
   return is_array($var) ? array() : '';
 }
 
-function add_theme_support_child() {
-
-    add_theme_support( 'title-tag' );
-
+function theme_slug_setup() {
+   add_theme_support( 'title-tag' );
 }
-
-add_action( 'after_setup_theme', 'add_theme_support_child', 11 );
+add_action( 'after_setup_theme', 'theme_slug_setup' );
 
 // Register scripts and stylesheets
 require_once(get_template_directory().'/assets/functions/enqueue-scripts.php'); 
