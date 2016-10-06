@@ -2,7 +2,7 @@
 	$home_url = home_url();
 	$theme_option = flagship_sub_get_global_options();	
 	
-		if ( is_single() && !is_singular(array( 'bulletinboard', 'ai1ec_event' ))) { 
+		if ( is_single() && !is_singular(array( 'bulletinboard', 'ai1ec_event', 'profile' ))) { 
 			global $post;
 			$article_title = $post->post_title;
 			//$article_link = $post->guid;
@@ -23,7 +23,22 @@
 				<li><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></li>
 			</ul>
 		</nav>
-		<?php }	
+		<?php }
+	elseif (is_singular('profile')) { ?>
+		<nav aria-label="breadcrumbs">
+			<ul id="menu-main-menu-2" class="breadcrumbs">
+				<li><a href="<?php echo $home_url; ?>">Home</a></li>
+				<?php if(has_term('spotlight', 'profiletype')){ ?>
+					<li><a href="<?php echo $home_url; ?>/profiletype/spotlight">Spotlights</a></li>
+				<?php } elseif(has_term('undergraduate-profile', 'profiletype')){ ?>
+					<li><a href="<?php echo $home_url; ?>/profiletype/undergraduate-profile/">Undergraduate Profiles</a></li>
+				<?php } elseif(has_term('graduate-profile', 'profiletype')){ ?>
+					<li><a href="<?php echo $home_url; ?>/profiletype/graduate-profile/">Graduate Profiles</a></li>
+				<?php } ?>
+				<li><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></li>
+			</ul>
+		</nav>
+		<?php }			
 	elseif ( $theme_option['flagship_sub_breadcrumbs']  == '1' ) { ?>
 
 		<nav aria-label="breadcrumbs">

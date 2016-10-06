@@ -10864,6 +10864,21 @@ button.radio {
   border-bottom: inherit;
   border-bottom-color: inherit; }
 
+.profile-title {
+  font-size: 1.5rem; }
+
+.widget.ksas_profile h4, .widget.ksas_profile p {
+  line-height: 1.4; }
+
+.widget.ksas_profile article h5 {
+  padding-left: 0px !important; }
+  .widget.ksas_profile article h5 a {
+    border-bottom: .125em dotted;
+    border-bottom-color: rgba(0, 0, 0, 0.1); }
+    .widget.ksas_profile article h5 a:hover {
+      color: #2C2C33;
+      border-bottom-style: solid; }
+
 .pagination {
   clear: both;
   padding: 20px 0;
