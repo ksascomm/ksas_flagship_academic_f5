@@ -418,9 +418,10 @@ a.field {
 
 div.field {
   min-height: 355px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   max-width: 305px;
   min-width: 240px;
+  border: .1875em solid $black;
 }
 
 #interdisciplinary {

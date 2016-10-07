@@ -41,7 +41,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
   	<script defer src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.courses.min.js"></script>
 
 
-<!***********SINGLE ITEMS (NEWS & PEOPLE_**************>
+<!***********SINGLE ITEMS (NEWS & PEOPLE & TESTIMONIALS & EXHIBITS)**************>
 <?php } if (is_page_template('template-program-people.php')) { ?>
 	
   	<script defer src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.directory.min.js"></script>
@@ -52,6 +52,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 	$faculty_id = ksas_get_page_id('faculty');
 	$undergraduate_id = ksas_get_page_id('undergraduate');
 	$testimonial_id = ksas_get_page_id('testimonial');
+	$exhibits_id = ksas_get_page_id('exhibitions');
 ?>
 <?php if (  is_singular('post') ) { ?>
 	<script defer>
@@ -79,6 +80,16 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 		$y(document).ready(function(){
 			$y('li.page-id-<?php echo $undergraduate_id; ?>').addClass('current_page_ancestor');
 			$y('li.page-id-<?php echo $testimonial_id; ?>').addClass('current_page_parent');
+			});
+	</script>
+<?php } ?>
+
+<?php if ( is_singular('ksasexhibits') ) { ?>
+	<script defer>
+		var $y = jQuery.noConflict();
+		$y(document).ready(function(){
+			$y('li.page-id-<?php echo $exhibits_id; ?>').addClass('current_page_ancestor');
+			$y('li.page-id-<?php echo $archive_id; ?>').removeClass('current_page_parent');
 			});
 	</script>
 <?php } ?>

@@ -13,7 +13,7 @@ Template Name: Exhibitions & Programs
 					));
 					 ?>
 
-<div class="row wrapper radius10" role="main">
+<div class="row wrapper radius10">
 	<div class="small-12 columns">
 		<div class="row">
 			
@@ -61,57 +61,57 @@ Template Name: Exhibitions & Programs
 
 		<main class="row" id="fields_container">
 			<?php while ($flagship_exhibitions_query->have_posts()) : $flagship_exhibitions_query->the_post(); 
-		//Pull discipline array (humanities, natural, social)
-		$program_types = get_the_terms( $post->ID, 'exhibition_type' );
-			if ( $program_types && ! is_wp_error( $program_types ) ) : 
-				$program_type_names = array();
-				$degree_types = array();
-					foreach ( $program_types as $program_type ) {
-						$program_type_names[] = $program_type->slug;
-						$exhibition_types[] = $program_type->name;
-					}
-				$program_type_name = join( " ", $program_type_names );
-				$exhibition_type = join( ", ", $exhibition_types );
+			//Pull exhibition type array (off/on-campus, independent study, online, etc)
+			$program_types = get_the_terms( $post->ID, 'exhibition_type' );
+				if ( $program_types && ! is_wp_error( $program_types ) ) : 
+					$program_type_names = array();
+					$degree_types = array();
+						foreach ( $program_types as $program_type ) {
+							$program_type_names[] = $program_type->slug;
+							$exhibition_types[] = $program_type->name;
+						}
+					$program_type_name = join( " ", $program_type_names );
+					$exhibition_type = join( ", ", $exhibition_types );
 
-			endif; ?>
-		
-		<!-- Set classes for isotype.js filter buttons -->
-		<div class="medium-4 small-12 columns mobile-field  <?php echo $program_type_name . ' ' . $school_name; ?>">
+				endif; ?>
 			
-			<div class="small-12 columns field" id="<?php echo $program_name; ?>">
+			<!-- Set classes for isotype.js filter buttons -->
+			<div class="medium-4 small-12 columns mobile-field <?php echo $program_type_name; ?>">
 				
-					<?php if ( has_post_thumbnail()) { ?> 
-						<?php the_post_thumbnail('exhibits'); ?>
-					<?php } ?>			    
-					<h4><a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>" class="field"><?php the_title(); ?></a></h4>
-				
+				<div class="small-12 columns field">
+					
+						<?php if ( has_post_thumbnail()) { ?> 
+							<?php the_post_thumbnail('exhibits'); ?>
+						<?php } ?>			    
+						<h4><a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>" class="field"><?php the_title(); ?></a></h4>
+					
 
-				<div class="row">
-					<div class="small-12 columns fields ">
-						<h5 class="black">
-							<?php if (get_post_meta($post->ID, 'ecpt_location', true)) : ?>
-								<?php echo get_post_meta($post->ID, 'ecpt_location', true); ?><br>
-							<?php endif; ?>
-							<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
-								<?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?><br>
-							<?php endif; ?>
-						</h5>			
-						<p>
-							<?php if (get_post_meta($post->ID, 'ecpt_description_short', true)) : ?>
-								<?php echo get_post_meta($post->ID, 'ecpt_description_short', true); ?><br>
-							<?php endif; ?>
-						</p>
+					<div class="row">
+						<div class="small-12 columns fields ">
+							<h5 class="black">
+								<?php if (get_post_meta($post->ID, 'ecpt_location', true)) : ?>
+									<?php echo get_post_meta($post->ID, 'ecpt_location', true); ?><br>
+								<?php endif; ?>
+								<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
+									<?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?><br>
+								<?php endif; ?>
+							</h5>			
+							<p>
+								<?php if (get_post_meta($post->ID, 'ecpt_description_short', true)) : ?>
+									<?php echo get_post_meta($post->ID, 'ecpt_description_short', true); ?><br>
+								<?php endif; ?>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	<?php endwhile; ?>
+			<?php endwhile; ?>
 
-	<div class="row" id="noresults">
-			<div class="medium-4 columns centered">
-				<h3> No matching results</h3>
+			<div class="row" id="noresults">
+					<div class="medium-4 columns centered">
+						<h3> No matching results</h3>
+					</div>
 			</div>
-	</div>
 		</main>
 		
 	</div>
