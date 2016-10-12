@@ -23,7 +23,7 @@ Template Name: Faculty Books
 					set_transient( 'faculty_books_query_' . $paged, $faculty_books_query, 2592000 );
 			} 	
 			 if ( $faculty_books_query->have_posts() ) : while ($faculty_books_query->have_posts()) : $faculty_books_query->the_post(); ?>
-			 <article>
+			 <article id="post-<?php the_ID(); ?>" role="article">
 					<?php if ( has_post_thumbnail()) { ?> 
 						<?php the_post_thumbnail('medium', array('class'	=> "floatleft")); ?>
 					<?php } ?>
@@ -32,19 +32,27 @@ Template Name: Faculty Books
 			
 				<ul class="no-bullet">
 					<li><h2><?php the_title(); ?></h2></li>
-					<li><?php if ( get_post_meta($post->ID, 'ecpt_pub_date', true) ) : echo get_post_meta($post->ID, 'ecpt_pub_date', true);  endif; ?>
-						<?php if ( get_post_meta($post->ID, 'ecpt_publisher', true) ) :?>, <?php echo get_post_meta($post->ID, 'ecpt_publisher', true);  endif; ?>
+					<li>
+					<?php if ( get_post_meta($post->ID, 'ecpt_pub_date', true) ) :?> 
+						<?php echo get_post_meta($post->ID, 'ecpt_pub_date', true);  ?>,
+					<?php endif; ?>
+					<?php if ( get_post_meta($post->ID, 'ecpt_publisher', true) ) :?>
+						<?php echo get_post_meta($post->ID, 'ecpt_publisher', true); ?> 
+					<?php endif; ?>	
 					</li>
 					<li>
-						<strong><a href="<?php echo get_permalink($faculty_post_id); ?>"><?php echo get_the_title($faculty_post_id); ?> 
-									<?php if ( get_post_meta($post->ID, 'ecpt_pub_role', true)) :?>, <?php echo get_post_meta($post->ID, 'ecpt_pub_role', true); endif; ?>
-								</a>
-						</strong>
+						<a href="<?php echo get_permalink($faculty_post_id); ?>">
+							<?php echo get_the_title($faculty_post_id); ?>, 
+								<?php if ( get_post_meta($post->ID, 'ecpt_pub_role', true)) :?> 
+									<?php echo get_post_meta($post->ID, 'ecpt_pub_role', true);?>
+								<?php endif; ?>
+						</a>
 					</li>
 					<li><?php if (get_post_meta($post->ID, 'ecpt_author_cond', true) == 'on') { ?><br>
-						<strong>
-							<a href="<?php echo get_permalink($faculty_post_id2); ?>"><?php echo get_the_title($faculty_post_id2); ?>,&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_pub_role2', true); ?></a>
-						</strong>
+							<a href="<?php echo get_permalink($faculty_post_id2); ?>">
+							<?php echo get_the_title($faculty_post_id2); ?>,&nbsp;
+								<?php echo get_post_meta($post->ID, 'ecpt_pub_role2', true); ?>
+							</a>
 						<?php } ?>
 					</li>
 					<li><?php if ( get_post_meta($post->ID, 'ecpt_pub_link', true) ) :?> 

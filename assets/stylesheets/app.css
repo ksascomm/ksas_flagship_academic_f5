@@ -10874,6 +10874,18 @@ button.radio {
       color: #2C2C33;
       border-bottom-style: solid; }
 
+.widget.ksas_books h4, .widget.ksas_books p {
+  line-height: 1.4; }
+
+.widget.ksas_books article h5 {
+  padding-left: 0px !important; }
+  .widget.ksas_books article h5 a {
+    border-bottom: .125em dotted;
+    border-bottom-color: rgba(0, 0, 0, 0.1); }
+    .widget.ksas_books article h5 a:hover {
+      color: #2C2C33;
+      border-bottom-style: solid; }
+
 .pagination {
   clear: both;
   padding: 20px 0;
