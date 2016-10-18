@@ -79,7 +79,7 @@ module.exports = function(grunt) {
         }
     },
 
-    //Copy Font-Awesome
+    //Copy js files
     copy: {
         fontawesome: {
             expand: true,
@@ -117,7 +117,6 @@ module.exports = function(grunt) {
         files: {
           "assets/js/vendor/modernizr.min.js": ["assets/js/vendor/modernizr.js"],
           "assets/js/vendor/app.min.js": ["assets/js/vendor/app.js"],
-          "assets/js/vendor/offcanvas.min.js": ["assets/js/vendor/offcanvas.js"],
           "assets/js/vendor/bs-slider-bio.min.js": ["assets/js/vendor/bs-slider-bio.js"],
           "assets/js/vendor/bs-slider-cmdb.min.js": ["assets/js/vendor/bs-slider-cmdb.js"],
           "assets/js/vendor/page.courses.min.js": ["assets/js/vendor/page.courses.js"],

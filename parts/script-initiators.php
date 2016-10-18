@@ -1,6 +1,6 @@
 <!***********ALL PAGES**************>  
 
-		<script async>
+		<script>
 			var $x = jQuery.noConflict();
 				$x('#quicklinks ul.flyout li a').on('click', function() {
 		  			ga('send', 'event', 'Quicklinks', 'Flyout Menu', 'Flagship Academic');
@@ -9,13 +9,13 @@
 
 <!**********TABLET/MOBILE MENUS**************>  
 <?php if(is_tablet()) {  ?>
-		<script defer>
+		<script>
 			jQuery(document).ready(function () {
 			    jQuery('#main_nav').meanmenu({meanScreenWidth: "767"});
 			});
 		</script>
 <?php } else { ?>
-	<script defer>
+	<script>
 		jQuery(document).ready(function () {
 		    jQuery('#main_nav').meanmenu();
 		});
@@ -25,8 +25,8 @@
 <!***********DIRECTORY**************>
 <?php $theme_option = flagship_sub_get_global_options();
 if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flagship_sub_directory_search']  == '1' )  { ?>
-  	<script defer src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.directory.min.js"></script>
-  	<script defer>
+  	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.directory.min.js"></script>
+  	<script>
 	    var $j = jQuery.noConflict();
 	    $j(window).load(function() {
 	        var filterFromQuerystring = getParameterByName('filter');
@@ -38,13 +38,13 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 <!***********COURSES**************>
 <?php } 
 if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( 'template-courses-all.php' ) || is_page_template( 'template-courses-graduate.php' ) || is_page_template( 'template-courses-program.php' ))   { ?>
-  	<script defer src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.courses.min.js"></script>
+  	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.courses.min.js"></script>
 
 
 <!***********SINGLE ITEMS (NEWS & PEOPLE & TESTIMONIALS & EXHIBITS)**************>
 <?php } if (is_page_template('template-program-people.php')) { ?>
 	
-  	<script defer src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.directory.min.js"></script>
+  	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.directory.min.js"></script>
 <? } 
 	$about_id = ksas_get_page_id('about');
 	$archive_id = ksas_get_page_id('archive');
@@ -55,7 +55,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 	$exhibits_id = ksas_get_page_id('exhibitions');
 ?>
 <?php if (  is_singular('post') ) { ?>
-	<script defer>
+	<script>
 		var $j = jQuery.noConflict();
 		$j(document).ready(function(){
 			$j('li.page-id-<?php echo $about_id; ?>').addClass('current_page_ancestor');
@@ -65,7 +65,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 <?php } ?>
 
 <?php if ( is_singular('people') ) { ?>
-	<script defer>
+	<script>
 		var $k = jQuery.noConflict();
 		$k(document).ready(function(){
 			$k('li.page-id-<?php echo $people_id; ?>').addClass('current_page_ancestor');
@@ -75,7 +75,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 <?php } ?> 
 
 <?php if ( is_singular('testimonial') ) { ?>
-	<script defer>
+	<script>
 		var $y = jQuery.noConflict();
 		$y(document).ready(function(){
 			$y('li.page-id-<?php echo $undergraduate_id; ?>').addClass('current_page_ancestor');
@@ -85,7 +85,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 <?php } ?>
 
 <?php if ( is_singular('ksasexhibits') ) { ?>
-	<script defer>
+	<script>
 		var $y = jQuery.noConflict();
 		$y(document).ready(function(){
 			$y('li.page-id-<?php echo $exhibits_id; ?>').addClass('current_page_ancestor');
@@ -97,7 +97,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 <!***********EXHIBITS**************>
 
 <?php if (is_page_template( 'template-exhibitions-programs.php' )) : ?>
-<script defer src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.exhibits.min.js"></script> 
+<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.exhibits.min.js"></script> 
 <?php endif; ?>
 <!***********FULL WIDTH IMAGES**************>
 
@@ -122,7 +122,6 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 	<?php } ?>
 
 
-<script defer>
-jQuery.noConflict();
-jQuery(document).foundation();
+<script>
+jQuery.noConflict(),jQuery(document).foundation();
 </script>
