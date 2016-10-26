@@ -7,6 +7,9 @@ function site_scripts() {
     
     // Adding Foundation scripts file in the footer
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/foundation.min.js', array( 'jquery' ), '5.5.3', true );
+
+        // Adding Foundation scripts file in the footer
+    wp_enqueue_script( 'foundation-plugins', get_template_directory_uri() . '/assets/js/foundation.plugins.min.js', array( 'jquery' ), '5.5.3', true );
     
     // Adding app.js file in the footer
     wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/js/vendor/app.min.js', array( 'jquery' ), '', true );
@@ -25,6 +28,7 @@ if (!(is_admin() )) {
         if ( strpos( $url, 'jquery.js' ) ) return $url;
         if ( strpos( $url, 'modernizr.min.js' ) ) return $url;
         if ( strpos( $url, 'foundation.min.js' ) ) return $url;
+        if ( strpos( $url, 'foundation.plugins.min.js' ) ) return $url;
         // return "$url' defer ";
         return "$url' defer onload='";
     }

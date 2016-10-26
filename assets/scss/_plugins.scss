@@ -555,11 +555,17 @@ box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 .profile-title {
   font-size: 1.5rem;
 }
-.widget.ksas_profile {
+
+//KSAS Books & Spotlight Profiles & Bulletins ------------------------------------
+.widget.ksas_books, .widget.ksas_profile, .widget.ksas_bulletin  {
   h4, p {
     line-height: 1.4;
   }
-    article { 
+    article {
+      h4 {
+        color: $black;
+        font-size: 1.125rem;
+      } 
       h5 {
       padding-left: 0px !important;
       a {
@@ -573,23 +579,9 @@ box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
       }
     }
 }
-
-//KSAS Books ------------------------------------
-.widget.ksas_books {
-  h4, p {
-    line-height: 1.4;
+.widget_rss {
+  span.rss-date {
+      margin-left: -20px;
+      color: $black;
   }
-    article { 
-      h5 {
-      padding-left: 0px !important;
-      a {
-        border-bottom: .125em dotted;
-        border-bottom-color: rgba(0,0,0,0.1);
-        &:hover {
-          color: $black;
-          border-bottom-style: solid;
-        }
-      }
-      }
-    }
 }

@@ -1,30 +1,29 @@
 <!***********ALL PAGES**************>  
-
-		<script>
-			var $x = jQuery.noConflict();
-				$x('#quicklinks ul.flyout li a').on('click', function() {
-		  			ga('send', 'event', 'Quicklinks', 'Flyout Menu', 'Flagship Academic');
-				});
-		</script>
+<script>
+	var $x = jQuery.noConflict();
+		$x('#quicklinks ul.flyout li a').on('click', function() {
+  			ga('send', 'event', 'Quicklinks', 'Flyout Menu', 'Flagship Academic');
+		});
+</script>
 
 <!**********TABLET/MOBILE MENUS**************>  
-<?php if(is_tablet()) {  ?>
+<?php if(is_tablet()) :  ?>
 		<script>
 			jQuery(document).ready(function () {
 			    jQuery('#main_nav').meanmenu({meanScreenWidth: "767"});
 			});
 		</script>
-<?php } else { ?>
+<?php else: ?>
 	<script>
 		jQuery(document).ready(function () {
 		    jQuery('#main_nav').meanmenu();
 		});
 	</script>
-<?php } ?>
+<?php endif; ?>
 
 <!***********DIRECTORY**************>
 <?php $theme_option = flagship_sub_get_global_options();
-if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flagship_sub_directory_search']  == '1' )  { ?>
+if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flagship_sub_directory_search']  == '1' )  : ?>
   	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.directory.min.js"></script>
   	<script>
 	    var $j = jQuery.noConflict();
@@ -33,19 +32,27 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	        $j('a[data-filter=".' + filterFromQuerystring  + '"]').click();
 	    });
 	</script>
-
+<?php endif; ?>
 	
 <!***********COURSES**************>
-<?php } 
-if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( 'template-courses-all.php' ) || is_page_template( 'template-courses-graduate.php' ) || is_page_template( 'template-courses-program.php' ))   { ?>
+<?php if ( 
+	is_page_template( 'template-courses-undergrad.php' ) 
+	|| is_page_template( 'template-courses-all.php' ) 
+	|| is_page_template( 'template-courses-graduate.php' ) 
+	|| is_page_template( 'template-courses-program.php' )
+	) : ?>
+  	
   	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.courses.min.js"></script>
 
+<?php endif; ?>
 
 <!***********SINGLE ITEMS (NEWS & PEOPLE & TESTIMONIALS & EXHIBITS)**************>
-<?php } if (is_page_template('template-program-people.php')) { ?>
+<?php if (is_page_template('template-program-people.php')) : ?>
 	
   	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.directory.min.js"></script>
-<? } 
+<?php endif; ?>
+
+<?php 
 	$about_id = ksas_get_page_id('about');
 	$archive_id = ksas_get_page_id('archive');
 	$people_id = ksas_get_page_id('people');
@@ -53,8 +60,8 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 	$undergraduate_id = ksas_get_page_id('undergraduate');
 	$testimonial_id = ksas_get_page_id('testimonial');
 	$exhibits_id = ksas_get_page_id('exhibitions');
-?>
-<?php if (  is_singular('post') ) { ?>
+
+if (  is_singular('post') ) : ?>
 	<script>
 		var $j = jQuery.noConflict();
 		$j(document).ready(function(){
@@ -62,9 +69,8 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 			$j('li.page-id-<?php echo $archive_id; ?>').addClass('current_page_parent');
 			});
 	</script>
-<?php } ?>
 
-<?php if ( is_singular('people') ) { ?>
+<?php elseif ( is_singular('people') ) : ?>
 	<script>
 		var $k = jQuery.noConflict();
 		$k(document).ready(function(){
@@ -72,9 +78,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 			$k('li.page-id-<?php echo $faculty_id; ?>').addClass('current_page_parent');
 			});
 	</script>
-<?php } ?> 
-
-<?php if ( is_singular('testimonial') ) { ?>
+<?php elseif ( is_singular('testimonial') ) : ?>
 	<script>
 		var $y = jQuery.noConflict();
 		$y(document).ready(function(){
@@ -82,9 +86,7 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 			$y('li.page-id-<?php echo $testimonial_id; ?>').addClass('current_page_parent');
 			});
 	</script>
-<?php } ?>
-
-<?php if ( is_singular('ksasexhibits') ) { ?>
+<?php elseif ( is_singular('ksasexhibits') ) : ?>
 	<script>
 		var $y = jQuery.noConflict();
 		$y(document).ready(function(){
@@ -92,12 +94,12 @@ if ( is_page_template( 'template-courses-undergrad.php' ) || is_page_template( '
 			$y('li.page-id-<?php echo $archive_id; ?>').removeClass('current_page_parent');
 			});
 	</script>
-<?php } ?>
+<?php endif; ?>
 
 <!***********EXHIBITS**************>
 
 <?php if (is_page_template( 'template-exhibitions-programs.php' )) : ?>
-<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.exhibits.min.js"></script> 
+	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.exhibits.min.js"></script> 
 <?php endif; ?>
 <!***********FULL WIDTH IMAGES**************>
 

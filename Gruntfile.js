@@ -90,15 +90,21 @@ module.exports = function(grunt) {
         foundation: {
             expand: true,
             flatten: true,
-            src: ['assets/bower_components/foundation/js/*'],
+            src: ['assets/bower_components/foundation/js/foundation/foundation.js'],
             dest: 'assets/js'
-        },
+        },    
         foundation_plugins: {
             expand: true,
             flatten: true,
-            src: ['assets/bower_components/foundation/js/foundation/*'],
-            dest: 'assets/js/foundation'
-        },        
+            src: [
+              'assets/bower_components/foundation/js/foundation/foundation.accordion.js',
+              'assets/bower_components/foundation/js/foundation/foundation.interchange.js',
+              'assets/bower_components/foundation/js/foundation/foundation.orbit.js',
+              'assets/bower_components/foundation/js/foundation/foundation.slider.js',
+              'assets/bower_components/foundation/js/foundation/foundation.tab.js'
+            ],
+            dest: 'assets/js/foundation_plugins'
+        },    
         modernizr: {
             expand: true,
             flatten: true,
@@ -123,6 +129,14 @@ module.exports = function(grunt) {
           "assets/js/vendor/page.directory.min.js": ["assets/js/vendor/page.directory.js"],
           "assets/js/vendor/page.exhibits.min.js": ["assets/js/vendor/page.exhibits.js"],
           "assets/js/vendor/page.fields.min.js": ["assets/js/vendor/page.fields.js"],
+          "assets/js/foundation.min.js": ["assets/js/foundation.js"],
+          "assets/js/foundation.plugins.min.js": [
+            "assets/js/foundation_plugins/foundation.accordion.js",
+            "assets/js/foundation_plugins/foundation.interchange.js",
+            "assets/js/foundation_plugins/foundation.orbit.js",
+            "assets/js/foundation_plugins/foundation.slider.js",
+            "assets/js/foundation_plugins/foundation.tab.js",
+          ]
         }
       },
     },
@@ -139,8 +153,11 @@ module.exports = function(grunt) {
         files: 'assets/scss/**/*.scss',
         tasks: ['sass', 'postcss', 'imagemin'],
       },
-    }
+    },  
+
   });
+
+
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -151,4 +168,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('build', ['sass', 'copy']);
   grunt.registerTask('default', ['sass','browserSync','copy','uglify','watch']);
+
 }

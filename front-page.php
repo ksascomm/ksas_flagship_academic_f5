@@ -103,14 +103,14 @@
 		
 		
 		<?php endwhile; ?>
-		<div class="row">
-			<h5>
+		<div class="archive-link row">
+			<h4>
 				<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</a>
-			</h5>
+			</h4>
 		</div>
 		<?php endif; ?>
 		
 	</main>	<!-- End main content (left) section -->
-<?php locate_template('parts/sidebar.php', true, false); ?>	
+<?php locate_template('/parts/sidebar.php', true, false); ?>	
 </div> <!-- End #landing -->
 <?php get_footer(); ?>
