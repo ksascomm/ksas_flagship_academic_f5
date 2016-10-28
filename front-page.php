@@ -85,13 +85,11 @@
 
 		<?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
 	
-		<article class="small-12 columns news-item" aria-label="<?php the_title();?> article" id="post-<?php the_ID(); ?>">
-			<header class="entry-header">
-				<h2 class="uppercase black"><?php the_time( get_option( 'date_format' ) ); ?></h2>
-				<h1>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title();?></a>
-				</h1>
-			</header>
+		<article class="small-12 columns news-item" aria-labelledby="post-<?php the_ID(); ?>">
+			<h2 class="uppercase black"><?php the_time( get_option( 'date_format' ) ); ?></h2>
+			<h1>
+				<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title();?></a>
+			</h1>
 			<div class="entry-content">	
 			<?php if ( has_post_thumbnail()) { ?> 
 				<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>

@@ -33,15 +33,13 @@
 
 		while ($news_archive_query->have_posts()) : $news_archive_query->the_post(); ?>
 
-		<article id="post-<?php the_ID(); ?>">
-			<header class="entry-header">
+		<article role="article" aria-labelledby="post-<?php the_ID(); ?>">
 				<h3 class="uppercase black"><?php the_time( get_option( 'date_format' ) ); ?></h3>
 				<h2>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title();?>">	
+					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">	
 						<?php the_title();?>
 					</a>
 				</h2>
-			</header><!-- .entry-header -->		
 			<div class="entry-content">
 					<?php if ( has_post_thumbnail()) { ?> 
 						<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
