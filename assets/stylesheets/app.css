@@ -5893,6 +5893,16 @@ body.purple .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, body.purp
   width: 1px;
   overflow: hidden; }
 
+.sticky {
+  background: #e5e2e0;
+  padding: 1rem;
+  margin-bottom: 1rem; }
+
+.sticky-title {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: #2C2C33 !important; }
+
 .orange_bg {
   background: #cc6600 !important; }
   .orange_bg.button:hover {

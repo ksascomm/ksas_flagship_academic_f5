@@ -84,19 +84,33 @@
 		<h3><?php echo $theme_option['flagship_sub_feed_name']; ?></h3>
 
 		<?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
-	
-		<article class="small-12 columns news-item" aria-labelledby="post-<?php the_ID(); ?>">
-			<h2 class="uppercase black"><?php the_time( get_option( 'date_format' ) ); ?></h2>
+		
+		<article class="small-12 columns news-item <?php if(is_sticky()) :?>sticky<?php endif;?>" aria-labelledby="post-<?php the_ID(); ?>">
+			
+			<?php if( is_sticky() ) :?>
+				<h3 class="sticky-title">Featured Article</h3>
+			<?php endif;?>
+			<?php if (!is_sticky()) :?>
+				<h2 class="uppercase black"><?php the_time( get_option( 'date_format' ) ); ?></h2>
+			<?php endif; ?>
+
 			<h1>
 				<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title();?></a>
 			</h1>
+
 			<div class="entry-content">	
-			<?php if ( has_post_thumbnail()) { ?> 
-				<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
-			<?php } ?>
-			<?php the_excerpt(); ?>
-				<hr>
+				<?php if ( has_post_thumbnail()) : ?> 
+
+					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+				<?php endif; ?>
+
+				<?php the_excerpt(); ?>
+				
+				<?php if (!is_sticky()) :?>
+	    			<hr>
+	  			<?php endif;?>
 			</div>	
+
 		</article>
 		
 		
