@@ -503,9 +503,12 @@ body {
   .sidebar_bg ul.nav li a {
     color: $black;
   }
+  a, .sidebar_bg ul.nav li a {
+    color: $darkgrey;
+  }
   #sidebar li {
     a, &.external a::after {
-      color: $black;
+      color: $darkgrey;
     }
   }
    ul.accordion > li.active {
@@ -521,7 +524,7 @@ body {
   }
   a, #sidebar a, .ecpt-page-sidebar ul li a {
     &:hover {
-      border-bottom-color: $black;
+      border-bottom-color: $darkgrey;
     }
   }
   .sb-icon-search {
