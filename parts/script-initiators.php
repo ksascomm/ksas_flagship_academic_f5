@@ -6,6 +6,14 @@
 		});
 </script>
 
+<script>
+	var $yt = jQuery.noConflict();
+		$yt('#sidebarvideo').on('click', function() {
+  			ga('send', 'event', 'Sidebar Video', 'Click', '<?php bloginfo( 'name' ); ?>', '<?php the_permalink(); ?>');
+		});
+</script>
+
+
 <!**********TABLET/MOBILE MENUS**************>  
 <?php if(is_tablet()) :  ?>
 		<script>
