@@ -32,7 +32,7 @@ Template Name: Testimonial Listing (Alumni)
 					</h3>
 				<ul class="no-bullet">
 					<?php if ( get_post_meta($post->ID, 'ecpt_job', true) ) : ?>
-						<li><strong>Current Job:</strong> <?php echo get_post_meta($post->ID, 'ecpt_job', true); ?></li>
+						<li><strong>Current Position:</strong> <?php echo get_post_meta($post->ID, 'ecpt_job', true); ?></li>
 					<?php endif; ?>
 					<?php if ( get_post_meta($post->ID, 'ecpt_class', true) ) : ?>
 						<li><strong>Class of:</strong> <?php echo get_post_meta($post->ID, 'ecpt_class', true); ?></li>
