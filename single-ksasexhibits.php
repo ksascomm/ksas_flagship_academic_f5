@@ -20,8 +20,8 @@
 			</nav> 
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<main class="content">
-				<h1 class="page-title"><?php the_title(); ?></h1>
+			<main class="content" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+				<h1 class="page-title" temprop="headline"><?php the_title(); ?></h1>
 
 					<div class="small-12 columns">
 						<div id="featured">
@@ -57,7 +57,7 @@
 						</div>	
 					</div>
 				<div class="small-12 columns">
-					<div class="exhibit-body">
+					<div class="exhibit-body" itemprop="articleBody">
 							<?php if (get_post_meta($post->ID, 'ecpt_location', true)) : ?>
 										<p><strong>Location:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_location', true); ?></p>
 									<?php endif; ?>

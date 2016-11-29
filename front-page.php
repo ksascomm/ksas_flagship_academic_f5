@@ -43,7 +43,7 @@
 <?php endif; ?>
 
 <div class="row sidebar_bg radius10 <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?> <?php } ?>">
-	<main class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer">	
+	<main class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php $frontpagecontent = the_content(); if($frontpagecontent != '') { ?>
 				<?php the_content(); ?>	
@@ -85,23 +85,22 @@
 
 		<?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
 		
-		<article class="small-12 columns news-item <?php if(is_sticky()) :?>sticky<?php endif;?>" aria-labelledby="post-<?php the_ID(); ?>">
+		<article class="small-12 columns news-item <?php if(is_sticky()) :?>sticky<?php endif;?>" aria-labelledby="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 			
 			<?php if( is_sticky() ) :?>
 				<h3 class="sticky-title">Featured Article</h3>
 			<?php endif;?>
 			<?php if (!is_sticky()) :?>
-				<h2 class="uppercase black"><?php the_time( get_option( 'date_format' ) ); ?></h2>
+				<h2 class="uppercase black" itemprop="datePublished"><?php the_time( get_option( 'date_format' ) ); ?></h2>
 			<?php endif; ?>
 
-			<h1>
+			<h1 itemprop="headline">
 				<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title();?></a>
 			</h1>
 
 			<div class="entry-content">	
 				<?php if ( has_post_thumbnail()) : ?> 
-
-					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
 				<?php endif; ?>
 
 				<?php the_excerpt(); ?>

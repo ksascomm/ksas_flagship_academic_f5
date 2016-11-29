@@ -4,7 +4,7 @@ Template Name: Faculty Books
 */
 ?>	
 <?php get_header(); ?>
-<div class="row wrapper radius10" id="page" role="main">
+<div class="row wrapper radius10" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-10 columns">	
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
 		<div class="content news">
@@ -23,7 +23,7 @@ Template Name: Faculty Books
 					set_transient( 'faculty_books_query_' . $paged, $faculty_books_query, 2592000 );
 			} 	
 			 if ( $faculty_books_query->have_posts() ) : while ($faculty_books_query->have_posts()) : $faculty_books_query->the_post(); ?>
-			 <article id="post-<?php the_ID(); ?>" role="article">
+			 <article id="post-<?php the_ID(); ?>" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 					<?php if ( has_post_thumbnail()) { ?> 
 						<?php the_post_thumbnail('medium', array('class'	=> "floatleft")); ?>
 					<?php } ?>

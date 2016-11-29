@@ -27,7 +27,7 @@ Template Name: People Directory
 	}
 	$filter_classes = implode(' ', $filter_slugs);
 	?>
-<main class="row wrapper radius10">
+<main class="row wrapper radius10" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
 	<div class="content row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

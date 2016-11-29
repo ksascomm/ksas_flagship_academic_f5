@@ -1,12 +1,16 @@
-	<aside class="small-12 large-4 columns hide-for-print" id="sidebar"> <!-- Begin Sidebar -->
+	<aside class="small-12 large-4 columns hide-for-print" id="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar> 
 		<!-- Start Featured Image -->
-		
-		<!-- Start Navigation for Sibling Pages -->		<!-- END Featured Image --> <?php 
+
+		<?php 
 		if ( is_page() && has_post_thumbnail()  ) {  
 			wp_reset_query();
 				the_post_thumbnail('full', array('class'	=> "offset-gutter radius-topright featured show-for-large-up")); 
 			 } 
 		 ?>
+
+		<!-- END Featured Image --> 
+
+		<!-- Start Navigation for Sibling Pages -->		
 
 			<?php 
 			
@@ -86,8 +90,6 @@
 				dynamic_sidebar( 'page-sb' );
 			}	
 			?>
-	
-	
-
+			
 		<!-- End Widget Content -->
-	</aside> <!-- End Sidebar -->
+	</aside>

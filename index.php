@@ -3,7 +3,7 @@
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">	
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false);
 		$theme_option = flagship_sub_get_global_options(); $news_query_cond = $theme_option['flagship_sub_news_query_cond']; ?>	
-		<main class="content post-archive">
+		<main class="content post-archive" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 		<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 		<?php 
 			$paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
@@ -33,16 +33,16 @@
 
 		while ($news_archive_query->have_posts()) : $news_archive_query->the_post(); ?>
 
-		<article role="article" aria-labelledby="post-<?php the_ID(); ?>">
-				<h3 class="uppercase black"><?php the_time( get_option( 'date_format' ) ); ?></h3>
-				<h2>
+		<article role="article" aria-labelledby="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+				<h3 class="uppercase black" itemprop="datePublished"><?php the_time( get_option( 'date_format' ) ); ?></h3>
+				<h2 itemprop="headline">
 					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">	
 						<?php the_title();?>
 					</a>
 				</h2>
-			<div class="entry-content">
+			<div class="entry-content" itemprop="text">
 					<?php if ( has_post_thumbnail()) { ?> 
-						<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+						<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
 					<?php } ?>
 				<?php the_excerpt(); ?>
 				<hr>

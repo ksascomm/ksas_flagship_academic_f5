@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="date" content="<?php the_modified_date(); ?>" />
+  <title><?php create_page_title(); ?></title>
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/assets/images/favicon.ico" />
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-144x144-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-114x114-precomposed.png" />
@@ -30,8 +31,8 @@
   <?php include_once("analytics.php"); ?>
 </head>
 <?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme']; global $blog_id; $site_id = 'site-' . $blog_id; ?>
-<body <?php body_class($color_scheme . ' ' . $site_id); ?> onLoad="viewport()">	
-	<header>
+<body <?php body_class($color_scheme . ' ' . $site_id); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
 		<div id="mobile-nav" class="blue_bg">
 	  		<div class="row">
 		        <div class="small-12 columns">
@@ -53,11 +54,18 @@
 						<li class="logo"><a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences"><img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo.png" alt="jhu logo"></a></li>
 					</div>
 					<div class="medium-9 columns">
-						<h1><a class="white" href="<?php echo site_url(); ?>"><span class="small"><?php echo get_bloginfo ( 'description' ); ?></span><?php echo get_bloginfo( 'title' ); ?></a></h1>
+						<h1 itemprop="headline">
+							<a class="white" href="<?php echo site_url(); ?>">
+								<?php if( !empty( get_bloginfo('description') )) : ?>
+										<span class="small" itemprop="description"><?php echo get_bloginfo ( 'description' ); ?></span>
+								<?php endif; ?>
+								<?php echo get_bloginfo( 'title' ); ?>
+							</a>
+						</h1>
 					</div>	
 				</div>
 			</div>
-			<nav class="row hide-for-print" aria-label="Main Menu">
+			<nav class="row hide-for-print" aria-label="Main Menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 
 					'menu_class' => '', 

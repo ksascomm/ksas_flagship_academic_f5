@@ -5,7 +5,7 @@ Template Name: Bulletin Board - Funding Opportunites
 ?>
 
 <?php get_header(); ?>
-<div class="row wrapper radius10" id="page" role="main">
+<div class="row wrapper radius10" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 columns">	
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
 		<div class="content">

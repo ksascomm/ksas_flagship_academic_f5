@@ -28,8 +28,8 @@ Template Name: ISIS Courses
 		    CURLOPT_TIMEOUT         =>  60,
 		    CURLOPT_CONNECTTIMEOUT  =>  60,
 		));
-		$cache_dir = TEMPLATEPATH . "/assets/functions/cache/";
-		$course_curl->cache($cache_dir, 86400);
+		//$cache_dir = TEMPLATEPATH . "/assets/functions/cache/";
+		//$course_curl->cache($cache_dir, 86400);
  
 	//Create API Url calls
 		$courses_spring_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $spring . '&Department=AS%20' . $department;
@@ -95,13 +95,13 @@ Template Name: ISIS Courses
 			    CURLOPT_TIMEOUT         =>  60,
 			    CURLOPT_CONNECTTIMEOUT  =>  60,
 			));
-			$curl->cache($cache_dir, 86400);
+			//$curl->cache($cache_dir, 86400);
 			$curl->get($course_data, 'display_courses');
 			
 		}
 ?>	
  
-<div class="row sidebar_bg radius10" id="page" role="main">
+<div class="row sidebar_bg radius10" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">	
 		<?php locate_template('/parts/nav-breadcrumbs.php', true, false); ?>	
 		<div class="content">

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
-<div class="row wrapper radius10" id="page" role="main">
+<div class="row wrapper radius10" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 columns radius-left offset-topgutter">	
 		<div class="content">
 		<div class="row">
-				<div class="small-5 small-offset-7 columns">
+			<div class="small-5 small-offset-7 columns">
 				<h6>View Other Testimonials</h6>
 				<form name="jump">
 					<select onchange="window.open(this.options[this.selectedIndex].value,'_top')">

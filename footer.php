@@ -1,4 +1,4 @@
-<footer>
+<footer itemscope="itemscope" itemtype="http://schema.org/WPFooter">
   	<div class="row hide-for-print">
 		<?php if(is_handheld()) :  ?>
 			<div class="small-10 medium-3 columns">

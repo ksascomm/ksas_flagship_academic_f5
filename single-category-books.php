@@ -1,5 +1,5 @@
 	<?php if ( has_post_thumbnail()) { ?> 
-		<?php the_post_thumbnail('medium', array('class'	=> "floatleft")); ?>
+		<?php the_post_thumbnail('medium', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
 	<?php } ?>
 
 	<?php $faculty_post_id = get_post_meta($post->ID, 'ecpt_pub_author', true);
