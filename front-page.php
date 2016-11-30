@@ -98,7 +98,7 @@
 				<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title();?></a>
 			</h1>
 
-			<div class="entry-content">	
+			<div class="entry-content" itemprop="text">	
 				<?php if ( has_post_thumbnail()) : ?> 
 					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
 				<?php endif; ?>
