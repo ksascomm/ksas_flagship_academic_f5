@@ -25,7 +25,7 @@ Template Name: Faculty Books
 			 if ( $faculty_books_query->have_posts() ) : while ($faculty_books_query->have_posts()) : $faculty_books_query->the_post(); ?>
 			 <article id="post-<?php the_ID(); ?>" role="article" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 					<?php if ( has_post_thumbnail()) { ?> 
-						<?php the_post_thumbnail('medium', array('class'	=> "floatleft")); ?>
+						<?php the_post_thumbnail('medium', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
 					<?php } ?>
 					<?php $faculty_post_id = get_post_meta($post->ID, 'ecpt_pub_author', true);
 						  $faculty_post_id2 = get_post_meta($post->ID, 'ecpt_pub_author2', true); ?>
