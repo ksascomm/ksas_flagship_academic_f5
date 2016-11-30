@@ -13,6 +13,13 @@
 		});
 </script>
 
+<script>
+	var $zz = jQuery.noConflict();
+		$zz('#sidebarvideo').on('click', function() {
+  			_sz.push(['event', 'Sidebar Video', '<?php bloginfo( 'name' ); ?>', ('<?php the_permalink(); ?>') ]);
+		});
+</script>
+
 
 <!**********TABLET/MOBILE MENUS**************>  
 <?php if(is_tablet()) :  ?>
