@@ -89,6 +89,7 @@ if (  is_singular('post') ) : ?>
 	<script>
 		var $k = jQuery.noConflict();
 		$k(document).ready(function(){
+			$k('li.page-id-<?php echo $archive_id; ?>').removeClass('current_page_parent');
 			$k('li.page-id-<?php echo $people_id; ?>').addClass('current_page_ancestor');
 			$k('li.page-id-<?php echo $faculty_id; ?>').addClass('current_page_parent');
 			});
@@ -105,8 +106,8 @@ if (  is_singular('post') ) : ?>
 	<script>
 		var $y = jQuery.noConflict();
 		$y(document).ready(function(){
-			$y('li.page-id-<?php echo $exhibits_id; ?>').addClass('current_page_ancestor');
 			$y('li.page-id-<?php echo $archive_id; ?>').removeClass('current_page_parent');
+			$y('li.page-id-<?php echo $exhibits_id; ?>').addClass('current_page_ancestor');
 			});
 	</script>
 <?php endif; ?>
