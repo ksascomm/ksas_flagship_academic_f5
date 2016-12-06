@@ -75,6 +75,7 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	$undergraduate_id = ksas_get_page_id('undergraduate');
 	$testimonial_id = ksas_get_page_id('testimonial');
 	$exhibits_id = ksas_get_page_id('exhibitions');
+	$events_id = ksas_get_page_id('events');
 
 if (  is_singular('post') ) : ?>
 	<script>
@@ -102,6 +103,13 @@ if (  is_singular('post') ) : ?>
 			$y('li.page-id-<?php echo $testimonial_id; ?>').addClass('current_page_parent');
 			});
 	</script>
+<?php elseif ( is_singular('ai1ec_event') ) : ?>
+	<script>
+		var $y = jQuery.noConflict();
+		$y(document).ready(function(){
+			$y('li.page-id-<?php echo $events_id; ?>').addClass('current_page_parent');
+			});
+	</script>	
 <?php elseif ( is_singular('ksasexhibits') ) : ?>
 	<script>
 		var $y = jQuery.noConflict();
