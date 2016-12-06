@@ -43,7 +43,7 @@
 <?php endif; ?>
 
 <div class="row sidebar_bg radius10 <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?> <?php } ?>">
-	<main class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">	
+	<main class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php $frontpagecontent = the_content(); if($frontpagecontent != '') { ?>
 				<?php the_content(); ?>	
@@ -100,7 +100,9 @@
 
 			<div class="entry-content" itemprop="text">	
 				<?php if ( has_post_thumbnail()) : ?> 
-					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
+					<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+						<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
+					</div>
 				<?php endif; ?>
 
 				<?php the_excerpt(); ?>

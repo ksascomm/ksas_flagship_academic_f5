@@ -39,22 +39,29 @@ Template Name: Bulletin Board - Funding Opportunites
 					        <h2><?php echo $term->name ;?></h2> 
 					   
 					        <?php while( $bulletins->have_posts() ) : $bulletins->the_post(); 
-					         //Do you general query loop here  ?>				   
-							<article class="bulletin small-12 columns">
+					         //Do your general query loop here  ?>				   
+							<article class="bulletin small-12 columns" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+								<link itemprop="mainEntityOfPage" href="<?php the_permalink(); ?>" />
 								<header class="article-header">	
-									<h1 class="page-title">
+									<h1 class="page-title" itemprop="headline">
 										<a href="<?php the_permalink(); ?>"><?php the_title();?></a>
 									</h1>
+									<h3 class="black" itemprop="datePublished">
+										Posted: <?php the_date(); ?>
+									</h3>
+									<span class="hide" itemprop="author" itemscope itemtype="https://schema.org/Person">
+										By <span itemprop="name">Krieger School of Arts & Sciences
+										</span>
+									</span>
+									<meta name="dateModified" itemprop="dateModified" content="<?php the_modified_date(); ?>" />
 								</header>
-								<div class="entry-content" itemprop="articleBody">
+								<div class="entry-content" itemprop="text">
 									<?php if ( has_post_thumbnail()) { ?> 
-										<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+									 <?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
 									<?php } ?>
-									<?php the_excerpt(); ?>
+									 <span itemprop="description"><?php the_excerpt(); ?></span>
 								</div>	
-							</article>		
-					        <?php endwhile; ?>	
-		
+							</article>	
 					        <?php endwhile; ?>	
 							
 
