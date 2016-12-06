@@ -47,11 +47,11 @@
 			$count_filters =  count($filters);
 			if ( $count_filters > 0 ) { ?>
 				<div class="row filter option-set" data-filter-group="expertise">
-						<div class="button radius10 yellow_bg">
+						<div class="button radius10">
 							<a href="#" class="black selected" data-filter="" class="selected">Clear Filters</a>
 						</div>
 					<?php foreach ( $filters as $filter ) { ?>
-						<div class="button radius10 yellow_bg">
+						<div class="button radius10">
 							<a href="#" class="black" data-filter=".<?php echo $filter->slug; ?>"><?php echo $filter->name; ?></a>
 						</div>
 					<?php } ?>
