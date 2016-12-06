@@ -124,9 +124,11 @@
 				</div>
 			<?php endif; ?>
 			<!--JMC Content -->
+			<?php if (has_term('job-market-candidate', 'role')) : ?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_bio', true) ) : ?>
 					<p><?php echo get_post_meta($post->ID, 'ecpt_bio', true); ?></p>
 				<?php endif; ?>
+			<?php endif;?>
 				<?php if ( get_post_meta($post->ID, 'ecpt_thesis', true) ) : ?>
 					<p><strong>Thesis Title:</strong> "<?php echo get_post_meta($post->ID, 'ecpt_thesis', true); ?>"
 				<?php endif; ?>
