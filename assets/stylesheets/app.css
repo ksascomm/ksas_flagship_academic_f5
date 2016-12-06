@@ -7088,6 +7088,19 @@ input[type="search"].sb-search-input {
   font-style: normal;
   color: #005eb8; }
 
+#sidebar ul.nav {
+  list-style: none; }
+  #sidebar ul.nav li {
+    border-top: 1px solid #999;
+    font-size: 1rem;
+    padding: 10px 0 8px 20px; }
+    #sidebar ul.nav li [class^="icon-"]:before, #sidebar ul.nav li [class*="icon-"]:before {
+      margin-right: 10px;
+      color: #999;
+      vertical-align: middle; }
+  #sidebar ul.nav:last-child {
+    border-bottom: 1px solid #999; }
+
 #sidebar h5 {
   padding-left: 20px;
   margin-top: 0;
@@ -7110,11 +7123,13 @@ input[type="search"].sb-search-input {
 #sidebar ul.nav li a:hover, #sidebar ul.nav li a:active {
   color: #2C2C33; }
 
-#sidebar .ecpt-page-sidebar ul li a {
-  border-bottom: .125em dotted;
-  border-bottom-color: rgba(0, 0, 0, 0.2); }
-  #sidebar .ecpt-page-sidebar ul li a:hover, #sidebar .ecpt-page-sidebar ul li a:active {
-    color: #2C2C33; }
+#sidebar .ecpt-page-sidebar ul li {
+  font-size: 1rem; }
+  #sidebar .ecpt-page-sidebar ul li a {
+    border-bottom: .125em dotted;
+    border-bottom-color: rgba(0, 0, 0, 0.2); }
+    #sidebar .ecpt-page-sidebar ul li a:hover, #sidebar .ecpt-page-sidebar ul li a:active {
+      color: #2C2C33; }
 
 #sidebar .ecpt-page-sidebar ul.nav li a {
   border-bottom: none; }
@@ -7140,6 +7155,8 @@ img.featured {
 
 .textwidget {
   padding: 3px 20px; }
+  .textwidget ul li {
+    font-size: 1rem; }
   .textwidget h6 {
     margin-top: 0;
     text-transform: none;
@@ -7388,20 +7405,6 @@ p.contact [class^="icon-"]:before, p.contact [class*=" icon-"]:before {
   font-size: 18px;
   color: #005eb8;
   margin-right: 0px; }
-
-ul.nav {
-  list-style: none; }
-  ul.nav li {
-    border-top: 1px solid #999;
-    font-size: 14px;
-    padding: 10px 0 8px 20px;
-    letter-spacing: 1px; }
-    ul.nav li [class^="icon-"]:before, ul.nav li [class*="icon-"]:before {
-      margin-right: 10px;
-      color: #999;
-      vertical-align: middle; }
-  ul.nav:last-child {
-    border-bottom: 1px solid #999; }
 
 .jumpmenu form {
   margin: 0 0 30px 30px; }

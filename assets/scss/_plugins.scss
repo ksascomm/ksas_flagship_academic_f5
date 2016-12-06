@@ -292,24 +292,6 @@ p.contact {
   }
 }
 
-ul.nav {
-  list-style: none;
-  li {
-    border-top: 1px solid #999;
-    font-size: 14px;
-    padding: 10px 0 8px 20px;
-    letter-spacing: 1px;
-    [class^="icon-"]:before, [class*="icon-"]:before {
-      margin-right: 10px;
-      color: #999;
-      vertical-align: middle;
-    }
-  }
-  &:last-child {
-    border-bottom: 1px solid #999;
-  }
-}
-
 .jumpmenu {
   form {
     margin: 0 0 30px 30px;
