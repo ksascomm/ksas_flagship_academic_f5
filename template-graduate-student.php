@@ -31,7 +31,7 @@ Template Name: Graduate Student Listing
 				}  
 			
 		 if ( $graduate_student_query->have_posts() ) : while ($graduate_student_query->have_posts()) : $graduate_student_query->the_post(); ?>
-					<li class="person <?php echo get_the_directory_filters($post);?> <?php echo get_the_roles($post); ?>">
+					<li class="person <?php echo get_the_roles($post); ?>">
 						<div class="row">
 							<div class="small-11 columns">
 								<div class="row">
@@ -45,7 +45,11 @@ Template Name: Graduate Student Listing
 									<?php } else { ?>	    
 										<h4 class="no-margin"><?php the_title(); ?></h4>
 									<?php } ?>
-										<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?><h6><?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?></h6><?php endif; ?>
+										<?php if ( get_post_meta($post->ID, 'ecpt_degrees', true) ) : ?>
+											<h5 class="subheader">
+												<?php echo get_post_meta($post->ID, 'ecpt_degrees', true); ?>
+											</h5>
+										<?php endif; ?>
 										<p class="contact no-margin">
 											<?php if ( get_post_meta($post->ID, 'ecpt_phone', true) ) : ?>
 												<span class="icon-mobile"> <?php echo get_post_meta($post->ID, 'ecpt_phone', true); ?></span>
@@ -73,6 +77,11 @@ Template Name: Graduate Student Listing
 					</li>
 		<?php endwhile; endif;?>
 				</ul>
+			<div class="row">
+				<div class="content large-12 columns">
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post();  the_content(); endwhile; endif; ?>
+				</div>
+			</div>			
 		</div>
 	</div>
 </div> <!-- End content wrapper -->
