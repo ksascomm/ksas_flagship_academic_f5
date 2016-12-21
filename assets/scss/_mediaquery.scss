@@ -263,8 +263,13 @@ p, ul, ol, dl {
 }
 
 @media only screen and (max-width: 64em) {
+
+  body.custom-background {
+    background:none !important;
+    @include linearGradient($white, $grey);
+  }
   .caption {
-  &.vertical {
+    &.vertical {
        .middle {       
           top: 35%;                         
       }
@@ -281,7 +286,8 @@ p, ul, ol, dl {
   border-bottom-left-radius: 0px;
   }
   .sidebar_bg {
-    background: #E5E2E0 !important;
+    background: $grey !important;
+    margin-bottom: inherit;
   }
 
   #mobile-nav {

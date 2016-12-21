@@ -7884,6 +7884,18 @@ a.button {
     font-size: 1.1rem; } }
 
 @media only screen and (max-width: 64em) {
+  body.custom-background {
+    background: none !important;
+    background: #FFFFFF;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #e5e2e0 100%) !important;
+    /* W3C */
+    /* Old browsers */
+    /* background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    /* background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); Chrome10+,Safari5.1+ */
+    /* background: -o-linear-gradient(top,  $top 0%,$bottom 100%); Opera 11.10+ */
+    /* background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); IE10+ */
+    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); IE6-9 */ }
   .caption.vertical .middle {
     top: 35%; }
   .caption.vertical h3 {
@@ -7894,7 +7906,8 @@ a.button {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px; }
   .sidebar_bg {
-    background: #E5E2E0 !important; }
+    background: #e5e2e0 !important;
+    margin-bottom: inherit; }
   #mobile-nav h1 {
     font-size: 2rem;
     text-align: center; }
