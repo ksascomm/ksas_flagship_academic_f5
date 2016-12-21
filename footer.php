@@ -1,6 +1,6 @@
 <footer itemscope="itemscope" itemtype="http://schema.org/WPFooter">
   	<div class="row hide-for-print">
-		<?php if(is_handheld()) :  ?>
+		<?php if(is_mobile()) :  ?>
 			<div class="small-10 medium-3 columns">
 				<a href="http://krieger.jhu.edu/explore-ksas/" class="button">Explore KSAS</a>
 			</div>
