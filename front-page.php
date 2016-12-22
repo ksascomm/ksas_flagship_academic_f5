@@ -11,7 +11,7 @@
 	} 	
 	if ( $slider_query->have_posts() ) :
 ?>
-<div class="row hide-for-small-only">
+<div class="row hide-for-small-only" role="marquee">
 	<div class="slideshow-wrapper">
 	  <div class="preloader"></div>
 			<?php if ($slider_query->post_count == 1) : ?>
@@ -22,7 +22,7 @@
 			<?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
 					<li>
 						<a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>" onclick="ga('send', 'event', 'Homepage Slider', 'Click', '<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>')">
-							<div class="slide">
+							<article class="slide">
 								<img src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" alt="<?php the_title(); ?>" class="radius-top" />
 									<div class="orbit-caption">
 										<?php if($theme_option['flagship_sub_slider_style'] == "vertical") { 
@@ -32,7 +32,7 @@
 										 		locate_template('parts/horizontal-slider.php', true, false); 
 										  } ?>
 									</div>
-							</div>
+							</article>
 						</a>
 					</li>
 				<?php endwhile; ?>	
