@@ -7,15 +7,13 @@
 			<link itemprop="mainEntityOfPage" href="<?php the_permalink(); ?>" />
 			<?php if (in_category('books')) {
 					locate_template('single-category-books.php', true, false);
-			} else { ?>
-			<header class="article-header">		
+			} else { ?>				
 				<h2 itemprop="datePublished"><?php the_date(); ?></h2>
 				<h1 itemprop="headline"><?php the_title();?></h1>
 				<span class="hide" itemprop="author" itemscope itemtype="https://schema.org/Person">
 				    By <span itemprop="name">Krieger School of Arts & Sciences</span>
 				 </span>
 				<meta name="dateModified" itemprop="dateModified" content="<?php the_modified_date(); ?>" />
-			</header> <!-- end article header -->
 			<div class="entry-content" itemprop="articleBody">
 			<?php if ( has_post_thumbnail()) { ?> 
 				<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">

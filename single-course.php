@@ -4,10 +4,8 @@
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="content news" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-				<header class="article-header">		
-					<h1 itemprop="headline"><?php the_title();?></h1>
-				</header> <!-- end article header -->
-				<section class="entry-content" itemprop="articleBody">
+				<h1 itemprop="headline"><?php the_title();?></h1>
+				<div class="entry-content" itemprop="articleBody">
 					<?php if ( get_post_meta($post->ID, 'ecpt_credit', true) ) : ?>
 						&nbsp;(<?php echo get_post_meta($post->ID, 'ecpt_credit', true); ?> Credits)
 					<?php endif; ?></h5>
@@ -36,7 +34,7 @@
 						<a href="<?php echo get_post_meta($post->ID, 'ecpt_course_website', true); ?>" target="_blank">View course website/syllabus</a>
 					<?php endif; ?>
 					</p>
-				</section> <!-- end article section -->
+				</div> <!-- end article section -->
 			</article> <!-- end article -->
 		<?php endwhile; endif;?>
 	</div>	<!-- End main content (left) section -->
