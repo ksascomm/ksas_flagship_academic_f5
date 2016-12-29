@@ -34,7 +34,7 @@
 
 		while ($news_archive_query->have_posts()) : $news_archive_query->the_post(); ?>
 	
-		<article role="article" aria-labelledby="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+		<article aria-labelledby="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 			<link itemprop="mainEntityOfPage" href="<?php the_permalink(); ?>" />
 				<h3 class="uppercase black" itemprop="datePublished"><?php the_time( get_option( 'date_format' ) ); ?></h3>
 				<h2 itemprop="headline">

@@ -6,13 +6,13 @@
 		<main class="content post-archive" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 			<h1 class="page-title">Faculty Books Archive</h1>
 				<?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
-					<article role="article" aria-labelledby="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+					<article aria-labelledby="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 						<?php if ( has_post_thumbnail()) { ?>
 							<?php the_post_thumbnail('medium', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
 						<?php } ?>
 						<?php $faculty_post_id = get_post_meta($post->ID, 'ecpt_pub_author', true); $faculty_post_id2 = get_post_meta($post->ID, 'ecpt_pub_author2', true); ?>				
 						<h2 itemprop="headline">
-							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a>
 						</h2>
 						<h3>
 							<?php if ( get_post_meta($post->ID, 'ecpt_pub_date', true) ) : echo get_post_meta($post->ID, 'ecpt_pub_date', true);  endif; ?>
