@@ -21,8 +21,8 @@
 			<?php endif; ?>
 			<?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
 					<li>
-						<a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>" onclick="ga('send', 'event', 'Homepage Slider', 'Click', '<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>')">
-							<article class="slide">
+						<a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>" onclick="ga('send', 'event', 'Homepage Slider', 'Click', '<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>')" id="post-<?php the_ID(); ?>">
+							<article class="slide" aria-labelledby="post-<?php the_ID(); ?>">
 								<img src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" alt="<?php the_title(); ?>" class="radius-top" />
 									<div class="orbit-caption">
 										<?php if($theme_option['flagship_sub_slider_style'] == "vertical") { 
