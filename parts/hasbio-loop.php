@@ -3,7 +3,8 @@
 			
 			<?php if ( has_post_thumbnail()) { ?> 
 			<a href="<?php the_permalink();?>" title="<?php the_title(); ?> full profile" class="field">
-				<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small')); ?>
+				<?php $title=get_the_title();
+				the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small', 'alt' => $title)); ?>
 			</a>
 			<?php } ?>			    
 					<h4 class="no-margin"><a href="<?php the_permalink();?>" title="<?php the_title(); ?> full profile" class="field"><?php the_title(); ?></a></h4>

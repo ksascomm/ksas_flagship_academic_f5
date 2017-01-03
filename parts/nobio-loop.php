@@ -3,10 +3,12 @@
 		<?php if ( has_post_thumbnail()) { ?> 
 			<?php if ( get_post_meta($post->ID, 'ecpt_website', true) ) : ?>			
 				<a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" title="<?php the_title(); ?> 's webpage">
-					<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small')); ?>
+					<?php $title=get_the_title();
+					the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small', 'alt' => $title)); ?>
 				</a>
 			<?php else : ?>
-				<?php the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small')); ?>
+				<?php $title=get_the_title();
+				the_post_thumbnail('directory', array('class' => 'padding-five floatleft hide-for-small', 'alt' => $title)); ?>
 			<?php endif; ?>
 		<?php } ?>
 		
