@@ -34,7 +34,7 @@ Template Name: Bulletin Board - Undergrad
 					   
 					        <?php while( $bulletins->have_posts() ) : $bulletins->the_post(); 
 					         //Do your general query loop here  ?>				   
-							<article class="bulletin small-12 columns" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+							<article class="bulletin small-12 columns" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost" aria-labelledby="post-<?php the_ID(); ?>">
 								<link itemprop="mainEntityOfPage" href="<?php the_permalink(); ?>" />
 								<h1 class="page-title" itemprop="headline">
 										<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title();?></a>
