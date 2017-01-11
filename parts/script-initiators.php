@@ -73,6 +73,7 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	$people_id = ksas_get_page_id('people');
 	$faculty_id = ksas_get_page_id('faculty');
 	$undergraduate_id = ksas_get_page_id('undergraduate');
+	$graduate_id = ksas_get_page_id('graduate');
 	$testimonial_id = ksas_get_page_id('testimonial');
 	$exhibits_id = ksas_get_page_id('exhibitions');
 	$events_id = ksas_get_page_id('events');
@@ -99,7 +100,13 @@ if (  is_singular('post') ) : ?>
 	<script>
 		var $y = jQuery.noConflict();
 		$y(document).ready(function(){
+			<?php $blog_id = get_current_blog_id(); ?>
+			<?php if ($blog_id == 70) : ?>
+			//CogSci uses single Graduate Testimonials. FMS uses Undergrad.
+			$y('li.page-id-<?php echo $graduate_id; ?>').addClass('current_page_ancestor');
+			<?php else: ?>
 			$y('li.page-id-<?php echo $undergraduate_id; ?>').addClass('current_page_ancestor');
+			<?php endif;?>
 			$y('li.page-id-<?php echo $testimonial_id; ?>').addClass('current_page_parent');
 			});
 	</script>
