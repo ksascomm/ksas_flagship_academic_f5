@@ -11,7 +11,7 @@
 						$article_link = $post->guid;
 					}
 					?>
-			<nav role="navigation">
+			<nav aria-label="breadcrumbs">
 				<ul id="menu-main-menu-2" class="breadcrumbs">
 					<li><a href="<?php echo $home_url; ?>">Home</a></li>
 					<li><a href="<?php echo $home_url; ?>/exhibitions">Exhibitions</a></li>
