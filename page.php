@@ -4,7 +4,7 @@
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
 		<main class="content page-content" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<article id="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+				<article id="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost" aria-label="<?php the_title();?>">
 					<h1 class="page-title" itemprop="headline"><?php the_title();?></h1>
 					<div class="entry-content" itemprop="text">
 						<?php the_content(); ?>
