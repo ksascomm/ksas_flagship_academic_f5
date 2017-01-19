@@ -71,6 +71,7 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	$about_id = ksas_get_page_id('about');
 	$archive_id = ksas_get_page_id('archive');
 	$people_id = ksas_get_page_id('people');
+		if (empty($people_id) == true ) { $people_id = ksas_get_page_id('directoryindex'); }
 	$faculty_id = ksas_get_page_id('faculty');
 	$undergraduate_id = ksas_get_page_id('undergraduate');
 	$graduate_id = ksas_get_page_id('graduate');
