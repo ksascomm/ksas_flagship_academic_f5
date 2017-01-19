@@ -7595,19 +7595,19 @@ button.radio {
 .profile-title {
   font-size: 1.5rem; }
 
-.widget.ksas_books h4, .widget.ksas_books p, .widget.ksas_profile h4, .widget.ksas_profile p, .widget.ksas_bulletin h4, .widget.ksas_bulletin p, .widget.ksas_testimonial h4, .widget.ksas_testimonial p {
+.widget.ksas_books h4, .widget.ksas_books p, .widget.ksas_profile h4, .widget.ksas_profile p, .widget.ksas_bulletin h4, .widget.ksas_bulletin p, .widget.ksas_testimonial h4, .widget.ksas_testimonial p, .widget_job_candidate h4, .widget_job_candidate p {
   line-height: 1.4; }
 
-.widget.ksas_books article h4, .widget.ksas_profile article h4, .widget.ksas_bulletin article h4, .widget.ksas_testimonial article h4 {
+.widget.ksas_books article h4, .widget.ksas_profile article h4, .widget.ksas_bulletin article h4, .widget.ksas_testimonial article h4, .widget_job_candidate article h4 {
   color: #2C2C33;
   font-size: 1.125rem; }
 
-.widget.ksas_books article h5, .widget.ksas_profile article h5, .widget.ksas_bulletin article h5, .widget.ksas_testimonial article h5 {
+.widget.ksas_books article h5, .widget.ksas_profile article h5, .widget.ksas_bulletin article h5, .widget.ksas_testimonial article h5, .widget_job_candidate article h5 {
   padding-left: 0px !important; }
-  .widget.ksas_books article h5 a, .widget.ksas_profile article h5 a, .widget.ksas_bulletin article h5 a, .widget.ksas_testimonial article h5 a {
+  .widget.ksas_books article h5 a, .widget.ksas_profile article h5 a, .widget.ksas_bulletin article h5 a, .widget.ksas_testimonial article h5 a, .widget_job_candidate article h5 a {
     border-bottom: .125em dotted;
     border-bottom-color: rgba(0, 0, 0, 0.1); }
-    .widget.ksas_books article h5 a:hover, .widget.ksas_profile article h5 a:hover, .widget.ksas_bulletin article h5 a:hover, .widget.ksas_testimonial article h5 a:hover {
+    .widget.ksas_books article h5 a:hover, .widget.ksas_profile article h5 a:hover, .widget.ksas_bulletin article h5 a:hover, .widget.ksas_testimonial article h5 a:hover, .widget_job_candidate article h5 a:hover {
       color: #2C2C33;
       border-bottom-style: solid; }
 
