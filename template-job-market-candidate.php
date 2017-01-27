@@ -73,7 +73,7 @@ if ( false === ( $job_market_query = get_transient( 'job_market_query' ) ) ) {
 									<?php endif; ?>
 									</p>
 									<?php if ( get_post_meta($post->ID, 'ecpt_advisor', true) ) : ?>
-										<p><strong>Main Advisor: </strong><?php echo get_post_meta($post->ID, 'ecpt_advisor', true); ?></p>
+										<p><strong>Main Adviser: </strong><?php echo get_post_meta($post->ID, 'ecpt_advisor', true); ?></p>
 									<?php endif; ?>
 									<?php if ( get_post_meta($post->ID, 'ecpt_fields', true) ) : ?>
 										<p><strong>Fields: </strong><?php echo get_post_meta($post->ID, 'ecpt_fields', true); ?></p>
