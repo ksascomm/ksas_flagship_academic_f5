@@ -44,7 +44,7 @@ Template Name: People Directory
 		<?php foreach($roles as $role) {
 			$role_slug = $role->slug;
 			$role_name = $role->name;
-			if ($role_slug !== 'graduate' && $role_slug !== 'job-market-candidate' && $role_slug !== 'graduate-student') {
+			if ($role_slug !== 'graduate' && $role_slug !== 'job-market-candidate' && $role_slug !== 'graduate-student' && $role_slug !== 'research') {
 			if ( false === ( $people_query = get_transient( 'people_query_' . $role_slug ) )) {				
 				$people_query = new WP_Query(array(
 						'post_type' => 'people',
