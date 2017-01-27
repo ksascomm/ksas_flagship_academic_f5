@@ -7379,6 +7379,8 @@ li.person {
   li.person.sub-head h2 {
     font-size: 28px;
     margin: 0; }
+  li.person.research-staff p.contact, li.person.research-staff p.expertise {
+    padding-right: 1.5rem; }
   li.person img {
     max-width: 100px;
     clear: left;

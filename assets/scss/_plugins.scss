@@ -257,6 +257,11 @@ li.person {
     font-size: 28px;
     margin: 0;
   }
+  &.research-staff {
+    p.contact, p.expertise {
+      padding-right: 1.5rem;
+    }
+  }
   img {
     max-width: 100px;
     clear: left;

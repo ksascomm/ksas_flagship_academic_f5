@@ -48,6 +48,17 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	    });
 	</script>
 <?php endif; ?>
+
+<?php if ( is_page_template( 'template-people-research-staff.php' ))  : ?>
+  	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.directory.min.js"></script>
+  	<script>
+	    var $j = jQuery.noConflict();
+	    $j(window).load(function() {
+	        var filterFromQuerystring = getParameterByName('filter');
+	        $j('a[data-filter=".' + filterFromQuerystring  + '"]').click();
+	    });
+	</script>
+<?php endif; ?>
 	
 <!***********COURSES**************>
 <?php if ( 
