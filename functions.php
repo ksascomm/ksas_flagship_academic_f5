@@ -176,6 +176,14 @@ function delete_academic_transients($post_id) {
 		case 'slider' :
 			delete_transient('slider_query');
 		break;
+		case 'course' :
+			delete_transient('ksas_course_grad_query');
+			delete_transient('ksas_course_undergrad_query');
+		break;
+		case 'bulletinboard' :
+			delete_transient('ksas_bb_undergrad_query');
+			delete_transient('ksas_bb_grad_query');
+		break;
 		case 'profile' :
 			delete_transient('ksas_profile_undergrad_query');
 			delete_transient('ksas_profile_grad_query');
