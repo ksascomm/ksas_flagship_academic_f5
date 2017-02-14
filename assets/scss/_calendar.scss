@@ -75,8 +75,11 @@ footer.timely.ai1ec-event-footer {
   font-family: $font-subhead !important;
 }
 
-.ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today,{
+.ai1ec-agenda-widget-view .ai1ec-date {
   background: none !important;
+  &.ai1ec-today {
+    background: none !important;
+  }
 }
 
 .ai1ec-agenda-view .ai1ec-date.ai1ec-today {
@@ -88,6 +91,17 @@ footer.timely.ai1ec-event-footer {
   font-family: inherit !important;
 }
 
-.ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-time, .ai1ec-agenda-widget-view .ai1ec-event>a {
-  color: $black;
+.ai1ec-agenda-widget-view {
+  .ai1ec-event {
+    .ai1ec-event-time, > a {
+      color: $black;
+    }
+  }
+  .ai1ec-date.ai1ec-today {
+    border-top: none;
+  }
+}
+
+.ai1ec-agenda-view .ai1ec-date.ai1ec-today {
+  border-top: none;
 }

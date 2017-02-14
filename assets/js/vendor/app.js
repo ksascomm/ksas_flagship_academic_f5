@@ -436,3 +436,14 @@ window.onload = init;
   }
 
 })(this);
+
+var $a = jQuery.noConflict();
+$a(document).ready(function() {
+$a('.orbit-prev').attr('aria-label', 'previous');
+$a('.orbit-next').attr('aria-label', 'next');
+});
+var $b = jQuery.noConflict();
+$b(document).ready(function() {
+$b('.orbit-prev').attr('role', 'button');
+$b('.orbit-next').attr('role', 'button');
+});

@@ -182,12 +182,14 @@ div.orbit-wrapper div.timer, .orbit-timer {
     h1 {
       font-size: 1.6875rem;
     }  
-    .yellow {
-      color: #dbb003 !important;
-    }
     p {
       vertical-align: top;
       line-height: 1.4em;
+      &.gold {
+        a {
+          color: $gold;
+        }
+      }
     }
     .icon-arrow-right-2 {
       padding-left: 6px;

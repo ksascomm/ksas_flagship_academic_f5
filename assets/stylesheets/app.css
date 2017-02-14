@@ -5963,8 +5963,10 @@ footer.timely.ai1ec-event-footer {
 .ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details {
   font-family: "gentona-book", Arial, sans-serif !important; }
 
-.ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today {
+.ai1ec-agenda-widget-view .ai1ec-date {
   background: none !important; }
+  .ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today {
+    background: none !important; }
 
 .ai1ec-agenda-view .ai1ec-date.ai1ec-today {
   border-top: none !important;
@@ -5975,6 +5977,12 @@ footer.timely.ai1ec-event-footer {
 
 .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-time, .ai1ec-agenda-widget-view .ai1ec-event > a {
   color: #2C2C33; }
+
+.ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today {
+  border-top: none; }
+
+.ai1ec-agenda-view .ai1ec-date.ai1ec-today {
+  border-top: none; }
 
 footer {
   background: #000;
@@ -7324,11 +7332,11 @@ div.orbit-wrapper div.timer, .orbit-timer {
   background: rgba(0, 0, 0, 0.9); }
   .slide summary h1 {
     font-size: 1.6875rem; }
-  .slide summary .yellow {
-    color: #dbb003 !important; }
   .slide summary p {
     vertical-align: top;
     line-height: 1.4em; }
+    .slide summary p.gold a {
+      color: #dbb003; }
   .slide summary .icon-arrow-right-2 {
     padding-left: 6px; }
 
