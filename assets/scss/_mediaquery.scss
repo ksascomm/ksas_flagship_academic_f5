@@ -75,6 +75,9 @@
 }
 
 @media only screen and (max-width: 40em) {
+  img.news {
+    width: 50%;
+  }
   .faculty {
     padding-left: 1em;
   }
@@ -158,17 +161,27 @@
   #fields_search input[type="submit"] {
     width: 35px;
   }
-   ul.breadcrumbs {
+  ul.breadcrumbs {
     li {
       margin-left: 0px;
+      padding-bottom: .75rem;
+      font-size: 1rem;
+      text-transform: inherit;
+      line-height: 1rem;
+      a {
+        border-bottom: none;
+          &:hover {
+            border-bottom: none;
+          }
+      }
     }
-   }
-   p.contact {
+  }
+  p.contact {
     span {
       margin-right: 2px;
     }
-   }
-   .wrapper li {
+  }
+  .wrapper li {
       margin-left: 5px;
   }
   .faculty {
@@ -324,7 +337,7 @@ p, ul, ol, dl {
       font-size: 13px;
       margin-top: -2px;
     }
-  }  
+  }
 }
 
 @media only screen and (max-width: 65.3125em) {

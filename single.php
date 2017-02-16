@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main class="row wrapper radius10" id="page" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
-	<div class="large-12 columns radius-left offset-topgutter">	
+	<div class="radius-left offset-topgutter">	
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="content news" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
@@ -14,29 +14,40 @@
 				    By <span itemprop="name">Krieger School of Arts & Sciences</span>
 				 </span>
 				<meta name="dateModified" itemprop="dateModified" content="<?php the_modified_date(); ?>" />
+				
 			<div class="entry-content" itemprop="articleBody">
-			<?php if ( has_post_thumbnail()) { ?> 
-				<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
-					<meta itemprop="url" content="<?php the_post_thumbnail_url();?>">
-  					<meta itemprop="width" content="361">
- 					<meta itemprop="height" content="150">
+
+				<?php if ( has_post_thumbnail()) : ?> 
+					<div class="small-12 medium-5 large-4 columns">
+						<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+							<?php the_post_thumbnail('full', array('class'	=> "floatleft news", 'itemprop' => 'image')); ?>
+							<meta itemprop="url" content="<?php the_post_thumbnail_url();?>">
+		  					<meta itemprop="width" content="361">
+		 					<meta itemprop="height" content="150">
+						</div>
+					</div>
+				<?php endif; ?>
+			
+			    <div class="small-12<?php if ( has_post_thumbnail()) : ?> medium-7 large-8<?php endif;?> columns">
+
+				    <span class="hide" itemscope itemprop="publisher" itemtype="http://schema.org/Organization">
+						<a itemprop="url" href="https://krieger.jhu.edu">
+						    <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+						       <img itemprop="url" content="<?php echo get_template_directory_uri() ?>/assets/images/university.jpg" alt="JHU Logo">
+						       <meta itemprop="width" content="600">
+						       <meta itemprop="height" content="60">
+						    </span>   
+						    <span itemprop="name">Krieger School of Arts & Sciences</span>
+				        </a>
+				    </span>
+					<span itemprop="description">
+						<?php the_content(); }?>
+					</span>
+
 				</div>
-			<?php } ?>
-			<span class="hide" itemscope itemprop="publisher" itemtype="http://schema.org/Organization">
-				<a itemprop="url" href="https://krieger.jhu.edu">
-				    <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-				       <img itemprop="url" content="<?php echo get_template_directory_uri() ?>/assets/images/university.jpg" alt="JHU Logo">
-				       <meta itemprop="width" content="600">
-				       <meta itemprop="height" content="60">
-				    </span>   
-				    <span itemprop="name">Krieger School of Arts & Sciences</span>
-		        </a>
-		    </span>
-			<span itemprop="description">
-				<?php the_content(); }?>
-			</span>
+
 			</div> <!-- end article section -->
+
 		</article> <!-- end article -->
 		<?php endwhile; endif; ?>
 	</div>	<!-- End main content (left) section -->

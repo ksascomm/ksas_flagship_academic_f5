@@ -7672,9 +7672,6 @@ button.radio {
 .tabs dd.active a {
   background-color: #fff !important; }
 
-.news img {
-  max-width: 45%; }
-
 .wp-caption img {
   max-width: 100%; }
 
@@ -7780,6 +7777,8 @@ a.button {
     font-size: 1.05rem; } }
 
 @media only screen and (max-width: 40em) {
+  img.news {
+    width: 50%; }
   .faculty {
     padding-left: 1em; }
   .single-people .tabs dd a {
@@ -7832,7 +7831,15 @@ a.button {
   #fields_search input[type="submit"] {
     width: 35px; }
   ul.breadcrumbs li {
-    margin-left: 0px; }
+    margin-left: 0px;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    text-transform: inherit;
+    line-height: 1rem; }
+    ul.breadcrumbs li a {
+      border-bottom: none; }
+      ul.breadcrumbs li a:hover {
+        border-bottom: none; }
   p.contact span {
     margin-right: 2px; }
   .wrapper li {
