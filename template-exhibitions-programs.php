@@ -13,7 +13,7 @@ Template Name: Exhibitions & Programs
 					));
 					 ?>
 
-<div class="row wrapper radius10" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<div class="row wrapper radius10" id="page" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 columns">
 		<div class="row">
 			

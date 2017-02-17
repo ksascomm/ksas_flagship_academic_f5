@@ -11,7 +11,7 @@ $collection_name = $theme_option['flagship_sub_search_collection'];
 ?>
 
 <div class="row wrapper radius10">
-	<main class="large-12 columns content">
+	<main class="large-12 columns content" id="page">
         <h1 class="page-title">Search Results</h1>
         <?php 
             try {
@@ -72,13 +72,9 @@ $collection_name = $theme_option['flagship_sub_search_collection'];
                         ?>
                     <li>
                         <h4><?php echo $pdfNote ?><a href="<?php echo $result['path'] ?>"><?php echo $result['title'] ?></a></h4>
-                        <?php
-                        if (array_key_exists('description', $result) && $result['description']) {
-                            ?>
-                                    <p itemprop="articleBody"><?php echo $result['description'] ?></p>
-                            <?php
-                        }
-                        ?>
+                        <?php if (array_key_exists('description', $result) && $result['description']) { ?>
+                             <p itemprop="articleBody"><?php echo $result['description'] ?></p>
+                        <?php } ?>
                         <div class="url"><?php echo $result['path'] ?> - <?php echo $result['sizeHumanReadable'] ?></div>
                     </li>
                     <hr>

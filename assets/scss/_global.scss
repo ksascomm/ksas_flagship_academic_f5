@@ -164,7 +164,7 @@ ol {
 }
 
 #page {
-  margin-top: 87px;
+  margin-top: 1rem;
 }
 
 .page-content {
@@ -951,4 +951,14 @@ h6 {font-size: 1rem; }
     text-transform: uppercase;
     font-size: 1.1rem;
     color: $black !important;
+}
+
+a.skipLink {
+  position: absolute;
+  left: -9999px;
+  background: $white;
+  padding: 5px 10px;
+  &:focus, &:active, &:hover {
+    left: 0;
+  }
 }

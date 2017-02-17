@@ -5305,7 +5305,7 @@ ol {
   padding-right: 1rem; }
 
 #page {
-  margin-top: 87px; }
+  margin-top: 1rem; }
 
 .page-content li {
   padding-bottom: 10px; }
@@ -5905,6 +5905,14 @@ body.purple .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, body.purp
   text-transform: uppercase;
   font-size: 1.1rem;
   color: #2C2C33 !important; }
+
+a.skipLink {
+  position: absolute;
+  left: -9999px;
+  background: #FFFFFF;
+  padding: 5px 10px; }
+  a.skipLink:focus, a.skipLink:active, a.skipLink:hover {
+    left: 0; }
 
 .orange_bg {
   background: #cc6600 !important; }

@@ -11,7 +11,7 @@
 	} 	
 	if ( $slider_query->have_posts() ) :
 ?>
-<main>
+<main id="page">
 	<div class="row hide-for-small-only" role="complementary" aria-label="Highlights of <?php echo get_bloginfo( 'title' ); ?>">
 		<div class="slideshow-wrapper">
 		  <div class="preloader"></div>

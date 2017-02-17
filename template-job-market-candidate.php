@@ -17,7 +17,7 @@ if ( false === ( $job_market_query = get_transient( 'job_market_query' ) ) ) {
 	set_transient( 'job_market_query', $job_market_query, 2592000 );
 } 
 ?>
-<div class="row wrapper radius10" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<div class="row wrapper radius10" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 columns">		
 	<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
 		<div class="content row">

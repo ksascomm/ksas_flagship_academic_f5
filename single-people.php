@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="row wrapper radius10" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="radius-left offset-topgutter">	
-		<main class="content">
+		<div class="content">
 		<?php if (has_term('', 'role') && !has_term('job-market-candidate', 'role')) : ?>
 			<div class="row">
 				<div class="small-12 medium-5 medium-offset-7 columns">
@@ -144,7 +144,7 @@
 				<?php echo get_post_meta($post->ID, 'ecpt_job_research', true); ?>
 			</div>
 			<?php endwhile; endif; ?>	
-		</main>
+		</div>
 	</div>	<!-- End main content (left) section -->
 </div> <!-- End #page -->
 <?php get_footer(); ?>
