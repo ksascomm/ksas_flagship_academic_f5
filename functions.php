@@ -214,6 +214,13 @@ function my_css_attributes_filter($var) {
   return is_array($var) ? array() : '';
 }
 
+
+/**********INCREASE POST META OPTIONS******************/
+add_filter( 'postmeta_form_limit', 'meta_limit_increase' );
+function meta_limit_increase( $limit ) {
+    return 50;
+}
+
 // Register scripts and stylesheets
 require_once(get_template_directory().'/assets/functions/enqueue-scripts.php'); 
 
