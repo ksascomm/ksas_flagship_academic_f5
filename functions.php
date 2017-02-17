@@ -218,7 +218,7 @@ function my_css_attributes_filter($var) {
 /**********INCREASE POST META OPTIONS******************/
 add_filter( 'postmeta_form_limit', 'meta_limit_increase' );
 function meta_limit_increase( $limit ) {
-    return 50;
+    return 100;
 }
 
 // Register scripts and stylesheets
