@@ -11,7 +11,7 @@
 	} 	
 	if ( $slider_query->have_posts() ) :
 ?>
-<main id="page">
+<main>
 	<div class="row hide-for-small-only" role="complementary" aria-label="Highlights of <?php echo get_bloginfo( 'title' ); ?>">
 		<div class="slideshow-wrapper">
 		  <div class="preloader"></div>
@@ -42,7 +42,7 @@
 	<?php endif; ?>
 
 	<div class="row sidebar_bg radius10 <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?> <?php } ?>">
-		<div class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">	
+		<div class="small-12 large-8 columns wrapper <?php if($theme_option['flagship_sub_slider_style'] == "vertical") { ?>offset-top <?php } ?>toplayer" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog" id="page">	
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<?php $frontpagecontent = the_content(); if($frontpagecontent != '') { ?>
 					<?php the_content(); ?>	
