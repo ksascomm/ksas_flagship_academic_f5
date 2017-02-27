@@ -17,18 +17,24 @@
 				
 			<div class="entry-content" itemprop="articleBody">
 
-				<?php if ( has_post_thumbnail()) : ?> 
-					<div class="small-12 medium-5 large-4 columns">
+				<?php if ( has_post_thumbnail()) : 
+					$thumb_id = get_post_thumbnail_id();
+					$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+					$thumb_url = $thumb_url_array[0];
+				?> 
+					<div class="imageblockleft small-centered medium-uncentered columns">
 						<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-							<?php the_post_thumbnail('full', array('class'	=> "floatleft news", 'itemprop' => 'image')); ?>
+							<a href="<?php echo $thumb_url; ?>" data-lightbox="image-1">
+								<?php the_post_thumbnail('full', array('class'	=> "th", 'itemprop' => 'image')); ?>
+							</a>
 							<meta itemprop="url" content="<?php the_post_thumbnail_url();?>">
 		  					<meta itemprop="width" content="361">
 		 					<meta itemprop="height" content="150">
 						</div>
-					</div>
+					</div>					
 				<?php endif; ?>
 			
-			    <div class="small-12<?php if ( has_post_thumbnail()) : ?> medium-7 large-8<?php endif;?> columns">
+			   
 
 				    <span class="hide" itemscope itemprop="publisher" itemtype="http://schema.org/Organization">
 						<a itemprop="url" href="https://krieger.jhu.edu">
@@ -44,7 +50,7 @@
 						<?php the_content(); }?>
 					</span>
 
-				</div>
+			
 
 			</div> <!-- end article section -->
 

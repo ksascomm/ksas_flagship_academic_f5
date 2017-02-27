@@ -98,6 +98,7 @@ module.exports = function(grunt) {
             flatten: true,
             src: [
               'assets/bower_components/foundation/js/foundation/foundation.accordion.js',
+              //'assets/bower_components/foundation/js/foundation/foundation.clearing.js',
               'assets/bower_components/foundation/js/foundation/foundation.interchange.js',
               'assets/bower_components/foundation/js/foundation/foundation.orbit.js',
               'assets/bower_components/foundation/js/foundation/foundation.slider.js',
@@ -110,7 +111,22 @@ module.exports = function(grunt) {
             flatten: true,
             src: ['assets/bower_components/foundation/bower_components/modernizr/modernizr.js'],
             dest: 'assets/js/vendor'
-        }
+        },
+        lightbox: {
+            expand: true,
+            flatten: true,
+            src: ['assets/bower_components/lightbox2/dist/js/lightbox.min.js'],
+            dest: 'assets/js/vendor'
+        },
+        lightbox2: {
+            expand: true,
+            cwd: 'assets/bower_components/lightbox2/dist/css/',
+            src: ['lightbox.css'],
+            dest: 'assets/scss/',
+            rename: function(dest, src) {
+              return dest + src.replace('.css','.scss');
+            }
+        },
     },
 
     //minify js with uglify
@@ -132,6 +148,7 @@ module.exports = function(grunt) {
           "assets/js/foundation.min.js": ["assets/js/foundation.js"],
           "assets/js/foundation.plugins.min.js": [
             "assets/js/foundation_plugins/foundation.accordion.js",
+            //"assets/js/foundation_plugins/foundation.clearing.js",
             "assets/js/foundation_plugins/foundation.interchange.js",
             "assets/js/foundation_plugins/foundation.orbit.js",
             "assets/js/foundation_plugins/foundation.slider.js",

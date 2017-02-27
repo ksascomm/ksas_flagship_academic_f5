@@ -470,9 +470,32 @@ blockquote {
   }
 }
 
+
+
+
 .wp-post-image {
   margin-bottom: 15px;
 }
+
+
+.entry-content {
+  .imageblockleft {
+    float: left;
+    max-width: 300px;
+    margin-right: 1em;
+    margin-bottom: 5px;
+    a {
+      border: none;
+      &:hover, &:active {
+        border: none;
+      }
+    }
+  }
+  .wp-post-image {
+  margin-bottom: inherit;
+  }
+}
+
 
 p.lead, .lead {
   line-height: 2em;
