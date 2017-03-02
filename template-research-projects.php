@@ -12,7 +12,7 @@ Template Name: Research Projects
 					'posts_per_page' => '-1'
 					));
 ?>
-<div class="row wrapper radius10" id="page">
+<div class="row wrapper radius10" id="page" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 columns">
 		<div class="row">
 			
@@ -22,39 +22,38 @@ Template Name: Research Projects
 			<p><?php the_content(); ?></p>
 			<?php endwhile; endif; ?>
 			
-			<div id="fields_search" role="search">
-				<form action="#">
-					<fieldset class="radius10">
-						<?php $projects = get_terms('project_type', array(
-									'orderby' 		=> 'ID',
-										'order'			=> 'ASC',
-								'hide_empty'	=> true,
-							));
-						
+			<div class="small-12 columns panel radius10" id="fields_search" role="search">
+		
+				<?php $projects = get_terms('project_type', array(
+						'orderby' 		=> 'ID',
+						'order'			=> 'ASC',
+						'hide_empty'	=> true,
+					));
+					
 						$count_projects = count($projects);
 						if ($count_projects > 0) { ?>
-						<div class="small-12 medium-7 columns">
-							<h6>Filter by Project Type:</h6>
-							<div class="filter option-set" data-filter-group="project_type">
+
+							<div class="row">
+								<h3>Filter by Project Type or Research Area:</h3>
+							</div>a
+							<div class="row filter option-set" data-filter-group="project_type">
 								<div class="button radio"><a href="#" data-filter="" class="selected">View All</a></div>
 								<?php foreach ( $projects as $project ) { ?>
-								<div class="button radio <?php echo $project->slug; ?>"><a href="#" data-filter=".<?php echo $project->slug; ?>"><?php echo $project->name; ?></a></div>
+									<div class="button radio <?php echo $project->slug; ?>"><a href="#" data-filter=".<?php echo $project->slug; ?>"><?php echo $project->name; ?></a></div>
 								<?php } ?>
 							</div>
-						</div>
 						<?php } ?>
-						<div class="small-12 medium-5 columns">
-							<h5>Search:</h5>
-							<div class="directory-search">
-								<span class="fa fa-search fa-2x" aria-hidden="true"></span>
-							</div>
-							<input type="text" name="search" id="id_search" placeholder="Search by name, title, or research area"  />
-							<label for="id_search" class="screen-reader-text">
-								Search by name, title, or research area
-							</label>
+					<div class="row">
+						<h3>Search by keyword:</h3>		
+						<div class="directory-search">
+							<span class="fa fa-search fa-2x" aria-hidden="true"></span>
 						</div>
-					</fieldset>
-				</form>
+						<input type="text" name="search" id="id_search" aria-label="Search" placeholder="Search by keyword"  /> 
+						<label for="id_search" class="screen-reader-text">
+							Search by keyword
+						</label>
+					</div>
+
 			</div>
 		</div>
 		<div class="row" id="fields_container" role="main">

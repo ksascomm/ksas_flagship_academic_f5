@@ -139,9 +139,9 @@ if (  is_singular('post') ) : ?>
 	</script>
 <?php endif; ?>
 
-<!***********EXHIBITS**************>
+<!***********EXHIBITS & RESEARCH PROJECTS**************>
 
-<?php if (is_page_template( 'template-exhibitions-programs.php' )) : ?>
+<?php if (is_page_template( 'template-exhibitions-programs.php' ) || is_page_template('template-research-projects.php')  ) : ?>
 	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/page.exhibits.min.js"></script> 
 <?php endif; ?>
 <!***********FULL WIDTH IMAGES**************>
