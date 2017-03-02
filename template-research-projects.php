@@ -35,7 +35,7 @@ Template Name: Research Projects
 
 							<div class="row">
 								<h3>Filter by Project Type or Research Area:</h3>
-							</div>a
+							</div>
 							<div class="row filter option-set" data-filter-group="project_type">
 								<div class="button radio"><a href="#" data-filter="" class="selected">View All</a></div>
 								<?php foreach ( $projects as $project ) { ?>
