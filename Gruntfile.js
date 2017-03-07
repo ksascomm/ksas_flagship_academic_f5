@@ -115,7 +115,7 @@ module.exports = function(grunt) {
         lightbox: {
             expand: true,
             flatten: true,
-            src: ['assets/bower_components/lightbox2/dist/js/lightbox.min.js'],
+            src: ['assets/bower_components/lightbox2/dist/js/lightbox.js'],
             dest: 'assets/js/vendor'
         },
         lightbox2: {
@@ -145,6 +145,7 @@ module.exports = function(grunt) {
           "assets/js/vendor/page.directory.min.js": ["assets/js/vendor/page.directory.js"],
           "assets/js/vendor/page.exhibits.min.js": ["assets/js/vendor/page.exhibits.js"],
           "assets/js/vendor/page.fields.min.js": ["assets/js/vendor/page.fields.js"],
+          "assets/js/vendor/lightbox.min.js": ["assets/js/vendor/lightbox.js"],
           "assets/js/foundation.min.js": ["assets/js/foundation.js"],
           "assets/js/foundation.plugins.min.js": [
             "assets/js/foundation_plugins/foundation.accordion.js",
