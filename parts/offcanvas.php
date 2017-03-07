@@ -1,7 +1,7 @@
  <?php $theme_option = flagship_sub_get_global_options(); 
         $collection_name = $theme_option['flagship_sub_search_collection'];
     ?>
-<div class="off-canvas-bg">
+<div class="off-canvas-bg hide-for-print">
   <div id="pattern" class="pattern">
     <div class="offcanvas-top">
         <div class="o-content" aria-hidden="false" role="navigation" aria-label="Global Menu">

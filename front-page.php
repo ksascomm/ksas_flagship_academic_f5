@@ -12,7 +12,7 @@
 	if ( $slider_query->have_posts() ) :
 ?>
 <main>
-	<div class="row hide-for-small-only" role="complementary" aria-label="Highlights of <?php echo get_bloginfo( 'title' ); ?>">
+	<div class="row hide-for-small-only hide-on-print" role="complementary" aria-label="Highlights of <?php echo get_bloginfo( 'title' ); ?>">
 		<div class="slideshow-wrapper">
 		  <div class="preloader"></div>
 				<?php if ($slider_query->post_count == 1) : ?>

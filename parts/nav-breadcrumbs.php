@@ -2,21 +2,22 @@
 	$home_url = home_url();
 	$theme_option = flagship_sub_get_global_options();	
 	
-		if ( is_single() && !is_singular(array( 'bulletinboard', 'ai1ec_event', 'profile' ))) { 
+		if ( is_single() && !is_singular(array( 'bulletinboard', 'ai1ec_event', 'profile', 'people' ))) { 
 			global $post;
 			$article_title = $post->post_title;
 			//$article_link = $post->guid;
 		?>
-		<nav aria-label="breadcrumbs">
+		<nav aria-label="breadcrumbs" class="hide-for-print">
 			<ul id="menu-main-menu-2" class="breadcrumbs">
 				<li><a href="<?php echo $home_url; ?>">Home</a></li>
 				<li><a href="<?php echo $home_url; ?>/about">About</a></li>
 				<li><a href="<?php echo $home_url; ?>/about/archive">News Archive</a></li>
 				<li><a href="<?php echo get_permalink(); ?>"><?php echo $article_title; ?></a></li>
 			</ul>
-		</nav>	<?php } 
+		</nav>	
+		<?php } 
 	elseif (is_singular('ai1ec_event')) { ?>
-		<nav aria-label="breadcrumbs">
+		<nav aria-label="breadcrumbs" class="hide-for-print">
 			<ul id="menu-main-menu-2" class="breadcrumbs">
 				<li><a href="<?php echo $home_url; ?>">Home</a></li>
 				<li><a href="<?php echo $home_url; ?>/events">Events</a></li>
@@ -24,8 +25,17 @@
 			</ul>
 		</nav>
 		<?php }
+	elseif (is_singular('people')) { ?>
+		<nav aria-label="breadcrumbs" class="hide-for-print">
+			<ul id="menu-main-menu-2" class="breadcrumbs">
+				<li><a href="<?php echo $home_url; ?>">Home</a></li>
+				<li><a href="<?php echo $home_url; ?>/people">People</a></li>
+				<li><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></li>
+			</ul>
+		</nav>
+		<?php }	
 	elseif (is_singular('profile')) { ?>
-		<nav aria-label="breadcrumbs">
+		<nav aria-label="breadcrumbs" class="hide-for-print">
 			<ul id="menu-main-menu-2" class="breadcrumbs">
 				<li><a href="<?php echo $home_url; ?>">Home</a></li>
 				<?php if(has_term('spotlight', 'profiletype')){ ?>
@@ -41,7 +51,7 @@
 		<?php }			
 	elseif ( $theme_option['flagship_sub_breadcrumbs']  == '1' ) { ?>
 
-		<nav aria-label="breadcrumbs">
+		<nav aria-label="breadcrumbs" class="hide-for-print">
 
 		<?php  wp_nav_menu( array( 
 				'container' => 'false',
