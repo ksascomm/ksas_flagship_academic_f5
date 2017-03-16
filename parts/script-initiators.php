@@ -99,6 +99,8 @@ if (  is_singular('post') ) : ?>
 			});
 	</script>
 
+	<script async src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/lightbox.min.js"></script>
+
 <?php elseif ( is_singular('people') ) : ?>
 	<script>
 		var $k = jQuery.noConflict();

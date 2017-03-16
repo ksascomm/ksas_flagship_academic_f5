@@ -13,12 +13,6 @@ function site_scripts() {
     
     // Adding app.js file in the footer
     wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/js/vendor/app.min.js', array( 'jquery' ), '', true );
-
-    // Adding offcanvas.js file in the footer
-    //wp_enqueue_script( 'offcanvas-js', get_template_directory_uri() . '/assets/js/vendor/offcanvas.min.js', array( 'jquery' ), '', true );
-
-    // Adding lightbox.js file in the footer
-    wp_enqueue_script( 'lightbox-js', get_template_directory_uri() . '/assets/js/vendor/lightbox.min.js', array( 'jquery' ), '', true );
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
 
