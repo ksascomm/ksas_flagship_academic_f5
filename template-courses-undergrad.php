@@ -12,10 +12,10 @@ Template Name: ISIS Courses
 		$department_unclean = $theme_option['flagship_sub_isis_name'];
 		$department = str_replace(' ', '%20', $department_unclean);
 		$department = str_replace('&', '%26', $department);
-		//$fall = 'fall%202016';
+		$fall = 'fall%202017';
 		$spring = 'spring%202017';
 		//$intersession = 'intersession%202017';
-		//$summer = 'summer%202017';
+		$summer = 'summer%202017';
 		$open = 'open';
 		$approval = 'approval%20required';
 		$closed = 'closed';
@@ -33,21 +33,21 @@ Template Name: ISIS Courses
  
 	//Create API Url calls
 		$courses_spring_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $spring . '&Department=AS%20' . $department;
-		//$courses_fall_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $fall . '&Department=AS%20' . $department;
+		$courses_fall_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $fall . '&Department=AS%20' . $department;
 		//$courses_intersession_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $intersession . '&Department=AS%20' . $department;
-		//$courses_summer_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $summer . '&Department=AS%20' . $department;
+		$courses_summer_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $summer . '&Department=AS%20' . $department;
 		$courses_call = array(
 			$courses_spring_url, 
-			//$courses_fall_url, 
+			$courses_fall_url, 
 			//$courses_intersession_url, 
-			//$courses_summer_url
+			$courses_summer_url
 			);
 	
 	//Course display callback function
 		function display_courses($result) {
 		    $result->body = json_decode(html_entity_decode($result->body));
 			$title = $result->body[0]->{'Title'};
-			$term = $result->body[0]->{'Term'};
+			$term = $result->body[0]->{'Term_IDR'};
 			$meetings = $result->body[0]->{'Meetings'};
 			$status = $result->body[0]->{'Status'};
 			$course_number = $result->body[0]->{'OfferingName'};
@@ -84,7 +84,7 @@ Template Name: ISIS Courses
 						) {
 						$number = $course->{'OfferingName'};
 						$clean_number = preg_replace('/[^A-Za-z0-9\-]/', '', $number);
-						$dirty_term = $course->{'Term'};
+						$dirty_term = $course->{'Term_IDR'};
 						$clean_term = str_replace(' ', '%20', $dirty_term);
 						$details_url = 'https://isis.jhu.edu/api/classes/' . $clean_number . $section .'/' . $clean_term . '?key=' . $key;
 						$course_data[] = $details_url;					
@@ -114,6 +114,8 @@ Template Name: ISIS Courses
 						<div class="row filter option-set" data-filter-group="term">
 								<div class="button radio"><a href="#" data-filter="*" class="selected" onclick="ga('send', 'event', 'ISIS', 'Courses', 'All');">View All</a></div>
 								<div class="button radio"><a href="#" data-filter=".Spring" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Spring');">Spring 2017 Courses</a></div>
+								<div class="button radio"><a href="#" data-filter=".Summer" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Summer');">Summer 2017 Courses</a></div>
+								<div class="button radio"><a href="#" data-filter=".Fall" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Fall');">Fall 2017 Courses</a></div>
 								<h5 class="inline"><a href="#" class="acc_expandall" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Expand All');">[Expand All]</a></h5>
 						</div>
 						<div class="row">
