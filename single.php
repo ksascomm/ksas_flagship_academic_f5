@@ -25,7 +25,7 @@
 					<div class="imageblockleft small-centered medium-uncentered columns">
 						<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 							<a href="<?php echo $thumb_url; ?>" data-lightbox="image-1">
-								<?php the_post_thumbnail('full', array('class'	=> "th", 'itemprop' => 'image')); ?>
+								<?php the_post_thumbnail('full', array('class'	=> "th", 'itemprop' => 'image', 'alt' => trim(strip_tags( $post->post_title )), )); ?>
 							</a>
 							<meta itemprop="url" content="<?php the_post_thumbnail_url();?>">
 		  					<meta itemprop="width" content="361">
