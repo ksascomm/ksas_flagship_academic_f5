@@ -25,7 +25,13 @@
 					<div class="imageblockleft small-centered medium-uncentered columns">
 						<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 							<a href="<?php echo $thumb_url; ?>" data-lightbox="image-1">
-								<?php the_post_thumbnail('full', array('class'	=> "th", 'itemprop' => 'image', 'alt' => trim(strip_tags( $post->post_title )), )); ?>
+								<?php the_post_thumbnail('full', 
+									array(
+										'class'	=> "th", 
+										'itemprop' => 'image', 
+										'alt' => trim(strip_tags( $post->post_title )),  
+										'aria-label' => 'Click on the featured image to expand it'
+									)); ?>
 							</a>
 							<meta itemprop="url" content="<?php the_post_thumbnail_url();?>">
 		  					<meta itemprop="width" content="361">
