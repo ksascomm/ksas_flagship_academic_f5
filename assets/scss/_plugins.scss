@@ -545,6 +545,18 @@ box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   font-size: 1.5rem;
 }
 
+//Testimonials ------------------------------------
+.testimonial dd.accordion-navigation {
+  ul {
+    li {
+      font-family: $font-stack;
+    }
+  }
+  p {
+    font-style: inherit;
+  }
+}
+
 //KSAS Books & Spotlight Profiles & Bulletins ------------------------------------
 .widget.ksas_books, .widget.ksas_profile, .widget.ksas_bulletin, .widget.ksas_testimonial, .widget_job_candidate  {
   h4, p {

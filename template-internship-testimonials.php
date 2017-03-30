@@ -26,10 +26,10 @@ Template Name: Testimonial Listing (Internship)
 			<?php while ($ksas_internship_testimonial_query->have_posts()) : $ksas_internship_testimonial_query->the_post(); ?>
 				<dd class="accordion-navigation">
 					<a href="#post<?php the_ID(); ?>" title="<?php the_title(); ?>">
-						<h3><?php the_title(); ?>
+						<h4><?php the_title(); ?>
 							<?php if ( has_post_thumbnail()) {  the_post_thumbnail('thumbnail', array('class'	=> "floatleft circle"));  } ?>
 							<span class="fa fa-caret-down"></span><span class="fa fa-caret-up"></span>
-						</h3>
+						</h4>
 						<ul class="no-bullet">
 							<?php if ( get_post_meta($post->ID, 'ecpt_internship', true) ) : ?>
 							<li><strong>Internship:</strong> <?php echo get_post_meta($post->ID, 'ecpt_internship', true); ?></li>

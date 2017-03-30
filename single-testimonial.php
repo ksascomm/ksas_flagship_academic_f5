@@ -38,7 +38,7 @@
 						<?php if ( get_post_meta($post->ID, 'ecpt_job', true) ) : ?>
 							<p><strong>Current Job:</strong> <?php echo get_post_meta($post->ID, 'ecpt_job', true); ?></p>
 						<?php endif; ?>
-						<p><?php the_content()?></p>
+						<?php the_content()?>
 					<?php endwhile; endif;?>
 				</div>
 			</main>
