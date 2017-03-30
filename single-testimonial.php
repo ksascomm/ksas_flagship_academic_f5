@@ -28,17 +28,19 @@
 				</div>
 				<div class="row">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-						<?php if ( has_post_thumbnail()) {  the_post_thumbnail('thumbnail', array('class'	=> "floatleft circle"));  } ?>
-						<?php if ( get_post_meta($post->ID, 'ecpt_class', true) ) : ?>
-							<p><strong>Class of: <?php echo get_post_meta($post->ID, 'ecpt_class', true); ?></strong></p>
-						<?php endif; ?>
-						<?php if ( get_post_meta($post->ID, 'ecpt_internship', true) ) : ?>
-							<p><strong>Internship:</strong> <?php echo get_post_meta($post->ID, 'ecpt_internship', true); ?></p>
-						<?php endif; ?>
-						<?php if ( get_post_meta($post->ID, 'ecpt_job', true) ) : ?>
-							<p><strong>Current Job:</strong> <?php echo get_post_meta($post->ID, 'ecpt_job', true); ?></p>
-						<?php endif; ?>
-						<?php the_content()?>
+						<div class="small-12 large-10 columns">
+							<?php if ( has_post_thumbnail()) {  the_post_thumbnail('thumbnail', array('class'	=> "floatleft circle"));  } ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_class', true) ) : ?>
+								<p><strong>Class of: <?php echo get_post_meta($post->ID, 'ecpt_class', true); ?></strong></p>
+							<?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_internship', true) ) : ?>
+								<p><strong>Internship:</strong> <?php echo get_post_meta($post->ID, 'ecpt_internship', true); ?></p>
+							<?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_job', true) ) : ?>
+								<p><strong>Current Job:</strong> <?php echo get_post_meta($post->ID, 'ecpt_job', true); ?></p>
+							<?php endif; ?>
+							<?php the_content();?>
+						</div>
 					<?php endwhile; endif;?>
 				</div>
 			</main>
