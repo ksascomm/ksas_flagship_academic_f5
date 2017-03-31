@@ -463,6 +463,14 @@ ul {
   .wp-post-image {
   margin-bottom: inherit;
   }
+  dd.tab-title {
+    border-top: 3px solid white;
+  }
+  .tabs {
+    .tab-title > a, dd > a {
+      border-bottom: none;
+    }
+  }
 }
 
 

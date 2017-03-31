@@ -5511,6 +5511,12 @@ ul {
 .entry-content .wp-post-image {
   margin-bottom: inherit; }
 
+.entry-content dd.tab-title {
+  border-top: 3px solid white; }
+
+.entry-content .tabs .tab-title > a, .entry-content .tabs dd > a {
+  border-bottom: none; }
+
 p.lead, .lead {
   line-height: 2em; }
 
