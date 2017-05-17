@@ -13,7 +13,7 @@ Template Name: ISIS Courses
 		$department = str_replace(' ', '%20', $department_unclean);
 		$department = str_replace('&', '%26', $department);
 		$fall = 'fall%202017';
-		$spring = 'spring%202017';
+		//$spring = 'spring%202017';
 		//$intersession = 'intersession%202017';
 		$summer = 'summer%202017';
 		$open = 'open';
@@ -32,12 +32,12 @@ Template Name: ISIS Courses
 		//$course_curl->cache($cache_dir, 86400);
  
 	//Create API Url calls
-		$courses_spring_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $spring . '&Department=AS%20' . $department;
+		//$courses_spring_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $spring . '&Department=AS%20' . $department;
 		$courses_fall_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $fall . '&Department=AS%20' . $department;
 		//$courses_intersession_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $intersession . '&Department=AS%20' . $department;
 		$courses_summer_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $summer . '&Department=AS%20' . $department;
 		$courses_call = array(
-			$courses_spring_url, 
+			//$courses_spring_url, 
 			$courses_fall_url, 
 			//$courses_intersession_url, 
 			$courses_summer_url
@@ -113,7 +113,6 @@ Template Name: ISIS Courses
 					<div id="fields_search" class="panel radius10">			
 						<div class="row filter option-set" data-filter-group="term">
 								<div class="button radio"><a href="#" data-filter="*" class="selected" onclick="ga('send', 'event', 'ISIS', 'Courses', 'All');">View All</a></div>
-								<div class="button radio"><a href="#" data-filter=".Spring" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Spring');">Spring 2017 Courses</a></div>
 								<div class="button radio"><a href="#" data-filter=".Summer" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Summer');">Summer 2017 Courses</a></div>
 								<div class="button radio"><a href="#" data-filter=".Fall" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Fall');">Fall 2017 Courses</a></div>
 								<h5 class="inline"><a href="#" class="acc_expandall" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Expand All');">[Expand All]</a></h5>
