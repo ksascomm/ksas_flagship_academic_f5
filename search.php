@@ -11,7 +11,7 @@ $collection_name = $theme_option['flagship_sub_search_collection'];
 ?>
 
 <div class="row wrapper radius10">
-	<main class="large-12 columns content" id="page">
+    <main class="large-12 columns content" id="page">
         <h1 class="page-title">Search Results</h1>
         <?php 
             try {
@@ -56,10 +56,10 @@ $collection_name = $theme_option['flagship_sub_search_collection'];
         <h5 class="black">Results <strong><?php echo $results->getFirstResultNum() ?> - <?php echo $results->getLastResultNum() ?></strong> of about <strong><?php echo $hits ?></strong></h5>
            
         <?php if (empty($sponsored_result) == false) { ?>
-	        <div class="panel radius10" id="sponsored">
-	        	<h2 class="black">Featured Result</h2>
-	        	<h3><a href="<?php echo $sponsored_result['sponsored_url']; ?>"><?php echo $sponsored_result['sponsored_title']; ?></a><small class="italic"> &mdash;<?php echo $sponsored_result['sponsored_url']; ?></small></h3>
-	        </div>
+            <div class="panel radius10" id="sponsored">
+                <h2 class="black">Featured Result</h2>
+                <h3><a href="<?php echo $sponsored_result['sponsored_url']; ?>"><?php echo $sponsored_result['sponsored_title']; ?></a><small class="italic"> &mdash;<?php echo $sponsored_result['sponsored_url']; ?></small></h3>
+            </div>
          <?php } ?>   
             <div id="search-results">
                 <ul>
@@ -106,12 +106,12 @@ $collection_name = $theme_option['flagship_sub_search_collection'];
             <p class="notice"><?php echo $notice ?></p>
         <?php } ?>
              
-            <h3 class="black">There are no pages matching your search.</h3>
+            <p>Sorry, No Results. Try your search again on <a href="https://www.jhu.edu/search/">JHU.edu</a>, or enter a new search term below:</p>
                <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
                     <fieldset> 
                         <label>
                             Search:
-                            <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
+                            <input type="text" class="input-text" name="q" value="<?php echo $displayQuery; ?>" />
                         </label>
                         <div class="row">
                             <div class="small-12  columns">
@@ -139,7 +139,7 @@ $collection_name = $theme_option['flagship_sub_search_collection'];
         </div>
         <?php } ?>
 
-	</main>
+    </main>
 </div>
 
 <?php get_footer(); ?>  
