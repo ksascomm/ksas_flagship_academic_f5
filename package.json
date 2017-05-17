@@ -8,15 +8,16 @@
   "devDependencies": {
     "autoprefixer": "^6.0.1",
     "browser-sync": "^2.8.1",
-    "grunt": "~0.4.5",
+    "grunt": "~1.0.1",
     "grunt-bower-update": "^0.1.2",
     "grunt-browser-sync": "^2.1.3",
-    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-postcss": "^0.7.2",
-    "grunt-sass": "~1.1.0",
-    "node-sass": "~3.4.2"
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "~2.0.0",
+    "grunt-uncss": "^0.6.1",
+    "node-sass": "~4.5.2"
   }
 }
