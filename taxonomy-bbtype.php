@@ -25,7 +25,7 @@
 		$bblink = 'research-internships';
 	}
 	elseif(is_tax('bbtype', 'international-programs')){
-		$bbname = "International Programs";
+		$bbname = "International Travel Grants";
 		$bblink = 'international-programs';
 	}
 	elseif(is_tax('bbtype', 'language-grants')){
