@@ -7,7 +7,7 @@
 		<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 		<div class="small-12 large-11 columns">
 		<?php 
-			$paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
+			$paged = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
 			if ( false === ( $news_archive_query = get_transient( 'news_archive_query_' . $paged ) ) ) {
 				if ($news_query_cond === 1) {
 					$news_archive_query = new WP_Query(array(
@@ -30,7 +30,7 @@
 						)); 
 				}
 					set_transient( 'news_archive_query_' . $paged, $news_archive_query, 2592000 );
-			} 	
+			}
 
 		while ($news_archive_query->have_posts()) : $news_archive_query->the_post(); ?>
 	
