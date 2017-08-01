@@ -9,7 +9,6 @@
 			<div class="small-12 large-11 columns">
 			<?php 
 				$paged = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
-				if ( false === ( $news_archive_query = get_transient( 'news_archive_query_' . $paged ) ) ) {
 					if ($news_query_cond === 1) {
 						$news_archive_query = new WP_Query(array(
 							'post_type' => 'post',
@@ -30,8 +29,6 @@
 							'paged' => $paged
 							)); 
 					}
-					set_transient( 'news_archive_query_' . $paged, $news_archive_query, 1296000 );
-			} 						
 
 			if ($news_archive_query->have_posts()) : while ($news_archive_query->have_posts()) : $news_archive_query->the_post(); ?>
 			
