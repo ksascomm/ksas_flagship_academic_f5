@@ -11,17 +11,13 @@ Template Name: Faculty Books
 			<h1 class="page-title"><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 			<?php 
-			$paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
-			if ( false === ( $faculty_books_query = get_transient( 'faculty_books_query_' . $paged ) ) ) {
-				// It wasn't there, so regenerate the data and save the transient
+			$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 				$faculty_books_query = new WP_Query(array(
 					'post_type' => 'post',
 					'category_name' => 'books',
 					'posts_per_page' => 10,
 					'paged' => $paged
 					)); 
-					set_transient( 'faculty_books_query_' . $paged, $faculty_books_query, 2592000 );
-			} 	
 			 if ( $faculty_books_query->have_posts() ) : while ($faculty_books_query->have_posts()) : $faculty_books_query->the_post(); ?>
 			<article aria-labelledby="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 					<?php if ( has_post_thumbnail()) { ?> 
@@ -71,10 +67,15 @@ Template Name: Faculty Books
 				<hr>
 			</article>	
 			<?php endwhile; endif; ?>
-			<div class="row">
-				<?php flagship_pagination($faculty_books_query->max_num_pages); ?>		
-			</div>	
-		</div>
+			<div class="row pagination">
+				 <?php
+				      if (function_exists('custom_pagination')) {
+				        custom_pagination($faculty_books_query->max_num_pages,"",$paged);
+				      }
+				    ?>
+				      <?php wp_reset_postdata(); ?>
+			</div>
+		</main>
 	</div>	<!-- End main content (left) section -->
 </div> <!-- End #landing -->
 <?php get_footer(); ?>
