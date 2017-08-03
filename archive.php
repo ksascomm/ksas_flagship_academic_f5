@@ -1,12 +1,18 @@
-<?php get_header(); 
+<?php /**
+* The template used to display archive content
+*/
+
+get_header(); 
 	$theme_option = flagship_sub_get_global_options(); 
 	$collection_name = $theme_option['flagship_sub_search_collection']; ?>	
 <div class="row wrapper radius10" id="page" role="main">
 	<div class="small-12 columns">
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false);?>
+		<main class="content post-archive">
+		<?php
+		if ( have_posts() ) : ?>
+			<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive: <strong><?php single_month_title(' ') ?></strong></h1>
 
-		<main class="content post-archive" itemprop="mainEntity" itemscope itemtype="http://schema.org/Blog">
-			<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 				<div class="row panel">
 					<div class="small-12 medium-6 columns">
 						<form method="GET" action="<?php echo site_url('/search'); ?>" id="search-bar" class="archive">
@@ -23,32 +29,29 @@
 						</select>
 					</div>	
 				</div>
-			<div class="small-12 large-11 columns">
-			<?php 
 
-			if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
-				<article aria-labelledby="post-<?php the_ID(); ?>">
-						<h2 itemprop="headline">
-							<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">	
-								<?php the_title();?>
-							</a>
-						</h2>
-						<h3 class="black" itemprop="datePublished">Date: <?php the_time( get_option( 'date_format' ) ); ?> <br> Category: <?php echo get_the_category( $id )[0]->name; ?></h3>
-					<div class="entry-content" itemprop="text">
-							<?php if ( has_post_thumbnail()) { ?>
-								<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
-							<?php } ?>
-						 <?php the_excerpt(); ?>
-						<hr>
-					</div>	
-				</article>		
-				<?php endwhile; ?>
-					<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-					<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
-				<?php endif; ?>
+				<?php
+			/* Start the Loop */
+			while ( have_posts() ) : the_post(); ?>	
 
-			</div>	
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+					 	<h1 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
+					 	<h3 class="black" itemprop="datePublished">Date: <?php the_time( get_option( 'date_format' ) ); ?> <br> Category: <?php echo get_the_category( $id )[0]->name; ?></h3>
+					</header><!-- .entry-header -->
+					<div class="entry-content">
+						<?php if ( has_post_thumbnail()) { ?>
+							<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft", 'itemprop' => 'image')); ?>
+						<?php } ?>
+					  <?php the_excerpt(); ?>
+					</div>
+					
+				</article>
+				<hr>
+			<?php endwhile;?> 
+				<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+				<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+			<?php endif; ?>
 		</main>
 	</div>	<!-- End main content (left) section -->
 </div> <!-- End #landing -->

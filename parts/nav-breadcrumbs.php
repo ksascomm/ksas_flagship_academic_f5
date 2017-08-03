@@ -15,7 +15,17 @@
 				<li><a href="<?php echo get_permalink(); ?>"><?php echo $article_title; ?></a></li>
 			</ul>
 		</nav>	
-		<?php } 
+		<?php }
+	elseif ( is_archive() ) { ?>
+		<nav aria-label="breadcrumbs" class="hide-for-print">
+			<ul id="menu-main-menu-2" class="breadcrumbs">
+				<li><a href="<?php echo $home_url; ?>">Home</a></li>
+				<li><a href="<?php echo $home_url; ?>/about">About</a></li>
+				<li><a href="<?php echo $home_url; ?>/about/archive">News Archive</a></li>
+				<li class="black"><?php echo the_archive_title(); ?></li>
+			</ul>
+		</nav>	
+		<?php }
 	elseif (is_singular('ai1ec_event')) { ?>
 		<nav aria-label="breadcrumbs" class="hide-for-print">
 			<ul id="menu-main-menu-2" class="breadcrumbs">
