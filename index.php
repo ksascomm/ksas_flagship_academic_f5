@@ -8,6 +8,9 @@
 		<main class="content post-archive" itemprop="mainEntity" itemscope itemtype="http://schema.org/Blog">
 			<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 				<div class="row panel">
+					<label for="archives">
+						<h3>Search Our Archives</h3>
+					</label>
 					<div class="small-12 medium-6 columns">
 						<form method="GET" action="<?php echo site_url('/search'); ?>" class="archive">
 					      <div class="row collapse prefix-round">
@@ -23,10 +26,11 @@
 				        </form>
 					</div>
 					<div class="small-12 medium-5 columns">
-						<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+						<select name="archive-dropdown" id="archives" onchange="document.location.href=this.options[this.selectedIndex].value;">
 						  <option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option> 
 						  <?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option', 'show_post_count' => 1 ) ); ?>
 						</select>
+						
 					</div>	
 				</div>
 			<div class="small-12 large-11 columns">

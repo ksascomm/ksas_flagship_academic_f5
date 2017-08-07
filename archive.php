@@ -14,8 +14,11 @@ get_header();
 			<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive: <strong><?php single_month_title(' ') ?></strong></h1>
 
 				<div class="row panel">
+					<label for="archives">
+						<h3>Search Our Archives</h3>
+					</label>
 					<div class="small-12 medium-6 columns">
-						<form method="GET" action="<?php echo site_url('/search'); ?>" id="search-bar" class="archive">
+						<form method="GET" action="<?php echo site_url('/search'); ?>" class="archive">
 					      <div class="row collapse prefix-round">
 					        <div class="small-2 columns">
 					          <input type="submit" class="button prefix" aria-label="submit" />
@@ -29,7 +32,7 @@ get_header();
 				        </form>
 					</div>
 					<div class="small-12 medium-5 columns">
-						<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+						<select name="archive-dropdown" id="archives" onchange="document.location.href=this.options[this.selectedIndex].value;">
 						  <option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option> 
 						  <?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option', 'show_post_count' => 1 ) ); ?>
 						</select>
