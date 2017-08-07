@@ -9,11 +9,17 @@
 			<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 				<div class="row panel">
 					<div class="small-12 medium-6 columns">
-						<form method="GET" action="<?php echo site_url('/search'); ?>" id="search-bar" class="archive">
-				              <input type="submit" class="icon-search" aria-label="submit" value="&#xe004;" />
-				              <label for="search" class="screen-reader-text">Search</label>
-				              <input type="text" id="search" name="q" placeholder="Search this site" aria-label="search"/>
-				              <input type="hidden" aria-label="site" name="site" value="<?php echo $collection_name; ?>" />
+						<form method="GET" action="<?php echo site_url('/search'); ?>" class="archive">
+					      <div class="row collapse prefix-round">
+					        <div class="small-2 columns">
+					          <input type="submit" class="button prefix" aria-label="submit" />
+					        </div>
+					        <div class="small-10 columns">
+								<label for="search" class="screen-reader-text">Search</label>
+								<input type="text" id="search" name="q" placeholder="Search our News Archives" aria-label="search"/>
+								<input type="hidden" aria-label="site" name="site" value="<?php echo $collection_name; ?>" />
+					        </div>
+					      </div>
 				        </form>
 					</div>
 					<div class="small-12 medium-5 columns">
