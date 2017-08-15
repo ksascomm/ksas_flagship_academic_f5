@@ -66,9 +66,24 @@ Template Name: ISIS Courses
 		}
 	//ISIS Call callback function	
 		function parse_courses($result) {
-			$cache_dir = TEMPLATEPATH . "/assets/functions/cache/";
-			$key = 'DZkN4QOJGaDKVg6Du1911u45d4TJNp6I';
-			$result->body = json_decode(html_entity_decode($result->body));
+		$cache_dir = TEMPLATEPATH . "/assets/functions/cache/";
+		$key = 'DZkN4QOJGaDKVg6Du1911u45d4TJNp6I';
+
+		$result->body = json_decode(html_entity_decode($result->body));
+	    if ((!is_array ($result) && !is_object($result)) || 
+	        (is_array($result) || count($result) == 0) ||
+	        (json_last_error() != JSON_ERROR_NONE)) {// only for PHP >= 5.3.0
+
+		        // log the error or warning here ...
+		        $input  = $result->body;
+		        $output = print_r ($result, TRUE);
+
+		        // Only for PHP >= 5.3.0
+		        // json_last_error();
+		        // json_last_error_msg();
+		        return -1;
+		    }	    	
+
 			$course_data = array();
 				foreach($result->body as $course) {
 					$section = $course->{'SectionName'};
