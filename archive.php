@@ -24,8 +24,8 @@ get_header();
 					          <input type="submit" class="button prefix" aria-label="submit" />
 					        </div>
 					        <div class="small-10 columns">
-								<label for="search" class="screen-reader-text">Search</label>
-								<input type="text" id="search" name="q" placeholder="Search our News Archives" aria-label="search"/>
+								<label for="news-search" class="screen-reader-text">Search</label>
+								<input type="text" id="news-search" name="q" placeholder="Search our News Archives" aria-label="search"/>
 								<input type="hidden" aria-label="site" name="site" value="<?php echo $collection_name; ?>" />
 					        </div>
 					      </div>
