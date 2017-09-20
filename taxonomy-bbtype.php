@@ -21,7 +21,7 @@
 		$bblink = 'volunteering-bb';
 	}
 	elseif(is_tax('bbtype', 'research-internships')){
-		$bbname ="Funding for Research & Internships";
+		$bbname ="Research & Internships";
 		$bblink = 'research-internships';
 	}
 	elseif(is_tax('bbtype', 'international-programs')){
