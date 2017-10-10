@@ -42,7 +42,7 @@
 
 			<h1 class="page-title"> <?php echo $bbname;?> </h1>
 
-			<?php if(is_tax('bbtype', 'research-internships') || is_tax('bbtype', 'international-programs') || is_tax('bbtype', 'language-grants') ){ ?>	
+			<?php if( is_tax('bbtype', 'international-programs') || is_tax('bbtype', 'language-grants') ){ ?>	
 
 				<?php $posts = query_posts($query_string . '&orderby=title&order=asc&posts_per_page=-1'); ?>
 
