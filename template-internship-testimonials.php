@@ -22,7 +22,7 @@ Template Name: Testimonial Listing (Internship)
 					'posts_per_page' => -1));
 			?>
 			<?php if($ksas_internship_testimonial_query->have_posts()) : ?>
-				<dl class="accordion" data-accordion>
+				<dl class="accordion testimonial" data-accordion>
 			<?php while ($ksas_internship_testimonial_query->have_posts()) : $ksas_internship_testimonial_query->the_post(); ?>
 				<dd class="accordion-navigation">
 					<a href="#post<?php the_ID(); ?>" title="<?php the_title(); ?>">
