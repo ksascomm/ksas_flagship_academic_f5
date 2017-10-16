@@ -25,13 +25,6 @@
 					      </div>
 				        </form>
 					</div>
-					<div class="small-12 medium-5 columns">
-						<select name="archive-dropdown" id="archives" onchange="document.location.href=this.options[this.selectedIndex].value;">
-						  <option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option> 
-						  <?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option', 'show_post_count' => 1 ) ); ?>
-						</select>
-						
-					</div>	
 				</div>
 			<div class="small-12 large-11 columns">
 			<?php 
@@ -53,12 +46,11 @@
 						<hr>
 					</div>	
 				</article>		
-				<?php endwhile; ?>
-					<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-					<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
-				<?php endif; ?>
-
-			</div>	
+				<?php endwhile; endif ?>
+			</div>
+			<div class="row">
+				<?php flagship_pagination(); ?>		
+			</div>		
 		</main>
 	</div>	<!-- End main content (left) section -->
 </div> <!-- End #landing -->
