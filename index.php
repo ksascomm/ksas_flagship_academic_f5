@@ -8,9 +8,7 @@
 		<main class="content post-archive" itemprop="mainEntity" itemscope itemtype="http://schema.org/Blog">
 			<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 				<div class="row panel">
-					<label for="archives">
-						<h3>Search Our Archives</h3>
-					</label>
+					<h3>Search Our Archives</h3>
 					<div class="small-12 medium-6 columns">
 						<form method="GET" action="<?php echo site_url('/search'); ?>" class="archive">
 					      <div class="row collapse prefix-round">
