@@ -22,9 +22,10 @@ footer {
 }
 
 #social-media {
-  a {
-    padding: 10px;
-    margin-right: 10px;
+  @media only screen and (min-width: 40.063em) {
+    ul.inline-list {
+      float: right;
+    }
   }
 }
 
