@@ -224,6 +224,9 @@ function meta_limit_increase( $limit ) {
 /*****FORMIDABLE UPLOADS ***/
 add_filter( 'frm_load_dropzone', '__return_false' );
 
+/*****BLOCK COMMENTS & TRACKBACKS ***/
+require_once(get_template_directory() . '/assets/functions/block-comments.php');
+
 // Register scripts and stylesheets
 require_once(get_template_directory().'/assets/functions/enqueue-scripts.php'); 
 
