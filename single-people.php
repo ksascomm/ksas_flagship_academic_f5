@@ -110,7 +110,11 @@
 					<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) || get_post_meta($post->ID, 'ecpt_google_id', true) ) : ?>
 						<div class="content" id="publicationsTab">
 							<?php if ( get_post_meta($post->ID, 'ecpt_publications', true) ) : echo get_post_meta($post->ID, 'ecpt_publications', true); endif; ?>
-							<?php if ( get_post_meta($post->ID, 'ecpt_google_id', true) ) : locate_template('/parts/google-scholar.php', true, false); endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_google_id', true) ) : ?>
+								<div class="panel">
+									<p>View <?php the_title(); ?>'s profile on <a href="http://scholar.google.com/citations?user=<?php echo get_post_meta($post->ID, 'ecpt_google_id', true); ?>" target="_blank">Google Scholar</a> for a complete publications list.</p>
+								</div>
+							<?php endif; ?>
 						</div>
 					<?php endif; ?>
 					<?php if ( get_post_meta($post->ID, 'ecpt_books_cond', true) == 'on' ) : locate_template('/parts/faculty-books.php', true, false); endif;?>
