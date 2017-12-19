@@ -7,7 +7,7 @@
 				'orderby'       => 'ID', 
 				'order'         => 'ASC',
 				'hide_empty'    => true,
-				'exclude'		=> array('63', '58', '61'), //job-market-candidate
+				'exclude'		=> array('63', '58'), //job-market-candidate
 				));
 				
 				$count_roles =  count($roles);
