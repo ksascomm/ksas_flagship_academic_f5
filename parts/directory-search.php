@@ -7,7 +7,6 @@
 				'orderby'       => 'ID', 
 				'order'         => 'ASC',
 				'hide_empty'    => true,
-				'exclude'		=> array('63', '58'), //job-market-candidate
 				));
 				
 				$count_roles =  count($roles);
@@ -16,11 +15,14 @@
 							<div class="button radio">
 								<a href="#" data-filter="" class="selected">View All</a>
 							</div>
-						<?php foreach ( $roles as $role ) { ?>
+						<?php foreach ( $roles as $role ) { 
+							$role_slug = $role->slug;
+							$role_name = $role->name;
+							if ($role_slug !== 'graduate' && $role_slug !== 'job-market-candidate' && $role_slug !== 'graduate-student' && $role_slug !== 'research') { ?>
 							<div class="button radio">
 								<a href="#" data-filter=".<?php echo $role->slug; ?>"><?php echo $role->name; ?></a>
 							</div>
-						<?php } ?>
+						<?php } } ?>
 					</div>
 				<?php } ?>
 		<?php } ?>
