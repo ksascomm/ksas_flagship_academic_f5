@@ -5854,6 +5854,17 @@ body.purple .ai1ec-agenda-widget-view .ai1ec-event .ai1ec-event-title, body.purp
   font-size: 1.1rem;
   margin-bottom: 3px; }
 
+.news-item .hub-article {
+  border-bottom: 1px solid #e5e2e0;
+  padding-bottom: 1rem;
+  margin-top: 1rem; }
+  .news-item .hub-article:last-of-type {
+    border-bottom: none; }
+
+.news-item .hub-thumb {
+  width: 200px;
+  margin-bottom: 1rem; }
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);

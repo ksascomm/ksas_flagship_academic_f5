@@ -121,7 +121,12 @@
 				</h4>
 			</div>
 			<?php endif; ?>
-			
+
+		<?php $hub_query_cond = $theme_option['flagship_sub_hub_cond'];
+			if ($hub_query_cond === 1) :
+				get_template_part( 'parts/hub-news' ); 
+			endif; ?>
+	
 		</div>	<!-- End main content (left) section -->
 	<?php locate_template('/parts/sidebar.php', true, false); ?>	
 	</div> <!-- End #landing -->

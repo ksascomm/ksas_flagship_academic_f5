@@ -171,8 +171,27 @@ function flagship_sub_options_page_fields() {
 		"type"    => "select",
 		"choices" => array('blue','black','yellow','green','purple','red','aqua'),
 		"std"    => "blue");
-	return $options;
-		
+
+	$options[17] =
+	array(		
+		'section' => 'homepage_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_hub_cond',
+		'title'   => __( 'Hub Feed Option', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Do you want to display articles from The Hub?', 'flagship_sub_textdomain' ),
+		'type'    => 'checkbox',
+		'std'    => 0,
+);	
+	$options[18] =
+	array(		
+		'section' => 'homepage_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_hub_keywords',
+		'title'   => __( 'Hub Keywords', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Enter keywords. Use hyphens instead of spaces (comma separated, no spaces) ie. physics,arts-and-sciences.', 'flagship_sub_textdomain' ),
+		'type'    => 'text',
+		'class'   => 'nohtml',
+		'std'    => '',
+);
+	return $options;	
 }
 
 ?>

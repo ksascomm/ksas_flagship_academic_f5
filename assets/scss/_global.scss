@@ -929,8 +929,22 @@ h6 {font-size: 1rem; }
     font-family: $font-subhead;
   }
   h2 {font-size: 1.1rem;
-    margin-bottom: 3px;}
+    margin-bottom: 3px;
+  }
+  .hub-article {
+    border-bottom: 1px solid $grey;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .hub-thumb {
+    width: 200px;
+    margin-bottom: 1rem;
+  }
 }
+
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
