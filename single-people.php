@@ -75,6 +75,9 @@
 				    	<?php if (get_post_meta($post->ID, 'ecpt_microsoft_id', true)) : ?>
 				    		<span class="fa fa-windows"></span> <a href="https://academic.microsoft.com/#/detail/<?php echo get_post_meta($post->ID, 'ecpt_microsoft_id', true); ?>" target="_blank"> Microsoft Academic Profile</a>
 						<?php endif; ?>
+				    	<?php if (get_post_meta($post->ID, 'ecpt_twitter', true)) : ?>
+				    		<span class="fa fa-twitter"></span> <a href="https://twitter.com/<?php echo get_post_meta($post->ID, 'ecpt_twitter', true); ?>" target="_blank"> @<?php echo get_post_meta($post->ID, 'ecpt_twitter', true); ?></a>
+						<?php endif; ?>						
 				    </p>
 				</div>
 			<div class="small-12 medium-8 columns">
