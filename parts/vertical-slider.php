@@ -6,7 +6,7 @@
 		<?php } ?>
 	   	<?php if ( get_post_meta($post->ID, 'ecpt_urldestination', true) ) : ?>				
 			<p class="gold">
-				<a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>" onclick="ga('send', 'event', 'Homepage Slider', 'Click', '<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>')">
+				<a href="<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>" onclick="ga('send', 'event', 'Homepage Slider', 'Click', '<?php echo get_post_meta($post->ID, 'ecpt_urldestination', true); ?>')" aria-label="<?php the_title(); ?>">
 					Find Out More <span class="icon-arrow-right-2"></span>
 				</a>
 			</p>
