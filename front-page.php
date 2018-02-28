@@ -94,7 +94,12 @@
 				<?php endif; ?>
 
 				<h1 itemprop="headline">
-					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title();?></a>
+				<?php if ( get_post_meta($post->ID, 'ecpt_external_link', true) ) : ?>
+					<a href="<?php echo get_post_meta($post->ID, 'ecpt_external_link', true); ?>" target="_blank" title="<?php the_title(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?> <span class="icon-new-tab-2" aria-hidden="true"></span>
+					</a>
+				<?php else : ?>
+					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a>
+				<?php endif; ?>
 				</h1>
 
 				<div class="entry-content" itemprop="text">	

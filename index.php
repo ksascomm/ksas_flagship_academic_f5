@@ -31,9 +31,12 @@
 			
 				<article aria-labelledby="post-<?php the_ID(); ?>">
 						<h2 itemprop="headline">
-							<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">	
-								<?php the_title();?>
-							</a>
+							<?php if ( get_post_meta($post->ID, 'ecpt_external_link', true) ) : ?>
+								<a href="<?php echo get_post_meta($post->ID, 'ecpt_external_link', true); ?>" target="_blank" title="<?php the_title(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?> <span class="icon-new-tab-2" aria-hidden="true"></span>
+								</a>
+							<?php else : ?>
+								<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a>
+							<?php endif; ?>
 						</h2>
 						<h3 class="black" itemprop="datePublished">Date: <?php the_time( get_option( 'date_format' ) ); ?> <br> Category: <?php echo get_the_category( $id )[0]->name; ?></h3>
 					<div class="entry-content" itemprop="text">
