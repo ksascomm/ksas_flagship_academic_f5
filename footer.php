@@ -28,7 +28,7 @@
 			<?php if(get_page_by_title('Jobs') || get_page_by_title('Employment Opportunities') || get_page_by_title('Employment') ) : ?>
 				<li role="menuitem"><a href="<?php echo get_site_url(); ?>/about/jobs/">Employment</a></li>
 			<?php else : ?>
-				<li role="menuitem"><a href="http://krieger.jhu.edu/faculty-jobs/">Employment</a></li>	
+				<li role="menuitem"><a href="https://jobs.jhu.edu/">Employment</a></li>	
 			<?php endif;?>
 				<li role="menuitem"><a href="https://www.jhu.edu/alert/">Emergency Alerts & Info</a></li>
 			</ul>
