@@ -115,7 +115,7 @@ Template Name: ISIS Courses (Graduate)
 		}
 ?>	
  
-<div class="row sidebar_bg radius10" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<div class="row sidebar_bg radius10 main-content" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">	
 		<?php locate_template('/parts/nav-breadcrumbs.php', true, false); ?>	
 		<div class="content">
