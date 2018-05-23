@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="row wrapper radius10" id="page" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<main class="row wrapper radius10 main-content " id="page" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="radius-left offset-topgutter">	
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false); ?>	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

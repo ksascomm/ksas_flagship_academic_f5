@@ -5,7 +5,7 @@
 	<div class="small-12 columns">
 		<?php locate_template('parts/nav-breadcrumbs.php', true, false);?>
 
-		<main class="content post-archive" itemprop="mainEntity" itemscope itemtype="http://schema.org/Blog">
+		<main class="content post-archive main-content" itemprop="mainEntity" itemscope itemtype="http://schema.org/Blog">
 			<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 				<div class="row panel">
 					<h3>Search Our Archives</h3>

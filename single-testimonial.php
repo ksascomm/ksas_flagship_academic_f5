@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="row wrapper radius10" id="page">
 	<div class="large-12 columns radius-left offset-topgutter">	
-			<main class="content page-content" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+			<main class="content main-content" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 				<div class="row">
 					<div class="large-8 columns">
 						<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
