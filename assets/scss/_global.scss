@@ -164,8 +164,8 @@ ol {
   margin-top: 1rem;
 }
 
-.page-content {
-  li {
+.entry-content {
+  li:not(:last-child) {
     padding-bottom: 10px; 
   }  
 }
