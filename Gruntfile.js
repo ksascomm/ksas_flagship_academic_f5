@@ -74,7 +74,7 @@ module.exports = function(grunt) {
             },
             options: {
                 watchTask: true,
-                proxy: "bicycle.dev/africana"
+                proxy: "krieger.local/africana"
             }
         }
     },
