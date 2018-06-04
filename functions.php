@@ -223,14 +223,22 @@ function my_css_attributes_filter($var) {
 	        return;
 		if($excerpt = $post->post_content) 
 	        {
- 				$excerpt = strip_tags($post->post_content);
-				$excerpt = str_replace("", "'", $excerpt);
-				$excerpt = wp_trim_words($post->post_content, 25, '...');
+ 				$uglyexcerpt = strip_tags($post->post_content);
+				$uglyexcerpt = str_replace("", "'", $uglyexcerpt);
+				$excerpt = wp_trim_words($uglyexcerpt, 25, '...');
         	} 
-        	else 
+        	elseif (is_singular('people')) {
+        		$longexcerpt = strip_tags(get_post_meta($post->ID, 'ecpt_bio', true));
+        		$longexcerpt = str_replace("", "'", $longexcerpt);
+        		$excerpt = wp_trim_words($longexcerpt, 15, '...');
+        	}
+        	elseif (is_page_template( 'template-people-directory.php' )) {
+        		$excerpt = get_the_title();
+        	}
+        	else
         	{
             	$excerpt = get_bloginfo('title');
-		}
+			}
 
 	        echo '<meta property="og:title" content="' . get_the_title() ." | " . get_bloginfo('title')  . '"/>';
 			echo '<meta property="og:description" content="' . $excerpt . '"/>';
