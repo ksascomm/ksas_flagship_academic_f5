@@ -2,7 +2,7 @@
 <div class="row wrapper radius10 main-content" id="page" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="radius-left offset-topgutter">	
 		<div class="content">
-		<?php if (has_term('', 'role') && !has_term('job-market-candidate', 'role')) : ?>
+		<?php if (has_term('', 'role') && !has_term(array('job-market-candidate', 'graduate-student'), 'role')) : ?>
 			<div class="row">
 				<div class="small-12 medium-5 medium-offset-7 columns">
 					<label for="jump">
