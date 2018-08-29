@@ -140,6 +140,19 @@ function get_the_roles($post) {
 					return $role_name;
 }
 
+add_action( 'template_redirect', 'redirect_empty_bios' );
+function redirect_empty_bios() {
+	if(is_singular('people') ) :
+		global $post;
+		$bio = get_post_meta($post->ID, 'ecpt_bio', true);
+		$link = get_post_meta($post->ID, 'ecpt_website', true);
+		if(empty($bio) && isset($link)) {
+		    wp_redirect(esc_url($link), 301);
+		    exit;
+		} 
+	endif;
+}
+
 /**********DELETE TRANSIENTS******************/
 
 function delete_academic_transients($post_id) {
