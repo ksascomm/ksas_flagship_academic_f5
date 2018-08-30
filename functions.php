@@ -142,15 +142,17 @@ function get_the_roles($post) {
 
 add_action( 'template_redirect', 'redirect_empty_bios' );
 function redirect_empty_bios() {
-	if(is_singular('people') ) :
+	if(is_singular('people') ) {
 		global $post;
 		$bio = get_post_meta($post->ID, 'ecpt_bio', true);
 		$link = get_post_meta($post->ID, 'ecpt_website', true);
-		if(empty($bio) && isset($link)) {
-		    wp_redirect(esc_url($link), 301);
-		    exit;
-		} 
-	endif;
+		if (has_term(array('faculty', 'tenured-and-tenure-track-faculty'), 'role')) {
+			if(empty($bio) && isset($link)) {
+			    wp_redirect(esc_url($link), 301);
+			    exit;
+			}
+		}
+	}
 }
 
 /**********DELETE TRANSIENTS******************/
