@@ -13,7 +13,7 @@ Template Name: ISIS Courses (Graduate)
 		$department = str_replace(' ', '%20', $department_unclean);
 		$department = str_replace('&', '%26', $department);
 		$fall = 'fall%202018';
-		//$spring = 'spring%202018';
+		$spring = 'spring%202019';
 		//$intersession = 'intersession%202018';
 		//$summer = 'summer%202018';
 		$open = 'open';
@@ -32,14 +32,14 @@ Template Name: ISIS Courses (Graduate)
 		//$course_curl->cache($cache_dir, 86400);
  
 	//Create API Url calls
-		//$courses_spring_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $spring . '&Department=AS%20' . $department;
-		$courses_fall_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $fall . '&Department=AS%20' . $department;
+		$courses_spring_url = 'https://sis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $spring . '&Department=AS%20' . $department;
+		$courses_fall_url = 'https://sis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $fall . '&Department=AS%20' . $department;
 		//$courses_intersession_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $intersession . '&Department=AS%20' . $department;
 		//$courses_summer_url = 'https://isis.jhu.edu/api/classes?key=' . $key . '&School=Krieger%20School%20of%20Arts%20and%20Sciences&Term=' . $summer . '&Department=AS%20' . $department;
 		$courses_call = array(
 			$courses_fall_url, 
 			//$courses_intersession_url,
-			//$courses_spring_url,  
+			$courses_spring_url,  
 			//$courses_summer_url
 			);
 	
@@ -100,7 +100,7 @@ Template Name: ISIS Courses (Graduate)
 						$clean_number = preg_replace('/[^A-Za-z0-9\-]/', '', $number);
 						$dirty_term = $course->{'Term_IDR'};
 						$clean_term = str_replace(' ', '%20', $dirty_term);
-						$details_url = 'https://isis.jhu.edu/api/classes/' . $clean_number . $section .'/' . $clean_term . '?key=' . $key;
+						$details_url = 'https://sis.jhu.edu/api/classes/' . $clean_number . $section .'/' . $clean_term . '?key=' . $key;
 						$course_data[] = $details_url;					
 					}
 				}
@@ -128,6 +128,7 @@ Template Name: ISIS Courses (Graduate)
 						<div class="row filter option-set" data-filter-group="term">
 								<div class="button radio"><a href="#" data-filter="*" class="selected" onclick="ga('send', 'event', 'ISIS', 'Courses', 'All');">View All</a></div>
 								<div class="button radio"><a href="#" data-filter=".Fall" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Fall');">Fall 2018 Courses</a></div>
+								<div class="button radio"><a href="#" data-filter=".Spring" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Spring');">Spring 2019 Courses</a></div>
 								<h5 class="inline"><a href="#" class="acc_expandall" onclick="ga('send', 'event', 'ISIS', 'Courses', 'Expand All');">[Expand All]</a></h5>
 						</div>
 						<div class="row">
