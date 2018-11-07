@@ -69,9 +69,10 @@ Template Name: Graduate Student Listing
 												</span>
 											<?php endif; ?>
 										</p>
-							<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?><p><strong>Research Interests:&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); endif; ?>
-							<?php if ( get_post_meta($post->ID, 'ecpt_advisor', true) ) : ?><br><strong>Advisor:&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_advisor', true); endif; ?>
-							<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?></p><?php endif; ?>
+								<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?><p><strong>Research Interests:&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); endif; ?>
+								<?php if ( get_post_meta($post->ID, 'ecpt_advisor', true) ) : ?><br><strong>Advisor:&nbsp;</strong><?php echo get_post_meta($post->ID, 'ecpt_advisor', true); endif; ?>
+								<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?></p><?php endif; ?>
+								</div>
 							</div>
 						</div>
 					</li>
