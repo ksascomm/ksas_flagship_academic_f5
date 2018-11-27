@@ -6,9 +6,19 @@
 
 </script>
 
-<script async>
-!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//siteimproveanalytics.com/js/siteanalyze_11464.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+<?php $siteimprove_analytics = $theme_option['flagship_sub_siteimprove_analytics'];
+if ($siteimprove_analytics === 1): ?>
+<script async type="text/javascript">
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//siteimproveanalytics.com/js/siteanalyze_11464.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
 </script>
+<?php
+endif; ?>
 
 <script async>
 function _gaLt(t){for(var e=t.srcElement||t.target;e&&("undefined"==typeof e.tagName||"a"!=e.tagName.toLowerCase()||!e.href);)e=e.parentNode;if(e&&e.href){var a=e.href;if(-1==a.indexOf(location.host)&&!a.match(/^javascript\:/i)){var n=function(t,e){e?window.open(t,e):window.location.href=t},o=e.target&&!e.target.match(/^_(self|parent|top)$/i)?e.target:!1;ga("send","event","Outgoing Links",a,document.location.pathname+document.location.search,{hitCallback:n(a,o)}),t.preventDefault?t.preventDefault():t.returnValue=!1}}}var w=window;w.addEventListener?w.addEventListener("load",function(){document.body.addEventListener("click",_gaLt,!1)},!1):w.attachEvent&&w.attachEvent("onload",function(){document.body.attachEvent("onclick",_gaLt)});

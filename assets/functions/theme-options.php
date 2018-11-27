@@ -191,6 +191,15 @@ function flagship_sub_options_page_fields() {
 		'class'   => 'nohtml',
 		'std'    => '',
 );
+	$options[19] =
+	array(
+		'section' => 'technical_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_siteimprove_analytics',
+		'title'   => __( 'Siteimprove Analytics', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Do you want to display the Siteimprove Analytics script?', 'flagship_sub_textdomain'  ),
+		'type'    => 'checkbox',
+		'std'    => '0',
+);
 	return $options;	
 }
 
