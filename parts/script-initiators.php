@@ -22,19 +22,11 @@
 
 
 <!**********TABLET/MOBILE MENUS**************>  
-<?php if(is_tablet()) :  ?>
-		<script>
-			jQuery(document).ready(function () {
-			    jQuery('#main_nav').meanmenu({meanScreenWidth: "767"});
-			});
-		</script>
-<?php else: ?>
-	<script>
-		jQuery(document).ready(function () {
-		    jQuery('#main_nav').meanmenu();
-		});
-	</script>
-<?php endif; ?>
+<script>
+	jQuery(document).ready(function () {
+	    jQuery('#main_nav').meanmenu();
+	});
+</script>
 
 <!***********DIRECTORY**************>
 <?php $theme_option = flagship_sub_get_global_options();
